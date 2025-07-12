@@ -1,27 +1,39 @@
-import { Benefits } from "./components/dashboard/benefit"
-import { BookingCall } from "./components/dashboard/booking-call"
-import { CaseStudies } from "./components/dashboard/case-studies"
-import { Footer } from "./components/dashboard/footer"
-import { Headline } from "./components/dashboard/head-line"
-import { Hero } from "./components/dashboard/hero"
-import { Navbar } from "./components/dashboard/navbar"
-import { Services } from "./components/dashboard/services"
-import { VideoSection } from "./components/dashboard/video-section"
+import { Home } from "./pages/home";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { AmazonAutomation } from "./pages/services/amazon-automation";
+import { TiktokShopAutomation } from "./pages/services/tiktok-shop-automation";
+import { AmazonPrivateLabel } from "./pages/services/amazon-private-label";
+import { WalmartAutomation } from "./pages/services/walmart-automation";
+import { AccountReinstatement } from "./pages/services/account-reinstatement";
+import { ShopifyDropshippingAutomation } from "./pages/services/shopify-dropshipping-automation";
+import { Navbar } from "./components/dashboard/navbar";
+import { Footer } from "./components/dashboard/footer";
 
 const App = () => {
-  return(
-    <section className="min-h-screen flex flex-col">
-    <Navbar />
-    <Hero />
-    <Benefits />
-    <Headline />
-    <VideoSection/>
-    <Services />
-    <CaseStudies/>
-    <BookingCall />
-    <Footer />
-    </section>
-  )
-}
+  return (
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        {/* Home/Index */}
+        <Route path="/" Component={Home} />
+        {/* Services */}
+        {/* amazon automation */}
+        <Route path="/amazon-automation" Component={AmazonAutomation} />
+        <Route
+          path="/tiktok-shop-automation"
+          Component={TiktokShopAutomation}
+        />
+        <Route path="/amazon-private-label" Component={AmazonPrivateLabel} />
+        <Route path="/walmart-automation" Component={WalmartAutomation} />
+        <Route path="/account-reinstatement" Component={AccountReinstatement} />
+        <Route
+          path="/shopify-dropshipping-automation"
+          Component={ShopifyDropshippingAutomation}
+        />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
+  );
+};
 
-export default App
+export default App;
