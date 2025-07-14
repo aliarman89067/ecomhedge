@@ -12,35 +12,43 @@ import About from "./pages/about";
 import Contact from "./pages/contact";
 import { ScrollToTop } from "./components/scroll-to-top";
 import Faq from "./pages/faq";
+import { ContextProvider } from "./context/form-context";
+import { OverlayForm } from "./components/overlay-form";
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <ScrollToTop />
-      <Navbar />
-      <Routes>
-        {/* Home/Index */}
-        <Route path="/" Component={Home} />
-        {/* Services */}
-        {/* amazon automation */}
-        <Route path="/amazon-automation" Component={AmazonAutomation} />
-        <Route
-          path="/tiktok-shop-automation"
-          Component={TiktokShopAutomation}
-        />
-        <Route path="/amazon-private-label" Component={AmazonPrivateLabel} />
-        <Route path="/walmart-automation" Component={WalmartAutomation} />
-        <Route path="/account-reinstatement" Component={AccountReinstatement} />
-        <Route
-          path="/shopify-dropshipping-automation"
-          Component={ShopifyDropshippingAutomation}
-        />
-        <Route path="/about" Component={About} />
-        <Route path="/contact" Component={Contact} />
-        <Route path="/faq" Component={Faq} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+    <ContextProvider>
+      <BrowserRouter>
+        <OverlayForm />
+        <ScrollToTop />
+        <Navbar />
+        <Routes>
+          {/* Home/Index */}
+          <Route path="/" Component={Home} />
+          {/* Services */}
+          {/* amazon automation */}
+          <Route path="/amazon-automation" Component={AmazonAutomation} />
+          <Route
+            path="/tiktok-shop-automation"
+            Component={TiktokShopAutomation}
+          />
+          <Route path="/amazon-private-label" Component={AmazonPrivateLabel} />
+          <Route path="/walmart-automation" Component={WalmartAutomation} />
+          <Route
+            path="/account-reinstatement"
+            Component={AccountReinstatement}
+          />
+          <Route
+            path="/shopify-dropshipping-automation"
+            Component={ShopifyDropshippingAutomation}
+          />
+          <Route path="/about" Component={About} />
+          <Route path="/contact" Component={Contact} />
+          <Route path="/faq" Component={Faq} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </ContextProvider>
   );
 };
 
