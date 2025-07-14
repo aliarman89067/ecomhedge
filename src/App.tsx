@@ -8,10 +8,15 @@ import { AccountReinstatement } from "./pages/services/account-reinstatement";
 import { ShopifyDropshippingAutomation } from "./pages/services/shopify-dropshipping-automation";
 import { Navbar } from "./components/dashboard/navbar";
 import { Footer } from "./components/dashboard/footer";
+import About from "./pages/about";
+import Contact from "./pages/contact";
+import { ScrollToTop } from "./components/scroll-to-top";
+import Faq from "./pages/faq";
 
 const App = () => {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         {/* Home/Index */}
@@ -30,6 +35,9 @@ const App = () => {
           path="/shopify-dropshipping-automation"
           Component={ShopifyDropshippingAutomation}
         />
+        <Route path="/about" Component={About} />
+        <Route path="/contact" Component={Contact} />
+        <Route path="/faq" Component={Faq} />
       </Routes>
       <Footer />
     </BrowserRouter>

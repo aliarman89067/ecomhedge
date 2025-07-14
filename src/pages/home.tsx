@@ -8,7 +8,7 @@ import { VideoSection } from "@/components/dashboard/video-section";
 
 export const Home = () => {
   return (
-    <section className="min-h-screen flex flex-col">
+    <section className="min-h-screen flex flex-col overflow-hidden">
       <Hero />
       <Benefits />
       <Headline />

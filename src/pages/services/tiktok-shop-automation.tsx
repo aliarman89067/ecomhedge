@@ -145,7 +145,7 @@ export const TiktokShopAutomation = () => {
       {/* Hero */}
       <ServicesHero
         title={
-          <h1 className="text-white text-3xl font-bold">
+          <h1 className="text-white text-3xl font-bold max-md:text-center">
             Hop on the{" "}
             <div className="inline-flex bg-black text-gold px-4 py-2 rounded-full">
               TikTok Shop
@@ -156,21 +156,21 @@ export const TiktokShopAutomation = () => {
         desc="TikTok shop opens a doorway to unimaginable profits only if it's done the right way. Thinking how to do that?"
       />
 
-      <div className="flex flex-col min-h-screen items-center justify-center">
+      <div className="flex flex-col min-h-screen items-center justify-center py-10 px-2">
         <MaxWidthWrapper classNames="flex flex-col gap-10">
-          <h1 className="text-charcoal font-bold text-3xl text-center">
+          <h1 className="text-charcoal font-bold text-2xl md:text-3xl text-center">
             The Undeniable Benefits of TikTok Shop Automation
           </h1>
-          <div className="grid grid-cols-2 gap-5 w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 w-full">
             <div className="group flex flex-col gap-3 bg-white hover:bg-charcoal rounded-lg py-4 px-5 border border-gray-300 transition-all duration-150 ease-in-out">
               <div className="flex items-center justify-between gap-4">
-                <h2 className="text-charcoal group-hover:text-white text-xl font-semibold transition-all duration-150 ease-in-out">
+                <h2 className="text-charcoal group-hover:text-white text-lg md:text-xl font-semibold transition-all duration-150 ease-in-out">
                   Marketing Like Never Before
                 </h2>
                 <img
                   src="/services/tiktok/laptop.png"
                   alt="Laptop"
-                  className="w-16 h-16 object-contain"
+                  className="w-9 md:w-16 h-9 md:h-16 object-contain"
                 />
               </div>
               <p className="text-sm text-charcoal group-hover:text-white transition-all duration-150 ease-in-out">
@@ -182,13 +182,13 @@ export const TiktokShopAutomation = () => {
             </div>
             <div className="group flex flex-col gap-3 bg-white hover:bg-charcoal rounded-lg py-4 px-5 border border-gray-300 transition-all duration-150 ease-in-out">
               <div className="flex items-center justify-between gap-4">
-                <h2 className="text-charcoal group-hover:text-white text-xl font-semibold transition-all duration-150 ease-in-out">
+                <h2 className="text-charcoal group-hover:text-white text-lg md:text-xl font-semibold transition-all duration-150 ease-in-out">
                   Unparalleled Engagement
                 </h2>
                 <img
                   src="/services/tiktok/social.png"
                   alt="Laptop"
-                  className="w-16 h-16 object-contain"
+                  className="w-9 md:w-16 h-9 md:h-16 object-contain"
                 />
               </div>
               <p className="text-sm text-charcoal group-hover:text-white transition-all duration-150 ease-in-out">
@@ -198,17 +198,17 @@ export const TiktokShopAutomation = () => {
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-3 gap-5 w-full">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 w-full">
             <div className="flex flex-col gap-3">
               <div className="group flex flex-col gap-3 bg-white hover:bg-charcoal rounded-lg py-4 px-5 border border-gray-300 transition-all duration-150 ease-in-out">
-                <div className="flex items-center justify-between gap-4">
-                  <h2 className="text-charcoal group-hover:text-white text-xl font-semibold transition-all duration-150 ease-in-out">
+                <div className="flex items-center gap-4">
+                  <h2 className="text-charcoal group-hover:text-white text-lg font-semibold transition-all duration-150 ease-in-out">
                     Guaranteed Convenience
                   </h2>
                   <img
                     src="/services/tiktok/hands.png"
                     alt="Hands"
-                    className="w-16 h-16 object-contain"
+                    className="w-9 h-9  md:w-12 md:h-12 object-contain"
                   />
                 </div>
                 <p className="text-sm text-charcoal group-hover:text-white transition-all duration-150 ease-in-out">
@@ -220,14 +220,14 @@ export const TiktokShopAutomation = () => {
             </div>
             <div className="flex flex-col gap-3">
               <div className="group flex flex-col gap-3 bg-white hover:bg-charcoal rounded-lg py-4 px-5 border border-gray-300 transition-all duration-150 ease-in-out">
-                <div className="flex items-center justify-between gap-4">
-                  <h2 className="text-charcoal group-hover:text-white text-xl font-semibold transition-all duration-150 ease-in-out">
+                <div className="flex items-center gap-4">
+                  <h2 className="text-charcoal group-hover:text-white text-lg font-semibold transition-all duration-150 ease-in-out">
                     Real-time Dealings
                   </h2>
                   <img
                     src="/services/tiktok/clock.png"
                     alt="Clock"
-                    className="w-16 h-16 object-contain"
+                    className="w-9 h-9  md:w-12 md:h-12 object-contain"
                   />
                 </div>
                 <p className="text-sm text-charcoal group-hover:text-white transition-all duration-150 ease-in-out">
@@ -239,14 +239,14 @@ export const TiktokShopAutomation = () => {
             </div>
             <div className="flex flex-col gap-3">
               <div className="group flex flex-col gap-3 bg-white hover:bg-charcoal rounded-lg py-4 px-5 border border-gray-300 transition-all duration-150 ease-in-out">
-                <div className="flex items-center justify-between gap-4">
-                  <h2 className="text-charcoal group-hover:text-white text-xl font-semibold transition-all duration-150 ease-in-out">
+                <div className="flex items-center gap-4">
+                  <h2 className="text-charcoal group-hover:text-white text-lg font-semibold transition-all duration-150 ease-in-out">
                     Impactful Promotions
                   </h2>
                   <img
                     src="/services/tiktok/bell.png"
                     alt="Bell"
-                    className="w-16 h-16 object-contain"
+                    className="w-9 h-9  md:w-12 md:h-12 object-contain"
                   />
                 </div>
                 <p className="text-sm text-charcoal group-hover:text-white transition-all duration-150 ease-in-out">
@@ -259,10 +259,10 @@ export const TiktokShopAutomation = () => {
           </div>
         </MaxWidthWrapper>
       </div>
-      <div className="flex flex-col min-h-screen items-center justify-center">
-        <MaxWidthWrapper classNames="grid grid-cols-[1.3fr_1fr] gap-8">
+      <div className="flex flex-col min-h-screen items-center justify-center py-10 px-2">
+        <MaxWidthWrapper classNames="grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-8">
           <div className="flex flex-col gap-5">
-            <h2 className="text-charcoal text-3xl font-bold">
+            <h2 className="text-charcoal text-2xl md:text-3xl font-bold">
               Why You Need TikTok Shop Automation?
             </h2>
             <div className="flex flex-col gap-4">
@@ -271,7 +271,7 @@ export const TiktokShopAutomation = () => {
                   <img
                     src={item.href}
                     alt="Image"
-                    className="w-10 h-10 object-contain"
+                    className="w-8 h-8 md:w-10 md:h-10 object-contain"
                   />
                   <div className="flex flex-col gap-1">
                     <h3 className="text-charcoal font-semibold text-lg">
@@ -284,7 +284,7 @@ export const TiktokShopAutomation = () => {
             </div>
             <CTAButton />
           </div>
-          <div className="relative w-full h-[80%] rounded-xl overflow-hidden">
+          <div className="relative max-md:hidden w-full h-[80%] rounded-xl overflow-hidden">
             <div className="absolute left-0 bottom-0 flex flex-col gap-2 bg-charcoal/60 backdrop-blur-lg w-fit px-10 py-6 rounded-lg">
               <ShieldUserIcon className="size-10 text-white" />
               <p className="w-52 text-sm text-white">
@@ -300,29 +300,29 @@ export const TiktokShopAutomation = () => {
           </div>
         </MaxWidthWrapper>
       </div>
-      <div className="w-full relative h-[60vh] flex items-center justify-center">
-        <div className="absolute flex flex-col items-center gap-10 z-20">
-          <h2 className="text-white font-extralight text-3xl">
+      <div className="w-full relative h-[80vh] md:h-[60vh] flex items-center justify-center">
+        <div className="absolute flex flex-col items-center gap-10 px-2 z-20">
+          <h2 className="text-white font-extralight text-2xl max-md:text-center md:text-3xl">
             Changing the lives Of ecommerce sellers
           </h2>
-          <MaxWidthWrapper classNames="flex items-center justify-center gap-20">
+          <MaxWidthWrapper classNames="flex items-center justify-center flex-col md:flex-row gap-5 md:gap-20">
             {analyticsData.map((item, index) => (
               <div
                 key={index}
                 className={cn(
-                  "flex flex-col gap-3",
-                  index === 1 && "items-center",
-                  index === 2 && "items-end"
+                  "flex flex-col gap-3 max-md:items-center",
+                  index === 1 && "items-center md:items-center",
+                  index === 2 && "items-center md:items-end"
                 )}
               >
-                <h1 className="text-white font-bold text-3xl">
+                <h1 className="text-white font-bold text-2xl md:text-3xl">
                   {item.count}
                   {item.prefix}
                 </h1>
                 <span className="text-white text-base">{item.title}</span>
                 <span
                   className={cn(
-                    "text-white font-extralight text-sm",
+                    "text-white font-extralight max-md:text-center text-sm",
                     index === 1 && "text-center",
                     index === 2 && "text-right"
                   )}
@@ -344,10 +344,10 @@ export const TiktokShopAutomation = () => {
           <source src="/overlay-video.mp4" />
         </video>
       </div>
-      <div className="w-full h-screen">
+      <div className="w-full min-h-screen py-10 px-2">
         <MaxWidthWrapper classNames="py-10 h-full">
-          <div className="grid grid-cols-[1fr_1fr] gap-10 overflow-hidden border border-charcoal rounded-lg h-full pl-10">
-            <div className="flex flex-col gap-3 justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-10 overflow-hidden border border-charcoal rounded-lg h-full px-10 py-5 md:py-0 md:pl-10">
+            <div className="flex flex-col gap-3 justify-center max-md:items-center">
               <h3 className="text-gold font-bold text-3xl">
                 Our success lies in YOUR victory!
               </h3>
@@ -367,7 +367,7 @@ export const TiktokShopAutomation = () => {
                   </div>
                 ))}
               </div>
-              <p className="text-charcoal text-base">
+              <p className="text-charcoal text-base max-md:text-center">
                 Choose our TikTok shop automation service, sit back, and relax
                 while we do the heavy lifting for you!
               </p>
@@ -376,14 +376,14 @@ export const TiktokShopAutomation = () => {
             <img
               src="/services/tiktok/tiktok.jpg"
               alt="Tik Tok"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover hidden md:flex"
             />
           </div>
         </MaxWidthWrapper>
       </div>
-      <div className="w-full min-h-screen">
+      <div className="w-full min-h-screen py-10 px-2">
         <MaxWidthWrapper>
-          <div className="grid grid-cols-[1fr_1.3fr] gap-10 overflow-hidden h-full">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_1.3fr] gap-10 overflow-hidden h-full">
             <img
               src="/services/tiktok/tiktok2.jpg"
               alt="Tiktok 2"
@@ -433,14 +433,17 @@ export const TiktokShopAutomation = () => {
           </div>
         </MaxWidthWrapper>
       </div>
-      <div className="w-full h-screen flex items-center justify-center">
-        <MaxWidthWrapper classNames="flex flex-col gap-12">
-          <h1 className="text-charcoal font-bold text-3xl">
+      <div className="w-full min-h-screen flex items-center justify-center py-10 px-2">
+        <MaxWidthWrapper classNames="flex flex-col gap-12 max-md:items-center">
+          <h1 className="text-charcoal font-bold text-2xl md:text-3xl">
             Benefits of TikTok Shop Automation with EcomHedge
           </h1>
-          <div className="grid grid-cols-3 gap-14">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-14">
             {benefitsData.map((item, index) => (
-              <div key={index} className="flex flex-col gap-2">
+              <div
+                key={index}
+                className="flex flex-col gap-2 max-md:items-center"
+              >
                 <img
                   src={item.href}
                   alt="Image"
@@ -449,17 +452,19 @@ export const TiktokShopAutomation = () => {
                 <h2 className="text-charcoal font-bold text-xl">
                   {item.title}
                 </h2>
-                <h2 className="text-charcoal text-base">{item.desc}</h2>
+                <h2 className="text-charcoal text-base max-md:text-center">
+                  {item.desc}
+                </h2>
               </div>
             ))}
           </div>
           <CTAButton />
         </MaxWidthWrapper>
       </div>
-      <div className="w-full min-h-screen">
+      <div className="w-full min-h-screen py-10 px-2">
         <MaxWidthWrapper>
           <div className="flex flex-col gap-5 w-full">
-            <h1 className="text-gold font-medium text-3xl">
+            <h1 className="text-gold font-medium text-2xl md:text-3xl">
               Unlock your business potential
             </h1>
             <div className="h-3 w-full bg-charcoal" />
@@ -482,9 +487,12 @@ export const TiktokShopAutomation = () => {
             <h1 className="text-gold font-medium text-3xl">
               Our TikTok shop automation services include
             </h1>
-            <div className="grid grid-cols-3 gap-x-9 gap-y-7 w-full">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-9 gap-y-7 w-full">
               {servicesData.map((item, index) => (
-                <div key={index} className="flex flex-col gap-3">
+                <div
+                  key={index}
+                  className="flex flex-col gap-3 max-sm:items-center"
+                >
                   <div className="w-16 h-16 rounded-full bg-charcoal flex items-center justify-center">
                     <item.icon className="size-8 text-white" />
                   </div>
@@ -498,7 +506,7 @@ export const TiktokShopAutomation = () => {
           </div>
         </MaxWidthWrapper>
       </div>
-      <div className="w-full  mt-12">
+      <div className="w-full h-auto py-10 px-2">
         <MaxWidthWrapper classNames="flex flex-col gap-4">
           <h1 className="text-charcoal font-semibold text-3xl">
             Frequently asked questions
@@ -519,10 +527,10 @@ export const TiktokShopAutomation = () => {
           </Accordion>
         </MaxWidthWrapper>
       </div>
-      <div className="relative w-full h-[90vh] bg-gold mt-12 flex items-center justify-center overflow-hidden">
+      <div className="relative w-full h-auto md:h-[90vh] py-5 bg-gold mt-12 flex items-center justify-center overflow-hidden">
         <MaxWidthWrapper>
           <div className="flex items-center justify-between">
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-6 max-md:items-center max-md:text-center w-full">
               <h3 className="text-white text-xl font-extralight">Question?</h3>
               <div className="flex flex-col gap-2">
                 <span className="text-white text-xl font-semibold">
@@ -537,7 +545,7 @@ export const TiktokShopAutomation = () => {
             <img
               src="/services/tiktok/contact-us.png"
               alt="Contact us"
-              className="absolute -right-32 w-[600px] object-contain"
+              className="absolute -right-32 max-md:hidden md:w-[600px] object-contain"
             />
           </div>
         </MaxWidthWrapper>

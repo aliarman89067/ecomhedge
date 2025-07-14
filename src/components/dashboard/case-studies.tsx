@@ -1,51 +1,67 @@
-import { ArrowRight } from "lucide-react"
-import { MaxWidthWrapper } from "../max-width-wrapper"
+import { ArrowRight } from "lucide-react";
+import { MaxWidthWrapper } from "../max-width-wrapper";
 
 export const CaseStudies = () => {
-    return(
-        <section className="w-full h-screen flex items-center justify-center bg-charcoal">
-            <MaxWidthWrapper>
-                <div className="flex flex-col gap-4">
-                    <h1 className='text-white text-3xl'>Experience Brandock - <br />
-            <span className='text-gold'>Our Latest Case Studies:</span></h1>
-            <div className="grid grid-cols-2 gap-10 w-full">
-                <div className="flex flex-col w-full gap-1">
-                    <img src="https://brandock.co/wp-content/uploads/2024/02/T5-4.png" alt="Image 1" className="w-full rounded-lg h-[230px] object-cover" />
-                    <h1 className="text-2xl text-white">$19,760 Profit in 8 Months with FBA Wholesale</h1>
-                    <div className="flex flex-wrap mt-6 gap-x-3 gap-y-1">
-                        <div className="py-2 px-4 rounded-full bg-gold text-white text-xs">
-                            Stable Cashflow
-                        </div>
-                        <div className="py-2 px-4 rounded-full bg-gold text-white text-xs">
-                            FBA Wholesale Automtion
-                        </div>
-                        <div className="py-2 px-4 rounded-full bg-white text-charcoal text-xs flex items-center gap-2">
-                            Read full case study <div className="w-4 h-4 rounded-full bg-gold flex items-center justify-center">
-                                <ArrowRight className="text-white size-3"/>
-                            </div>
-                        </div>
-                    </div>
-                </div>  
-                <div className="flex flex-col w-full gap-1">
-                    <img src="https://brandock.co/wp-content/uploads/2024/02/T3-3-1.png" alt="Image 1" className="w-full rounded-lg h-[230px] object-cover" />
-                    <h1 className="text-2xl text-white">201.62% Sales Growth With 5x Less PPC  Cost</h1>
-                    <div className="flex flex-wrap mt-6 gap-x-3 gap-y-1">
-                        <div className="py-2 px-4 rounded-full bg-gold text-white text-xs">
-                            PPC Management
-                        </div>
-                        <div className="py-2 px-4 rounded-full bg-gold text-white text-xs">
-                            FBA Private Label
-                        </div>
-                        <div className="py-2 px-4 rounded-full bg-white text-charcoal text-xs flex items-center gap-2">
-                            Read full case study <div className="w-4 h-4 rounded-full bg-gold flex items-center justify-center">
-                                <ArrowRight className="text-white size-3"/>
-                            </div>
-                        </div>
-                    </div>
-                </div>  
-            </div>
+  return (
+    <section className="w-full min-h-screen py-10 flex items-center justify-center bg-charcoal">
+      <MaxWidthWrapper>
+        <div className="flex flex-col gap-4">
+          <h1 className="text-white text-3xl">
+            Experience Brandock - <br />
+            <span className="text-gold">Our Latest Case Studies:</span>
+          </h1>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full">
+            <div className="flex flex-col w-full gap-1">
+              <img
+                src="https://brandock.co/wp-content/uploads/2024/02/T5-4.png"
+                alt="Image 1"
+                className="w-full rounded-lg h-[230px] object-cover"
+              />
+              <h1 className="text-2xl text-white">
+                $19,760 Profit in 8 Months with FBA Wholesale
+              </h1>
+              <div className="flex flex-wrap mt-6 gap-x-3 gap-y-1">
+                <div className="py-2 px-4 rounded-full bg-gold text-white text-xs">
+                  Stable Cashflow
                 </div>
-            </MaxWidthWrapper>
-        </section>
-    )
-}
+                <div className="py-2 px-4 rounded-full bg-gold text-white text-xs">
+                  FBA Wholesale Automtion
+                </div>
+                <div className="py-2 px-4 rounded-full bg-white text-charcoal text-xs flex items-center gap-2">
+                  Read full case study{" "}
+                  <div className="w-4 h-4 rounded-full bg-gold flex items-center justify-center">
+                    <ArrowRight className="text-white size-3" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col w-full gap-1">
+              <img
+                src="https://brandock.co/wp-content/uploads/2024/02/T3-3-1.png"
+                alt="Image 1"
+                className="w-full rounded-lg h-[230px] object-cover"
+              />
+              <h1 className="text-2xl text-white">
+                201.62% Sales Growth With 5x Less PPC Cost
+              </h1>
+              <div className="flex flex-wrap mt-6 gap-x-3 gap-y-1">
+                <div className="py-2 px-4 rounded-full bg-gold text-white text-xs">
+                  PPC Management
+                </div>
+                <div className="py-2 px-4 rounded-full bg-gold text-white text-xs">
+                  FBA Private Label
+                </div>
+                <div className="py-2 px-4 rounded-full bg-white text-charcoal text-xs flex items-center gap-2">
+                  Read full case study{" "}
+                  <div className="w-4 h-4 rounded-full bg-gold flex items-center justify-center">
+                    <ArrowRight className="text-white size-3" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </MaxWidthWrapper>
+    </section>
+  );
+};
