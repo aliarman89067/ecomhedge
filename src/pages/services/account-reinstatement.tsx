@@ -8,6 +8,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
+import { TabName } from "@/lib/tab-name";
 import { cn } from "@/lib/utils";
 import {
   ArrowsUpFromLineIcon,
@@ -139,6 +140,8 @@ export const AccountReinstatement = () => {
       desc: "While we have a high success rate, reinstatement cannot be guaranteed due to platform discretion in evaluating each appeal. However, our experienced team maximizes your chances by adhering strictly to platform guidelines and leveraging proven strategies.",
     },
   ];
+
+  TabName()
   return (
     <section className="flex flex-col w-full min-h-screen">
       {/* Hero */}
@@ -161,7 +164,7 @@ export const AccountReinstatement = () => {
           </h1>
           <p className="text-base max-md:text-center">
             Running multiple Amazon accounts is a leading cause of account
-            suspension—and it can really mess up your earnings. At EcomHedge, we
+            suspension—and it can really mess up your earnings. At ecomasis, we
             understand how it can negatively impact your profits. We have a team
             of legal Amazon account reinstatement specialists who have the
             expertise to save your multiple accounts from getting suspended. If
@@ -351,7 +354,7 @@ export const AccountReinstatement = () => {
         <MaxWidthWrapper classNames="grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-8">
           <div className="flex flex-col gap-5">
             <h2 className="text-charcoal text-2xl md:text-3xl font-bold">
-              How We Do It at EcomHedge?
+              How We Do It at ecomasis?
             </h2>
             <div className="flex flex-col gap-4">
               {perksData.map((item, index) => (
@@ -479,11 +482,11 @@ export const AccountReinstatement = () => {
             />
             <div className="flex flex-col gap-4">
               <h1 className="text-gold font-semibold text-2xl">
-                With EcomHedge’s Amazon Account Reinstatement Service, Your
+                With ecomasis’s Amazon Account Reinstatement Service, Your
                 Comeback Is Just a Matter of Time
               </h1>
               <p className="text-charcoal text-sm">
-                At EcomHedge, our experts specialize in reinstating suspended
+                At ecomasis, our experts specialize in reinstating suspended
                 accounts. We understand the frustration and difficulties caused
                 by a suspended account. Trust our Amazon reinstatement services
                 to get your account up and live without any hassle.

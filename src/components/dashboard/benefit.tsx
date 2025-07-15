@@ -3,14 +3,14 @@ import { MaxWidthWrapper } from "../max-width-wrapper";
 
 export const Benefits = () => {
   return (
-    <div className="w-full min-h-screen flex items-center justify-center bg-charcoal">
+    <div className="w-full min-h-screen flex items-center justify-center bg-charcoal py-10">
       <MaxWidthWrapper classNames="flex flex-col gap-4 items-center">
         <div className="grid grid-cols-1 lg:grid-cols-[2fr_1.5fr]  gap-10 w-full">
           {/* Top Left */}
           <h1 className="text-white text-2xl lg:text-4xl">
             Wholesale Gains with{" "}
             <span className="inline-flex text-gold font-bold relative">
-              <span>Ecomhedge&apos;s</span>
+              <span>Ecomasis</span>
               <img
                 src="/heading-stars.png"
                 alt="Stars"
@@ -62,7 +62,7 @@ export const Benefits = () => {
               </div>
               <div className="relative mt-2">
                 <QuoteIcon className="text-white absolute hidden md:flex -left-3 -top-1 size-3 rotate-[200deg]" />
-                <QuoteIcon className="text-white absolute hidden md:flex left-24 lg:right-0 -bottom-1 size-3 rotate-[20deg]" />
+                <QuoteIcon className="text-white absolute hidden md:flex left-24 lg:left-[235px] -bottom-1 size-3 rotate-[20deg]" />
                 <p className="text-white text-sm">
                   With our Amazon wholesale automation, resell trusted brands
                   with built-in demand—minimizing risk and maximizing reliable

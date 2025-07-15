@@ -5,8 +5,10 @@ import { Headline } from "@/components/dashboard/head-line";
 import { Hero } from "@/components/dashboard/hero";
 import { Services } from "@/components/dashboard/services";
 import { VideoSection } from "@/components/dashboard/video-section";
+import { TabName } from "@/lib/tab-name";
 
 export const Home = () => {
+  TabName();
   return (
     <section className="min-h-screen flex flex-col overflow-hidden">
       <Hero />

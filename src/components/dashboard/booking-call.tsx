@@ -9,14 +9,17 @@ export const BookingCall = () => {
         </h1>
         <button className="h-14 pl-6 pr-1 w-fit rounded-full bg-charcoal flex items-center justify-between gap-3 cursor-pointer">
           <span className="text-white">Book a Call Now</span>
-          <div className="h-12 w-12 rounded-full bg-white flex items-center justify-center">
+          <a
+            href="tel:+1(469) 935-7701"
+            className="h-12 w-12 rounded-full bg-white flex items-center justify-center"
+          >
             <PhoneIcon className="size-6 text-charcoal" />
-          </div>
+          </a>
         </button>
       </div>
       <img
-        src="https://brandock.co/wp-content/uploads/2024/05/1-1-1536x1160.jpg"
-        alt="Image"
+        src="/booking.jpg"
+        alt="Booking image"
         className="w-full h-[500px] md:w-full md:h-full object-contain"
       />
     </div>

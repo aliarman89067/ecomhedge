@@ -8,6 +8,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
+import { TabName } from "@/lib/tab-name";
 import { cn } from "@/lib/utils";
 import {
   BrainIcon,
@@ -132,8 +133,8 @@ export const ShopifyDropshippingAutomation = () => {
     },
     {
       title:
-        "What distinguishes EcomHedge's Shopify Dropshipping Automation from other providers?",
-      desc: "EcomHedge specializes in comprehensive Shopify Dropshipping Automation that includes product research, store setup, marketing strategies, and order management. We emphasize quality service, prompt customer support, and a commitment to client success.",
+        "What distinguishes ecomasis's Shopify Dropshipping Automation from other providers?",
+      desc: "ecomasis specializes in comprehensive Shopify Dropshipping Automation that includes product research, store setup, marketing strategies, and order management. We emphasize quality service, prompt customer support, and a commitment to client success.",
     },
     {
       title:
@@ -141,6 +142,7 @@ export const ShopifyDropshippingAutomation = () => {
       desc: "Our pricing model for Shopify Dropshipping Automation is transparent and competitive. We charge a fee based on the services provided, including store setup, marketing campaigns, and ongoing support. This ensures clarity and aligns our interests with your business growth.",
     },
   ];
+  TabName()
   return (
     <section className="flex flex-col w-full min-h-screen">
       {/* Hero */}
@@ -264,7 +266,7 @@ export const ShopifyDropshippingAutomation = () => {
         <MaxWidthWrapper classNames="grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-8">
           <div className="flex flex-col gap-5">
             <h2 className="text-charcoal text-2xl md:text-3xl font-bold">
-              How We Do It at EcomHedge?
+              How We Do It at ecomasis?
             </h2>
             <div className="flex flex-col gap-4">
               {perksData.map((item, index) => (
@@ -369,7 +371,7 @@ export const ShopifyDropshippingAutomation = () => {
                 ))}
               </div>
               <p className="text-charcoal text-base max-md:text-center">
-                Choose EcomHedge as your Shopify automation agency, sit back, and
+                Choose ecomasis as your Shopify automation agency, sit back, and
                 relax while we do the heavy lifting for you!
               </p>
               <CTAButton />
@@ -396,7 +398,7 @@ export const ShopifyDropshippingAutomation = () => {
                 Private Label
               </h1>
               <p className="text-charcoal text-sm">
-                EcomHedge is one of the most reliable and trusted Shopify
+                ecomasis is one of the most reliable and trusted Shopify
                 automation partners in town. Our team excels in setting up and
                 managing recession-proof businesses on this platform, leveraging
                 their unbounded experience and expertise. .
@@ -408,7 +410,7 @@ export const ShopifyDropshippingAutomation = () => {
                 are the best at what we do!
               </p>
               <h2 className="text-gold font-semibold text-2xl">
-                EcomHedge, a Shopify Automation Agency, Helps Streamline and
+                ecomasis, a Shopify Automation Agency, Helps Streamline and
                 Scale Your Shopify Store
               </h2>
               <h3 className="text-charcoal font-semibold text-xl">
@@ -429,7 +431,7 @@ export const ShopifyDropshippingAutomation = () => {
       <div className="w-full min-h-screen flex items-center justify-center py-10 px-2">
         <MaxWidthWrapper classNames="flex flex-col gap-12 max-md:items-center">
           <h1 className="text-charcoal font-bold text-2xl md:text-3xl">
-            Benefits of Automated Shopify Dropshipping with EcomHedge
+            Benefits of Automated Shopify Dropshipping with ecomasis
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-14">
             {benefitsData.map((item, index) => (

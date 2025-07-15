@@ -8,6 +8,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
+import { TabName } from "@/lib/tab-name";
 import { cn } from "@/lib/utils";
 import {
   Brain,
@@ -72,17 +73,17 @@ export const TiktokShopAutomation = () => {
     {
       href: "/services/tiktok/sun.jpg",
       title: "Expand your reach",
-      desc: "EcomHedge strategies tap into TikTok's vast user base, increasing your brand's visibility and attracting a global audience.",
+      desc: "ecomasis strategies tap into TikTok's vast user base, increasing your brand's visibility and attracting a global audience.",
     },
     {
       href: "/services/tiktok/laptop.jpg",
       title: "Streamline operations",
-      desc: "EcomHedge automates your inventory management, order processing, and customer service for a seamless and efficient operation.",
+      desc: "ecomasis automates your inventory management, order processing, and customer service for a seamless and efficient operation.",
     },
     {
       href: "/services/tiktok/ranking.jpg",
       title: "Boost your sales",
-      desc: "EcomHedge expertise to drive high engagement and conversions with targeted TikTok campaigns tailored for your audience.",
+      desc: "ecomasis expertise to drive high engagement and conversions with targeted TikTok campaigns tailored for your audience.",
     },
   ];
   const servicesData = [
@@ -123,7 +124,7 @@ export const TiktokShopAutomation = () => {
       desc: "TikTok Shop Automation services manage your TikTok shop, handling everything from product sourcing and listings to order fulfillment and customer service, allowing you to earn passively.",
     },
     {
-      title: "Why Should I Trust EcomHedge For TikTok Shop Automation?",
+      title: "Why Should I Trust ecomasis For TikTok Shop Automation?",
       desc: "Our experienced team ensures your shop’s success with proven strategies and a strong track record in eCommerce. We prioritize transparency, reliability, and exceptional service.",
     },
     {
@@ -139,6 +140,7 @@ export const TiktokShopAutomation = () => {
       desc: "There are no hidden fees. We provide clear, upfront costs so you always know what you’re paying for and can plan your investments confidently.",
     },
   ];
+  TabName()
   return (
     <section className="flex flex-col w-full min-h-screen">
       {/* Hero */}
@@ -173,7 +175,7 @@ export const TiktokShopAutomation = () => {
                 />
               </div>
               <p className="text-sm text-charcoal group-hover:text-white transition-all duration-150 ease-in-out">
-                With EcomHedge&apos;s top-notch TikTok shop automation, you get a
+                With ecomasis&apos;s top-notch TikTok shop automation, you get a
                 chance to be as creative as you want in your marketing efforts.
                 Innovative marketing is TikTok&apos;s USP, and we make sure to
                 leverage it fully!
@@ -393,16 +395,16 @@ export const TiktokShopAutomation = () => {
                 A TikTok Shop Automation Service that Drives Excellent Profits
               </h1>
               <p className="text-charcoal text-sm">
-                Maximize TikTok's explosive growth with EcomHedge's expert
+                Maximize TikTok's explosive growth with ecomasis's expert
                 management and strategic TikTok automation, ensuring robust
-                sales and visibility for your store. EcomHedge, a TikTok shop
+                sales and visibility for your store. ecomasis, a TikTok shop
                 private label service, manages marketing, order fulfillment, and
                 more, freeing you to focus on growth while enjoying reliable
                 passive income.
               </p>
               <p className="text-charcoal text-sm">
                 With over half a decade in ecommerce across multiple platforms,
-                EcomHedge offers a dependable route to profitable TikTok stores,
+                ecomasis offers a dependable route to profitable TikTok stores,
                 backed by extensive industry experience and success.
               </p>
               <h2 className="text-gold font-semibold text-2xl">
@@ -417,13 +419,13 @@ export const TiktokShopAutomation = () => {
                 Client-centric approach
               </h3>
               <p className="text-charcoal text-sm">
-                At EcomHedge, your success is our priority. We provide
+                At ecomasis, your success is our priority. We provide
                 transparent communication, detailed performance tracking, and
                 ongoing support to help you navigate and thrive in the dynamic
                 world of TikTok eCommerce.
               </p>
               <p className="text-charcoal text-sm">
-                Ready to launch your profitable TikTok store with EcomHedge?
+                Ready to launch your profitable TikTok store with ecomasis?
                 Schedule a call with our team today to explore how we can help
                 you achieve your eCommerce goals effortlessly with our TikTok
                 private label and automation service.
@@ -435,7 +437,7 @@ export const TiktokShopAutomation = () => {
       <div className="w-full min-h-screen flex items-center justify-center py-10 px-2">
         <MaxWidthWrapper classNames="flex flex-col gap-12 max-md:items-center">
           <h1 className="text-charcoal font-bold text-2xl md:text-3xl">
-            Benefits of TikTok Shop Automation with EcomHedge
+            Benefits of TikTok Shop Automation with ecomasis
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-14">
             {benefitsData.map((item, index) => (

@@ -65,23 +65,7 @@ export const Footer = () => {
       title: "Find Us",
       links: [
         {
-          label: "5429 Lyndon B Johnson Fwy #800, Dallas, TX 75240",
-          href: "#footer",
-        },
-        {
-          label: "4140 Temescal Canyon Rd, Corona, CA 92883",
-          href: "#footer",
-        },
-        {
-          label: "222 Jarvis St, Toronto, ON M5B 2B8",
-          href: "#footer",
-        },
-        {
-          label: "782M+XWV - Port Saeed - Dubai - United Arab Emirates",
-          href: "#footer",
-        },
-        {
-          label: "Tai Roshan Trade Center, Karachi, Pakistan - 74000",
+          label: "777 S Central Expy #4h Richardson, TX 75080, USA",
           href: "#footer",
         },
       ],
@@ -90,7 +74,7 @@ export const Footer = () => {
   return (
     <footer
       id="footer"
-      className="bg-black flex flex-col min-h-screen pt-20 pb-16 gap-10"
+      className="bg-black flex flex-col min-h-screen pt-20 pb-5 gap-10"
     >
       <div className="flex justify-between px-2 max-w-5xl max-md:gap-8 flex-col md:flex-row w-full mx-auto">
         {data.map((item, index) => (
@@ -121,12 +105,16 @@ export const Footer = () => {
         >
           +1(469) 935-7701
         </a>
+        <a href="mailto:info@ecomasis.com">info@ecomasis.com</a>
       </div>
       <div className="w-full  mx-auto -mt-8">
         <h1 className="text-white font-extralight text-3xl lg:text-[170px] text-center">
-          EcomHedge
+          Ecomasis
         </h1>
       </div>
+      <p className="text-white text-center my-2">
+        Copyright © 2025 ECOM ASIS. All Rights Reserved.
+      </p>
     </footer>
   );
 };

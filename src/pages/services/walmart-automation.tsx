@@ -8,6 +8,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
+import { TabName } from "@/lib/tab-name";
 import { cn } from "@/lib/utils";
 import {
   BoxIcon,
@@ -24,22 +25,22 @@ export const WalmartAutomation = () => {
     {
       href: "/services/walmart/circle.png",
       title: "Tapping Into the Power of Walmart’s Customer Base",
-      desc: "How amazing it would be if you could tap into the millions of loyal Walmart customers? We at EcomHedge will help you enhance your store's visibility and drive more traffic by efficiently targeting these customers.",
+      desc: "How amazing it would be if you could tap into the millions of loyal Walmart customers? We at ecomasis will help you enhance your store's visibility and drive more traffic by efficiently targeting these customers.",
     },
     {
       href: "/services/walmart/shop.png",
       title: "Easy Expansion of Your Market",
-      desc: "Expand effortlessly with EcomHedge Walmart automation. Focus on your core business while we handle marketing, sales, and customer service, ensuring a smooth market expansion.",
+      desc: "Expand effortlessly with ecomasis Walmart automation. Focus on your core business while we handle marketing, sales, and customer service, ensuring a smooth market expansion.",
     },
     {
       href: "/services/walmart/hand.png",
       title: "Efficient Business Management",
-      desc: "Experience hassle-free store management with EcomHedge’s expertise, allowing you to enjoy seamless operations and focus on strategic growth without day-to-day oversight.",
+      desc: "Experience hassle-free store management with ecomasis’s expertise, allowing you to enjoy seamless operations and focus on strategic growth without day-to-day oversight.",
     },
     {
       href: "/services/walmart/moneyBag.png",
       title: "Guaranteed Passive Income",
-      desc: "EcomHedge manages your store efficiently, enabling you to enjoy steady revenue streams with minimal involvement.",
+      desc: "ecomasis manages your store efficiently, enabling you to enjoy steady revenue streams with minimal involvement.",
     },
   ];
   const analyticsData = [
@@ -76,7 +77,7 @@ export const WalmartAutomation = () => {
     {
       href: "/services/tiktok/laptop.jpg",
       title: "End-to-end solutions",
-      desc: "We at EcomHedge proudly offer comprehensive automation services, covering not just inventory management, listing optimization, and order processing but also customer service that is tailored to your business's unique requirements.",
+      desc: "We at ecomasis proudly offer comprehensive automation services, covering not just inventory management, listing optimization, and order processing but also customer service that is tailored to your business's unique requirements.",
     },
     {
       href: "/services/tiktok/ranking.jpg",
@@ -132,21 +133,22 @@ export const WalmartAutomation = () => {
     },
     {
       title:
-        "What sets EcomHedge's Walmart Automation apart from other providers?",
-      desc: "EcomHedge offers a unique blend of expertise, scalability, and flexibility. We employ advanced automation tools and strategies to optimize your storefront and maximize profitability. Our flexible payment options and commitment to client success differentiate us from other service providers.",
+        "What sets ecomasis's Walmart Automation apart from other providers?",
+      desc: "ecomasis offers a unique blend of expertise, scalability, and flexibility. We employ advanced automation tools and strategies to optimize your storefront and maximize profitability. Our flexible payment options and commitment to client success differentiate us from other service providers.",
     },
     {
       title: "How does the pricing structure work for Walmart Automation?",
       desc: "Our pricing structure is designed to align with your success. We typically charge a percentage of the net profits generated from your Walmart storefront each month. This performance-based model ensures that our incentives are aligned with your business growth and profitability.",
     },
   ];
+  TabName();
   return (
     <section className="flex flex-col w-full min-h-screen">
       {/* Hero */}
       <ServicesHero
         title={
           <h1 className="text-white text-3xl font-bold max-md:text-center">
-            EcomHedge: The Most{" "}
+            ecomasis: The Most{" "}
             <div className="inline-flex bg-black text-gold px-4 py-2 rounded-full">
               Trusted Walmart
             </div>{" "}
@@ -232,7 +234,7 @@ export const WalmartAutomation = () => {
                 <p className="text-sm text-charcoal group-hover:text-white transition-all duration-150 ease-in-out">
                   Did you know that you can run multiple business models on your
                   Walmart Store: Walmart Retail Arbitrage, Walmart Fulfillment
-                  Services, and Self-Fulfillment? Fret not, we at EcomHedge will
+                  Services, and Self-Fulfillment? Fret not, we at ecomasis will
                   help you choose the most suitable ones for you.
                 </p>
               </div>
@@ -368,7 +370,7 @@ export const WalmartAutomation = () => {
                 ))}
               </div>
               <p className="text-charcoal text-base max-md:text-center">
-                Choose EcomHedge as your Amazon FBA company, sit back, and relax
+                Choose ecomasis as your Amazon FBA company, sit back, and relax
                 while we do the heavy lifting for you!
               </p>
               <CTAButton />
@@ -403,7 +405,7 @@ export const WalmartAutomation = () => {
               <p className="text-charcoal text-sm">
                 No hidden charges and no (unpleasant) surprises when you get
                 your Walmart private label set up and automated by the best in
-                town—EcomHedge!
+                town—ecomasis!
               </p>
               <h2 className="text-gold font-semibold text-2xl">
                 Walmart Automation Services That You Can Trust
@@ -412,7 +414,7 @@ export const WalmartAutomation = () => {
                 Client-centric approach
               </h3>
               <p className="text-charcoal text-sm">
-                At EcomHedge, we take pride in offering the most comprehensive
+                At ecomasis, we take pride in offering the most comprehensive
                 set of Walmart automation services that do not just help you
                 manage the day-to-day operations, but offer insightful reports,
                 and analytics tools for improving store’s performance.
@@ -424,7 +426,7 @@ export const WalmartAutomation = () => {
       <div className="w-full min-h-screen flex items-center justify-center py-10 px-2">
         <MaxWidthWrapper classNames="flex flex-col gap-12 max-md:items-center">
           <h1 className="text-charcoal font-bold text-2xl md:text-3xl">
-            Benefits of Walmart Automation with EcomHedge
+            Benefits of Walmart Automation with ecomasis
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-14">
             {benefitsData.map((item, index) => (

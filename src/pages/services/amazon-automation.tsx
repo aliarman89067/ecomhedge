@@ -8,6 +8,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
+import { TabName } from "@/lib/tab-name";
 import { cn } from "@/lib/utils";
 import {
   BoxIcon,
@@ -120,7 +121,7 @@ export const AmazonAutomation = () => {
   const faqData = [
     {
       title: "What are automation services?",
-      desc: "EcomHedge automates every aspect of your online store, from product sourcing and listings to inventory, order processing, and customer support, using proprietary tools to scale your business and boost profitability.",
+      desc: "ecomasis automates every aspect of your online store, from product sourcing and listings to inventory, order processing, and customer support, using proprietary tools to scale your business and boost profitability.",
     },
     {
       title: "Why should i trust your company for storefront automation?",
@@ -132,9 +133,10 @@ export const AmazonAutomation = () => {
     },
     {
       title: "Are there any hidden fees in automation?",
-      desc: "With EcomHedge, there are no hidden fees. We prioritize transparency, offering clear, upfront pricing for all our services, so you always know exactly what you're paying for.",
+      desc: "With ecomasis, there are no hidden fees. We prioritize transparency, offering clear, upfront pricing for all our services, so you always know exactly what you're paying for.",
     },
   ];
+  TabName()
   return (
     <section className="flex flex-col w-full min-h-screen">
       {/* Hero */}
@@ -154,7 +156,7 @@ export const AmazonAutomation = () => {
       <div className="flex flex-col min-h-screen items-center justify-center py-10 px-2">
         <MaxWidthWrapper classNames="flex flex-col gap-10">
           <h1 className="text-charcoal font-bold text-2xl md:text-3xl text-center">
-            Wholesale Benefits with EcomHedge's Amazon FBA Automation Service
+            Wholesale Benefits with ecomasis's Amazon FBA Automation Service
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 w-full">
             <div className="group flex flex-col gap-3 bg-white hover:bg-charcoal rounded-lg py-4 px-5 border border-gray-300 transition-all duration-150 ease-in-out">
@@ -264,7 +266,7 @@ export const AmazonAutomation = () => {
         <MaxWidthWrapper classNames="grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-8">
           <div className="flex flex-col gap-5">
             <h2 className="text-charcoal text-2xl md:text-3xl font-bold">
-              How We Do It at EcomHedge?
+              How We Do It at ecomasis?
             </h2>
             <div className="flex flex-col gap-4">
               {perksData.map((item, index) => (
@@ -369,7 +371,7 @@ export const AmazonAutomation = () => {
                 ))}
               </div>
               <p className="text-charcoal text-base max-md:text-center">
-                Choose EcomHedge as your Amazon FBA company, sit back, and relax
+                Choose ecomasis as your Amazon FBA company, sit back, and relax
                 while we do the heavy lifting for you!
               </p>
               <CTAButton />
@@ -395,7 +397,7 @@ export const AmazonAutomation = () => {
                 How Our Amazon FBA Automation Service Drives Success?
               </h1>
               <p className="text-charcoal text-sm">
-                EcomHedge pioneers a transformative online business program,
+                ecomasis pioneers a transformative online business program,
                 setting benchmarks in the industry. Our mission is to foster and
                 elevate the next generation of agencies.
               </p>
@@ -414,7 +416,7 @@ export const AmazonAutomation = () => {
                 Optimize your inventory and sales with our automation tools
               </h3>
               <p className="text-charcoal text-sm">
-                At EcomHedge, we focus on your business’s operational efficiency
+                At ecomasis, we focus on your business’s operational efficiency
                 to drive sales growth. Whether you operate with FBA, FBM, or PL,
                 we manage listings, orders, product sourcing, and inventory with
                 utmost finesse. With state-of-the-art automation tools, your
@@ -428,7 +430,7 @@ export const AmazonAutomation = () => {
       <div className="w-full min-h-screen flex items-center justify-center py-10 px-2">
         <MaxWidthWrapper classNames="flex flex-col gap-12 max-md:items-center">
           <h1 className="text-charcoal font-bold text-2xl md:text-3xl">
-            Benefits of launching automation with EcomHedge
+            Benefits of launching automation with ecomasis
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-14">
             {benefitsData.map((item, index) => (

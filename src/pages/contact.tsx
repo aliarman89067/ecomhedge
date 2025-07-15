@@ -6,51 +6,58 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { TabName } from "@/lib/tab-name";
 import { MapPin } from "lucide-react";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const Contact = () => {
+  const location = useLocation();
+
   const faqData = [
     {
-      title: "What is EcomHedge, and what does it do?",
-      desc: "EcomHedge is a digital consultancy firm that specializes in guiding individuals and businesses through the process of starting, growing, and optimizing their ventures for success.",
+      title: "What is ecomasis, and what does it do?",
+      desc: "ecomasis is a digital consultancy firm that specializes in guiding individuals and businesses through the process of starting, growing, and optimizing their ventures for success.",
     },
     {
-      title: "How can EcomHedge help my business?",
-      desc: "EcomHedge offers tailored strategies, expert guidance, and solutions to help businesses increase revenue, optimize operations, and achieve their goals.",
+      title: "How can ecomasis help my business?",
+      desc: "ecomasis offers tailored strategies, expert guidance, and solutions to help businesses increase revenue, optimize operations, and achieve their goals.",
     },
     {
-      title: "What services does EcomHedge provide?",
-      desc: "EcomHedge offers a range of services, including business planning, digital marketing, brand development, and more. Explore our services page for details.",
+      title: "What services does ecomasis provide?",
+      desc: "ecomasis offers a range of services, including business planning, digital marketing, brand development, and more. Explore our services page for details.",
     },
     {
-      title: "Is EcomHedge only for startups?",
-      desc: "No, EcomHedge caters to both startups and established businesses looking to enhance their revenue streams and expand their market presence.",
+      title: "Is ecomasis only for startups?",
+      desc: "No, ecomasis caters to both startups and established businesses looking to enhance their revenue streams and expand their market presence.",
     },
     {
-      title: "Can I get a personalized business plan from EcomHedge?",
-      desc: "Yes, EcomHedge provides personalized business plans tailored to your specific goals and needs.",
+      title: "Can I get a personalized business plan from ecomasis?",
+      desc: "Yes, ecomasis provides personalized business plans tailored to your specific goals and needs.",
     },
     {
-      title: "How do I schedule a consultation with EcomHedge?",
+      title: "How do I schedule a consultation with ecomasis?",
       desc: "You can schedule a consultation by visiting our contact page or reaching out via email or phone.",
     },
     {
-      title: "Is EcomHedge's guidance confidential?",
-      desc: "Yes, EcomHedge values your privacy and follows strict confidentiality practices. We do not share your information without your consent.",
+      title: "Is ecomasis's guidance confidential?",
+      desc: "Yes, ecomasis values your privacy and follows strict confidentiality practices. We do not share your information without your consent.",
     },
     {
-      title: "What industries does EcomHedge specialize in?",
-      desc: "EcomHedge has experience across various industries, including e-commerce, digital marketing, technology, and more. We adapt our strategies to fit your industry.",
+      title: "What industries does ecomasis specialize in?",
+      desc: "ecomasis has experience across various industries, including e-commerce, digital marketing, technology, and more. We adapt our strategies to fit your industry.",
     },
     {
-      title: "How long does it take to see results with EcomHedge?",
+      title: "How long does it take to see results with ecomasis?",
       desc: "Results vary based on your goals and industry, but many clients experience positive outcomes within a few months.",
     },
     {
-      title: "Does EcomHedge offer ongoing support?",
+      title: "Does ecomasis offer ongoing support?",
       desc: "Yes, we provide ongoing support to help you adapt and grow as your business evolves.",
     },
   ];
+
+  TabName();
 
   return (
     <section className="flex flex-col w-full h-full">
@@ -68,21 +75,7 @@ const Contact = () => {
                 </h2>
                 <div className="flex flex-col gap-1">
                   <span className="flex items-center gap-2 text-white text-sm">
-                    <MapPin /> 5429 Lyndon B Johnson Fwy #800, Dallas, TX 75240
-                  </span>
-                  <span className="flex items-center gap-2 text-white text-sm">
-                    <MapPin /> 4140 Temescal Canyon Rd, Corona, CA 92883
-                  </span>
-                  <span className="flex items-center gap-2 text-white text-sm">
-                    <MapPin /> 222 Jarvis St, Toronto, ON M5B 2B8
-                  </span>
-                  <span className="flex items-center gap-2 text-white text-sm">
-                    <MapPin /> 782M+XWV - Port Saeed - Dubai - United Arab
-                    Emirates
-                  </span>
-                  <span className="flex items-center gap-2 text-white text-sm">
-                    <MapPin /> Tai Roshan Trade Center, Karachi, Pakistan -
-                    74000
+                    <MapPin /> 777 S Central Expy #4h Richardson, TX 75080, USA
                   </span>
                   <div className="mt-3">
                     <CTAButton />
@@ -93,9 +86,18 @@ const Contact = () => {
                 <h2 className="text-white font-semibold text-xl md:text-2xl lg:text-3xl">
                   Contact Info
                 </h2>
-                <span className="flex items-center gap-2 text-white text-sm">
-                  +1(469) 935-7701{" "}
-                </span>
+                <a
+                  href="tel:+1(469) 935-7701"
+                  className="flex items-center gap-2 text-white text-sm"
+                >
+                  +1(469) 935-7701
+                </a>
+                <a
+                  href="mailto:info@ecomasis.com"
+                  className="flex items-center gap-2 text-white text-sm"
+                >
+                  info@ecomasis.com
+                </a>
               </div>
               <div className="flex flex-col items-center justify-center gap-3 w-full py-10 px-5 bg-charcoal rounded-xl">
                 <h2 className="text-white font-semibold text-xl md:text-2xl lg:text-3xl">

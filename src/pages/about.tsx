@@ -1,5 +1,6 @@
 import { CTAButton } from "@/components/cta-button";
 import { MaxWidthWrapper } from "@/components/max-width-wrapper";
+import { TabName } from "@/lib/tab-name";
 import { cn } from "@/lib/utils";
 import {
   CheckIcon,
@@ -82,7 +83,7 @@ const About = () => {
     {
       icon: MessageCircleOffIcon,
       title: "Keep it simple",
-      desc: "Clear and direct communication is key to simplicity at EcomHedge. We actively listen, incorporate diverse viewpoints, and encourage open dialogue. Our transparent approach builds trust with both our team and clients.",
+      desc: "Clear and direct communication is key to simplicity at ecomasis. We actively listen, incorporate diverse viewpoints, and encourage open dialogue. Our transparent approach builds trust with both our team and clients.",
     },
     {
       icon: HeartHandshakeIcon,
@@ -90,6 +91,7 @@ const About = () => {
       desc: "Collaboration is ingrained in our DNA. By working together seamlessly, we harness collective strengths to drive success. Embracing inclusivity and mutual respect, we foster an environment where ideas flourish and innovation thrives.",
     },
   ];
+  TabName();
 
   return (
     <section className="flex flex-col w-full h-full">
@@ -98,10 +100,10 @@ const About = () => {
         <MaxWidthWrapper classNames="z-20">
           <div className="flex flex-col items-center justify-center gap-6">
             <h1 className="text-white font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
-              Go global with EcomHedge
+              Go global with ecomasis
             </h1>
             <p className="text-white text-center px-2">
-              EcomHedge aims to lead the way in digital solutions, empowering
+              ecomasis aims to lead the way in digital solutions, empowering
               global businesses through expert account setup, marketing
               strategies, and business consultancy. Our vision is to innovate
               and streamline operations, ensuring every client achieves
@@ -110,7 +112,7 @@ const About = () => {
               their full potential.
             </p>
             <p className="text-white text-center px-2">
-              At EcomHedge, we leverage cutting-edge automation solutions to
+              At ecomasis, we leverage cutting-edge automation solutions to
               simplify processes for our clients. Our innovative approach
               streamlines account setup, enhances marketing efficiency, and
               provides strategic business consultancy. By integrating
@@ -236,7 +238,7 @@ const About = () => {
         <MaxWidthWrapper classNames="grid grid-cols-1 md:grid-cols-2 gap-10">
           <div className="flex flex-col gap-4">
             <h1 className="text-gold font-bold text-2xl md:text-3xl lg:text-4xl">
-              EcomHedge, your top choice for empowering business automation
+              ecomasis, your top choice for empowering business automation
             </h1>
             <p className="text-charcoal">
               We're for the visionaries. Those driven by success, fueled by
@@ -255,7 +257,7 @@ const About = () => {
             </p>
             <p className="text-charcoal">
               For entrepreneurs launching their ventures, for families relying
-              on them, for safeguarding innovative ideas—we are EcomHedge. Here
+              on them, for safeguarding innovative ideas—we are ecomasis. Here
               to formalize aspirations and pave the way forward.
             </p>
           </div>
@@ -320,7 +322,7 @@ const About = () => {
       </div>
       <div className="w-full min-h-screen py-10">
         <MaxWidthWrapper classNames="grid grid-cols-1 md:grid-cols-2 gap-10">
-          <div className="relative w-full h-full">
+          <div className="relative w-full h-[600px]">
             <div className="absolute left-0 bottom-0 flex flex-col gap-2 bg-charcoal/60 backdrop-blur-lg w-fit px-10 py-6 rounded-lg">
               <CheckIcon className="size-10 text-white" />
               <p className="w-52 text-sm text-white">
@@ -330,12 +332,12 @@ const About = () => {
             <img
               src="/about/image3.jpg"
               alt="Image 3"
-              className="h-full object-cover rounded-xl"
+              className="h-full w-full object-cover rounded-xl"
             />
           </div>
           <div className="flex flex-col gap-4">
             <h1 className="text-gold font-bold text-2xl md:text-3xl lg:text-4xl">
-              The EcomHedge journey into automation
+              The ecomasis journey into automation
             </h1>
             <p className="text-charcoal">
               In the wake of the COVID-19 pandemic, the business landscape
@@ -346,13 +348,13 @@ const About = () => {
               strain, leading to widespread job losses.
             </p>
             <p className="text-charcoal">
-              Witnessing these challenges firsthand, EcomHedge recognized a
+              Witnessing these challenges firsthand, ecomasis recognized a
               critical need to pivot from traditional business strategy services
               to pioneering business automation solutions. With a vision to
               empower businesses across over 40 industries.
             </p>
             <p className="text-charcoal">
-              Today, EcomHedge continues to evolve, dedicated to empowering
+              Today, ecomasis continues to evolve, dedicated to empowering
               entrepreneurs and enterprises alike with transformative automation
               solutions that pave the way for success in the new era of
               business.
@@ -402,7 +404,7 @@ const About = () => {
             Making it official for everyone
           </h1>
           <p className="text-charcoal">
-            At EcomHedge, we are dedicated to making business automation
+            At ecomasis, we are dedicated to making business automation
             accessible to all, irrespective of background or circumstance. We
             aim to empower entrepreneurs and businesses alike, ensuring they
             have the tools and support needed to thrive in the digital age.
@@ -442,9 +444,9 @@ const About = () => {
       <MaxWidthWrapper classNames="flex flex-col gap-3 items-center pb-20">
         <h2 className="text-gold font-semibold text-2xl">Get in touch</h2>
         <p className="text-charcoal text-center max-w-3xl w-full">
-          At EcomHedge, we value trust, teamwork, and bringing transparency to
+          At ecomasis, we value trust, teamwork, and bringing transparency to
           help organisations make better decisions. Please don’t hesitate to
-          reach out directly at info@EcomHedge.com.
+          reach out directly at info@ecomasis.com.
         </p>
         <CTAButton />
       </MaxWidthWrapper>

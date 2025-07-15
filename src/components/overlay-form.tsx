@@ -7,7 +7,7 @@ export const OverlayForm = () => {
   const { isOpen, setIsOpen } = useContext(FormContext);
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
-      <DialogContent className="bg-transparent border-none outline-none ring-0 [&>button]:hidden">
+      <DialogContent className="bg-transparent border-none outline-none shadow-none ring-0 [&>button]:hidden">
         <form className="relative bg-gradient-to-bl from-charcoal to-gold rounded-lg border border-gray-400 flex flex-col px-5 py-3 w-[90%] gap-5">
           <button
             onClick={(e) => {
