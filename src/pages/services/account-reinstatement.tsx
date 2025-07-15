@@ -10,42 +10,34 @@ import {
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import {
-  Axis3dIcon,
-  BoxIcon,
-  Brain,
-  CarIcon,
+  ArrowsUpFromLineIcon,
   CheckIcon,
-  FileQuestionIcon,
-  KeyIcon,
-  LaptopIcon,
-  NotepadText,
-  PaperclipIcon,
-  SearchIcon,
-  ShieldIcon,
-  ShieldUserIcon,
-  ShoppingCartIcon,
-  StoreIcon,
+  HandHeartIcon,
+  LockOpenIcon,
+  MailPlusIcon,
+  NavigationIcon,
+  UserRoundSearchIcon,
 } from "lucide-react";
 
 export const AccountReinstatement = () => {
   const perksData = [
     {
-      href: "/services/tiktok/social.png",
+      href: "/services/reinstatement/amazon.png",
       title: "Amazon insider expertise",
       desc: "We understand Amazon's internal processes and leverage this insider knowledge to navigate account reinstatement challenges effectively.",
     },
     {
-      href: "/services/tiktok/video.png",
+      href: "/services/reinstatement/chess.png",
       title: "Tailored strategies for success",
       desc: "Each account reinstatement case on Amazon is unique, so we craft customized strategies and Plans of Action tailored to your specific suspension reasons and business circumstances.",
     },
     {
-      href: "/services/tiktok/rocket.png",
+      href: "/services/reinstatement/thumb.png",
       title: "Proven success record",
       desc: "With a track record of successfully reinstating numerous Amazon accounts, we have the expertise and strategies that yield results.",
     },
     {
-      href: "/services/tiktok/user.png",
+      href: "/services/reinstatement/navigator.png",
       title: "Support and guidance",
       desc: "Our proactive approach includes post-reinstatement strategies to ensure long-term compliance and account health.",
     },
@@ -95,32 +87,32 @@ export const AccountReinstatement = () => {
   ];
   const servicesData = [
     {
-      icon: PaperclipIcon,
+      icon: UserRoundSearchIcon,
       title: "Comprehensive account evaluation",
       desc: "We start with a thorough analysis of your suspended account to understand the specific reasons for the suspension. This helps us craft a precise and effective Plan of Action tailored to your situation.",
     },
     {
-      icon: ShoppingCartIcon,
+      icon: ArrowsUpFromLineIcon,
       title: "Tailored plan of action",
       desc: "Our experts create a detailed, customized Plan of Action that addresses all account reinstatement requirements. This plan is strategically designed to tackle the root causes of your suspension and demonstrate compliance.",
     },
     {
-      icon: BoxIcon,
+      icon: NavigationIcon,
       title: "Legal guidance and support",
       desc: "We provide legal assistance to navigate account complex reinstatement process. Our team of former employees uses their insider knowledge to ensure that all legal aspects are covered, increasing your chances of a successful appeal.",
     },
     {
-      icon: LaptopIcon,
+      icon: MailPlusIcon,
       title: "Ongoing communication with the platform",
       desc: "We manage all communication with the platform on your behalf. Our team stays in constant contact with platform representatives to provide updates, respond to inquiries, and push for a swift resolution.",
     },
     {
-      icon: FileQuestionIcon,
+      icon: HandHeartIcon,
       title: "Stress management and support",
       desc: "Our dedicated consultants offer emotional support throughout the reinstatement process. We handle the stressful aspects of dealing with the platform, allowing you to focus on your business while we work on getting your account back.",
     },
     {
-      icon: Axis3dIcon,
+      icon: LockOpenIcon,
       title: "Post-reinstatement strategies",
       desc: "After your account is reinstated, we provide strategies and recommendations to prevent future suspensions. Our team helps you implement best practices for account management, ensuring long-term stability and compliance with platform policies.",
     },
@@ -169,7 +161,7 @@ export const AccountReinstatement = () => {
           </h1>
           <p className="text-base max-md:text-center">
             Running multiple Amazon accounts is a leading cause of account
-            suspension—and it can really mess up your earnings. At EcomHike, we
+            suspension—and it can really mess up your earnings. At EcomHedge, we
             understand how it can negatively impact your profits. We have a team
             of legal Amazon account reinstatement specialists who have the
             expertise to save your multiple accounts from getting suspended. If
@@ -359,7 +351,7 @@ export const AccountReinstatement = () => {
         <MaxWidthWrapper classNames="grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-8">
           <div className="flex flex-col gap-5">
             <h2 className="text-charcoal text-2xl md:text-3xl font-bold">
-              How We Do It at EcomHike?
+              How We Do It at EcomHedge?
             </h2>
             <div className="flex flex-col gap-4">
               {perksData.map((item, index) => (
@@ -487,11 +479,11 @@ export const AccountReinstatement = () => {
             />
             <div className="flex flex-col gap-4">
               <h1 className="text-gold font-semibold text-2xl">
-                With EcomHike’s Amazon Account Reinstatement Service, Your
+                With EcomHedge’s Amazon Account Reinstatement Service, Your
                 Comeback Is Just a Matter of Time
               </h1>
               <p className="text-charcoal text-sm">
-                At EcomHike, our experts specialize in reinstating suspended
+                At EcomHedge, our experts specialize in reinstating suspended
                 accounts. We understand the frustration and difficulties caused
                 by a suspended account. Trust our Amazon reinstatement services
                 to get your account up and live without any hassle.

@@ -10,43 +10,36 @@ import {
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import {
-  Axis3dIcon,
-  BoxIcon,
-  Brain,
   CarIcon,
   CheckIcon,
-  FileQuestionIcon,
-  KeyIcon,
-  LaptopIcon,
-  NotepadText,
-  PaperclipIcon,
-  SearchIcon,
-  ShieldUserIcon,
-  ShoppingCartIcon,
-  StoreIcon,
+  GemIcon,
+  MessagesSquareIcon,
+  MonitorIcon,
+  NewspaperIcon,
+  PencilRulerIcon,
 } from "lucide-react";
 
 export const AmazonPrivateLabel = () => {
   const perksData = [
     {
-      href: "/services/tiktok/social.png",
+      href: "/services/amazon-pl/flag.png",
       title: "Brand Freedom",
       desc: "Forget about platform brand restrictions. Our Amazon private label services can unleash your creativity and establish a distinctive brand identity that sets your product apart from the competition.",
     },
     {
-      href: "/services/tiktok/video.png",
+      href: "/services/amazon-pl/calendar.png",
       title: "Quality control",
-      desc: "EcomHike’s FBA label service for Amazon empowers you to select premium materials and ingredients, ensuring your offerings exceed customer expectations and outshine competitors.",
+      desc: "EcomHedge’s FBA label service for Amazon empowers you to select premium materials and ingredients, ensuring your offerings exceed customer expectations and outshine competitors.",
     },
     {
-      href: "/services/tiktok/rocket.png",
+      href: "/services/amazon-pl/direction.png",
       title: "Profitability flexibility",
-      desc: "Set your own prices and gain a competitive edge in the market. With EcomHike, you can swiftly adjust prices to capitalize on market opportunities, maximizing your revenue potential.",
+      desc: "Set your own prices and gain a competitive edge in the market. With EcomHedge, you can swiftly adjust prices to capitalize on market opportunities, maximizing your revenue potential.",
     },
     {
-      href: "/services/tiktok/user.png",
+      href: "/services/amazon-pl/ranking.png",
       title: "Reduced competition",
-      desc: "Dive into a less saturated market with EcomHike's FBA label service. Create unique, niche products that resonate with customers, unlocking new market segments and boosting your sales potential.",
+      desc: "Dive into a less saturated market with EcomHedge's FBA label service. Create unique, niche products that resonate with customers, unlocking new market segments and boosting your sales potential.",
     },
   ];
   const analyticsData = [
@@ -79,55 +72,55 @@ export const AmazonPrivateLabel = () => {
     {
       href: "/services/tiktok/sun.jpg",
       title: "Strategic product selection",
-      desc: "EcomHike excels in guiding you through the intricate process of product selection for your Amazon private label. We conduct thorough market research to identify niche opportunities with low competition, ensuring your products stand out.",
+      desc: "EcomHedge excels in guiding you through the intricate process of product selection for your Amazon private label. We conduct thorough market research to identify niche opportunities with low competition, ensuring your products stand out.",
     },
     {
       href: "/services/tiktok/laptop.jpg",
       title: "Comprehensive brand development",
-      desc: "EcomHike provides comprehensive support in creating a distinctive brand identity that resonates with your target audience. From logo design to packaging strategies, we ensure every aspect reflects your brand's values and enhances customer trust.",
+      desc: "EcomHedge provides comprehensive support in creating a distinctive brand identity that resonates with your target audience. From logo design to packaging strategies, we ensure every aspect reflects your brand's values and enhances customer trust.",
     },
     {
       href: "/services/tiktok/ranking.jpg",
       title: "Optimized marketing strategies",
-      desc: "EcomHike leverages advanced SEO techniques, PPC campaigns, and social media integration to maximize your store's exposure. We formulate tailored marketing plans that attract organic traffic and convert visitors into loyal customers.",
+      desc: "EcomHedge leverages advanced SEO techniques, PPC campaigns, and social media integration to maximize your store's exposure. We formulate tailored marketing plans that attract organic traffic and convert visitors into loyal customers.",
     },
   ];
   const servicesData = [
     {
-      icon: PaperclipIcon,
+      icon: GemIcon,
       title: "Product research and sourcing",
       desc: "We conduct in-depth market research and negotiate with suppliers to secure high-quality materials at competitive prices, ensuring profitable product selections.",
     },
     {
-      icon: ShoppingCartIcon,
+      icon: PencilRulerIcon,
       title: "Brand identity and design development",
       desc: "Crafting a cohesive brand identity through logo creation, packaging design, and compelling visuals that enhance visibility and trust among consumers.",
     },
     {
-      icon: BoxIcon,
+      icon: NewspaperIcon,
       title: "Listing optimization and launch strategy",
       desc: "Optimizing product listings with SEO techniques, persuasive content, and strategic launch plans to drive initial sales and visibility on the platform.",
     },
     {
-      icon: LaptopIcon,
+      icon: CarIcon,
       title: "Inventory management and fulfillment",
       desc: "Efficiently managing inventory levels and partnering with reliable fulfillment centers to streamline shipping and deliver exceptional customer experiences.",
     },
     {
-      icon: FileQuestionIcon,
+      icon: MonitorIcon,
       title: "Performance monitoring and optimization",
       desc: "Using advanced analytics to track key metrics, conduct A/B testing, and optimize listings and marketing strategies for sustained growth and competitiveness.",
     },
     {
-      icon: Axis3dIcon,
+      icon: MessagesSquareIcon,
       title: "Ongoing support and strategic guidance",
       desc: "Providing personalized consultation and strategic advice to navigate challenges, capitalize on opportunities, and achieve long-term success.",
     },
   ];
   const faqData = [
     {
-      title: "What is amazon private labeling, and how can EcomHike help?",
-      desc: "EcomHike specializes in Amazon Private Labeling, where we assist sellers in creating and selling their own branded products on platform. We manage everything from product sourcing and branding to listing optimization and sales strategies, ensuring your products stand out in the marketplace.",
+      title: "What is amazon private labeling, and how can EcomHedge help?",
+      desc: "EcomHedge specializes in Amazon Private Labeling, where we assist sellers in creating and selling their own branded products on platform. We manage everything from product sourcing and branding to listing optimization and sales strategies, ensuring your products stand out in the marketplace.",
     },
     {
       title:
@@ -136,18 +129,18 @@ export const AmazonPrivateLabel = () => {
     },
     {
       title:
-        "What types of products are suitable for amazon private labeling with EcomHike?",
+        "What types of products are suitable for amazon private labeling with EcomHedge?",
       desc: "We recommend products that offer a balance of low competition and high demand. Our experts conduct thorough market research to identify profitable niches and product categories, ensuring your private label products have the best chance of success.",
     },
     {
       title:
-        "How long does it take to launch a private label product on platform with EcomHike?",
+        "How long does it take to launch a private label product on platform with EcomHedge?",
       desc: "The timeline varies depending on product complexity and market readiness. Typically, our streamlined process allows for efficient product development, listing creation, and marketing strategy implementation, aiming to launch your product as swiftly as possible while ensuring quality and compliance.",
     },
     {
       title:
-        "What support does EcomHike provide after launching my amazon private label product?",
-      desc: "Beyond product launch, EcomHike offers ongoing support including inventory management, sales optimization, and marketing strategies. We monitor market trends, adjust strategies as needed, and provide insights to help maximize your product's success and profitability on platform.",
+        "What support does EcomHedge provide after launching my amazon private label product?",
+      desc: "Beyond product launch, EcomHedge offers ongoing support including inventory management, sales optimization, and marketing strategies. We monitor market trends, adjust strategies as needed, and provide insights to help maximize your product's success and profitability on platform.",
     },
   ];
   return (
@@ -178,7 +171,7 @@ export const AmazonPrivateLabel = () => {
                   A Standout Brand Identity
                 </h2>
                 <img
-                  src="/services/tiktok/laptop.png"
+                  src="/services/amazon-pl/starBadge.png"
                   alt="Laptop"
                   className="w-9 md:w-16 h-9 md:h-16 object-contain"
                 />
@@ -197,7 +190,7 @@ export const AmazonPrivateLabel = () => {
                   Set Your Own Prices
                 </h2>
                 <img
-                  src="/services/tiktok/social.png"
+                  src="/services/amazon-pl/tag.png"
                   alt="Laptop"
                   className="w-9 md:w-16 h-9 md:h-16 object-contain"
                 />
@@ -217,7 +210,7 @@ export const AmazonPrivateLabel = () => {
                     A Vast Network of Loyal Customers
                   </h2>
                   <img
-                    src="/services/tiktok/hands.png"
+                    src="/services/amazon-pl/hand.png"
                     alt="Hands"
                     className="w-9 h-9  md:w-12 md:h-12 object-contain"
                   />
@@ -236,7 +229,7 @@ export const AmazonPrivateLabel = () => {
                     Asset Building
                   </h2>
                   <img
-                    src="/services/tiktok/clock.png"
+                    src="/services/amazon-pl/building.png"
                     alt="Clock"
                     className="w-9 h-9  md:w-12 md:h-12 object-contain"
                   />
@@ -256,7 +249,7 @@ export const AmazonPrivateLabel = () => {
                     Global Selling Opportunities
                   </h2>
                   <img
-                    src="/services/tiktok/bell.png"
+                    src="/services/amazon-pl/world.png"
                     alt="Bell"
                     className="w-9 h-9  md:w-12 md:h-12 object-contain"
                   />
@@ -275,7 +268,7 @@ export const AmazonPrivateLabel = () => {
         <MaxWidthWrapper classNames="grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-8">
           <div className="flex flex-col gap-5">
             <h2 className="text-charcoal text-2xl md:text-3xl font-bold">
-              How EcomHike, as an Amazon private label agency, helps you
+              How EcomHedge, as an Amazon private label agency, helps you
             </h2>
             <div className="flex flex-col gap-4">
               {perksData.map((item, index) => (
@@ -380,7 +373,7 @@ export const AmazonPrivateLabel = () => {
                 ))}
               </div>
               <p className="text-charcoal text-base max-md:text-center">
-                Choose EcomHike as your Amazon FBA company, sit back, and relax
+                Choose EcomHedge as your Amazon FBA company, sit back, and relax
                 while we do the heavy lifting for you!
               </p>
               <CTAButton />
@@ -406,7 +399,7 @@ export const AmazonPrivateLabel = () => {
                 How OAn Amazon FBA Private Label Agency Driving Success for All
               </h1>
               <p className="text-charcoal text-sm">
-                EcomHike propels businesses forward with meticulously crafted
+                EcomHedge propels businesses forward with meticulously crafted
                 strategies for Amazon white label setups. We delve deep into
                 market analysis, identifying growth opportunities and devising
                 strategic plans that align with your business goals. By
@@ -423,7 +416,7 @@ export const AmazonPrivateLabel = () => {
                 mutual success.
               </p>
               <h2 className="text-gold font-semibold text-2xl">
-                Transform Your Vision into Reality with EcomHike’s Amazon
+                Transform Your Vision into Reality with EcomHedge’s Amazon
                 Private Label Services
               </h2>
               <h3 className="text-charcoal font-semibold text-xl">
@@ -431,7 +424,7 @@ export const AmazonPrivateLabel = () => {
                 Amazon private label.
               </h3>
               <p className="text-charcoal text-sm">
-                Our success stories speak volumes. Over the years, EcomHike has
+                Our success stories speak volumes. Over the years, EcomHedge has
                 empowered numerous Entrepreneurs and businesses to achieve
                 remarkable growth and profitability through its private labeling
                 on Amazon. Through data-driven insights and innovative
@@ -445,7 +438,7 @@ export const AmazonPrivateLabel = () => {
       <div className="w-full min-h-screen flex items-center justify-center py-10 px-2">
         <MaxWidthWrapper classNames="flex flex-col gap-12 max-md:items-center">
           <h1 className="text-charcoal font-bold text-2xl md:text-3xl">
-            Benefits of choosing EcomHike’s Amazon FBA label service
+            Benefits of choosing EcomHedge’s Amazon FBA label service
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-14">
             {benefitsData.map((item, index) => (

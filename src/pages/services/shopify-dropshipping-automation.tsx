@@ -10,41 +10,34 @@ import {
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import {
-  Axis3dIcon,
-  BoxIcon,
-  Brain,
-  CarIcon,
+  BrainIcon,
+  ChartNetworkIcon,
   CheckIcon,
-  FileQuestionIcon,
-  KeyIcon,
-  LaptopIcon,
+  GemIcon,
   NotepadText,
-  PaperclipIcon,
-  SearchIcon,
-  ShieldUserIcon,
-  ShoppingCartIcon,
+  ShoppingBagIcon,
   StoreIcon,
 } from "lucide-react";
 
 export const ShopifyDropshippingAutomation = () => {
   const perksData = [
     {
-      href: "/services/tiktok/social.png",
+      href: "/services/shopify/paper.png",
       title: "Specifically-Tailored Solutions",
       desc: "We understand your requirements and draw up a customized Shopify automation strategy tailored to maximize your business’s efficiency and growth.",
     },
     {
-      href: "/services/tiktok/video.png",
+      href: "/services/shopify/shopify.png",
       title: "The Automation You Need",
       desc: "From design to shipping, we implement the automation processes your Shopify dropshipping private label needs to run smoothly.",
     },
     {
-      href: "/services/tiktok/rocket.png",
+      href: "/services/shopify/screen.png",
       title: "Continuous Monitoring",
       desc: "We continuously monitor the performance of your private label on Shopify and make real-time adjustments to enhance efficiency and achieve optimal results.",
     },
     {
-      href: "/services/tiktok/user.png",
+      href: "/services/shopify/chart.png",
       title: "Reporting and Improving",
       desc: "Keep a close eye on your business’s performance with clear, concise reports that we provide you, showing a roadmap for future scaling to drive sales and boost performance.",
     },
@@ -94,32 +87,32 @@ export const ShopifyDropshippingAutomation = () => {
   ];
   const servicesData = [
     {
-      icon: PaperclipIcon,
+      icon: StoreIcon,
       title: "Initial setup",
       desc: "We setup and configure your Shopify store, customizing the design and settings to attract and retain customers, keeping in mind your vision and goals.",
     },
     {
-      icon: ShoppingCartIcon,
+      icon: GemIcon,
       title: "Extensive research",
       desc: "Our expertise allows us to identify profitable products and niches through extensive research and analysis, guaranteeing a high ROI on your store.",
     },
     {
-      icon: BoxIcon,
+      icon: NotepadText,
       title: "Optimizing listings",
       desc: "We help you add selected products, optimize listings, and make them available for customers, ensuring a seamless shopping experience.",
     },
     {
-      icon: LaptopIcon,
+      icon: BrainIcon,
       title: "Marketing strategies",
       desc: "Implement effective Shopify marketing automation strategies to ensure high visibility in a crowded market.",
     },
     {
-      icon: FileQuestionIcon,
+      icon: ShoppingBagIcon,
       title: "Order management",
       desc: "We ensure a smooth experience for both you and your customers with our efficient order management, transaction tracking, and overseeing product shipments.",
     },
     {
-      icon: Axis3dIcon,
+      icon: ChartNetworkIcon,
       title: "Reputation management",
       desc: "Ensuring your store’s reputation remains unhurt through effective management of reviews, customer feedback, and offering reliable customer service to enhance trust and loyalty.",
     },
@@ -139,8 +132,8 @@ export const ShopifyDropshippingAutomation = () => {
     },
     {
       title:
-        "What distinguishes EcomHike's Shopify Dropshipping Automation from other providers?",
-      desc: "EcomHike specializes in comprehensive Shopify Dropshipping Automation that includes product research, store setup, marketing strategies, and order management. We emphasize quality service, prompt customer support, and a commitment to client success.",
+        "What distinguishes EcomHedge's Shopify Dropshipping Automation from other providers?",
+      desc: "EcomHedge specializes in comprehensive Shopify Dropshipping Automation that includes product research, store setup, marketing strategies, and order management. We emphasize quality service, prompt customer support, and a commitment to client success.",
     },
     {
       title:
@@ -176,7 +169,7 @@ export const ShopifyDropshippingAutomation = () => {
                   Affordable Setup
                 </h2>
                 <img
-                  src="/services/tiktok/laptop.png"
+                  src="/services/shopify/sale.png"
                   alt="Laptop"
                   className="w-9 md:w-16 h-9 md:h-16 object-contain"
                 />
@@ -193,7 +186,7 @@ export const ShopifyDropshippingAutomation = () => {
                   Inventory-free Business
                 </h2>
                 <img
-                  src="/services/tiktok/social.png"
+                  src="/services/shopify/squares.png"
                   alt="Laptop"
                   className="w-9 md:w-16 h-9 md:h-16 object-contain"
                 />
@@ -213,7 +206,7 @@ export const ShopifyDropshippingAutomation = () => {
                     Minimum Risk Setup
                   </h2>
                   <img
-                    src="/services/tiktok/hands.png"
+                    src="/services/shopify/meter.png"
                     alt="Hands"
                     className="w-9 h-9  md:w-12 md:h-12 object-contain"
                   />
@@ -232,7 +225,7 @@ export const ShopifyDropshippingAutomation = () => {
                     Product Variety
                   </h2>
                   <img
-                    src="/services/tiktok/clock.png"
+                    src="/services/shopify/bucket.png"
                     alt="Clock"
                     className="w-9 h-9  md:w-12 md:h-12 object-contain"
                   />
@@ -251,7 +244,7 @@ export const ShopifyDropshippingAutomation = () => {
                     Scalability
                   </h2>
                   <img
-                    src="/services/tiktok/bell.png"
+                    src="/services/shopify/scale.png"
                     alt="Bell"
                     className="w-9 h-9  md:w-12 md:h-12 object-contain"
                   />
@@ -271,7 +264,7 @@ export const ShopifyDropshippingAutomation = () => {
         <MaxWidthWrapper classNames="grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-8">
           <div className="flex flex-col gap-5">
             <h2 className="text-charcoal text-2xl md:text-3xl font-bold">
-              How We Do It at EcomHike?
+              How We Do It at EcomHedge?
             </h2>
             <div className="flex flex-col gap-4">
               {perksData.map((item, index) => (
@@ -376,7 +369,7 @@ export const ShopifyDropshippingAutomation = () => {
                 ))}
               </div>
               <p className="text-charcoal text-base max-md:text-center">
-                Choose EcomHike as your Shopify automation agency, sit back, and
+                Choose EcomHedge as your Shopify automation agency, sit back, and
                 relax while we do the heavy lifting for you!
               </p>
               <CTAButton />
@@ -403,7 +396,7 @@ export const ShopifyDropshippingAutomation = () => {
                 Private Label
               </h1>
               <p className="text-charcoal text-sm">
-                EcomHike is one of the most reliable and trusted Shopify
+                EcomHedge is one of the most reliable and trusted Shopify
                 automation partners in town. Our team excels in setting up and
                 managing recession-proof businesses on this platform, leveraging
                 their unbounded experience and expertise. .
@@ -415,7 +408,7 @@ export const ShopifyDropshippingAutomation = () => {
                 are the best at what we do!
               </p>
               <h2 className="text-gold font-semibold text-2xl">
-                EcomHike, a Shopify Automation Agency, Helps Streamline and
+                EcomHedge, a Shopify Automation Agency, Helps Streamline and
                 Scale Your Shopify Store
               </h2>
               <h3 className="text-charcoal font-semibold text-xl">
@@ -436,7 +429,7 @@ export const ShopifyDropshippingAutomation = () => {
       <div className="w-full min-h-screen flex items-center justify-center py-10 px-2">
         <MaxWidthWrapper classNames="flex flex-col gap-12 max-md:items-center">
           <h1 className="text-charcoal font-bold text-2xl md:text-3xl">
-            Benefits of Automated Shopify Dropshipping with EcomHike
+            Benefits of Automated Shopify Dropshipping with EcomHedge
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-14">
             {benefitsData.map((item, index) => (

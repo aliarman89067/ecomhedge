@@ -11,43 +11,43 @@ import { MapPin } from "lucide-react";
 const Contact = () => {
   const faqData = [
     {
-      title: "What is EcomHike, and what does it do?",
-      desc: "EcomHike is a digital consultancy firm that specializes in guiding individuals and businesses through the process of starting, growing, and optimizing their ventures for success.",
+      title: "What is EcomHedge, and what does it do?",
+      desc: "EcomHedge is a digital consultancy firm that specializes in guiding individuals and businesses through the process of starting, growing, and optimizing their ventures for success.",
     },
     {
-      title: "How can EcomHike help my business?",
-      desc: "EcomHike offers tailored strategies, expert guidance, and solutions to help businesses increase revenue, optimize operations, and achieve their goals.",
+      title: "How can EcomHedge help my business?",
+      desc: "EcomHedge offers tailored strategies, expert guidance, and solutions to help businesses increase revenue, optimize operations, and achieve their goals.",
     },
     {
-      title: "What services does EcomHike provide?",
-      desc: "EcomHike offers a range of services, including business planning, digital marketing, brand development, and more. Explore our services page for details.",
+      title: "What services does EcomHedge provide?",
+      desc: "EcomHedge offers a range of services, including business planning, digital marketing, brand development, and more. Explore our services page for details.",
     },
     {
-      title: "Is EcomHike only for startups?",
-      desc: "No, EcomHike caters to both startups and established businesses looking to enhance their revenue streams and expand their market presence.",
+      title: "Is EcomHedge only for startups?",
+      desc: "No, EcomHedge caters to both startups and established businesses looking to enhance their revenue streams and expand their market presence.",
     },
     {
-      title: "Can I get a personalized business plan from EcomHike?",
-      desc: "Yes, EcomHike provides personalized business plans tailored to your specific goals and needs.",
+      title: "Can I get a personalized business plan from EcomHedge?",
+      desc: "Yes, EcomHedge provides personalized business plans tailored to your specific goals and needs.",
     },
     {
-      title: "How do I schedule a consultation with EcomHike?",
+      title: "How do I schedule a consultation with EcomHedge?",
       desc: "You can schedule a consultation by visiting our contact page or reaching out via email or phone.",
     },
     {
-      title: "Is EcomHike's guidance confidential?",
-      desc: "Yes, EcomHike values your privacy and follows strict confidentiality practices. We do not share your information without your consent.",
+      title: "Is EcomHedge's guidance confidential?",
+      desc: "Yes, EcomHedge values your privacy and follows strict confidentiality practices. We do not share your information without your consent.",
     },
     {
-      title: "What industries does EcomHike specialize in?",
-      desc: "EcomHike has experience across various industries, including e-commerce, digital marketing, technology, and more. We adapt our strategies to fit your industry.",
+      title: "What industries does EcomHedge specialize in?",
+      desc: "EcomHedge has experience across various industries, including e-commerce, digital marketing, technology, and more. We adapt our strategies to fit your industry.",
     },
     {
-      title: "How long does it take to see results with EcomHike?",
+      title: "How long does it take to see results with EcomHedge?",
       desc: "Results vary based on your goals and industry, but many clients experience positive outcomes within a few months.",
     },
     {
-      title: "Does EcomHike offer ongoing support?",
+      title: "Does EcomHedge offer ongoing support?",
       desc: "Yes, we provide ongoing support to help you adapt and grow as your business evolves.",
     },
   ];

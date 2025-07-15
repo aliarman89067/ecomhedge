@@ -82,7 +82,7 @@ const About = () => {
     {
       icon: MessageCircleOffIcon,
       title: "Keep it simple",
-      desc: "Clear and direct communication is key to simplicity at EcomHike. We actively listen, incorporate diverse viewpoints, and encourage open dialogue. Our transparent approach builds trust with both our team and clients.",
+      desc: "Clear and direct communication is key to simplicity at EcomHedge. We actively listen, incorporate diverse viewpoints, and encourage open dialogue. Our transparent approach builds trust with both our team and clients.",
     },
     {
       icon: HeartHandshakeIcon,
@@ -98,10 +98,10 @@ const About = () => {
         <MaxWidthWrapper classNames="z-20">
           <div className="flex flex-col items-center justify-center gap-6">
             <h1 className="text-white font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
-              Go global with EcomHike
+              Go global with EcomHedge
             </h1>
             <p className="text-white text-center px-2">
-              EcomHike aims to lead the way in digital solutions, empowering
+              EcomHedge aims to lead the way in digital solutions, empowering
               global businesses through expert account setup, marketing
               strategies, and business consultancy. Our vision is to innovate
               and streamline operations, ensuring every client achieves
@@ -110,7 +110,7 @@ const About = () => {
               their full potential.
             </p>
             <p className="text-white text-center px-2">
-              At EcomHike, we leverage cutting-edge automation solutions to
+              At EcomHedge, we leverage cutting-edge automation solutions to
               simplify processes for our clients. Our innovative approach
               streamlines account setup, enhances marketing efficiency, and
               provides strategic business consultancy. By integrating
@@ -236,7 +236,7 @@ const About = () => {
         <MaxWidthWrapper classNames="grid grid-cols-1 md:grid-cols-2 gap-10">
           <div className="flex flex-col gap-4">
             <h1 className="text-gold font-bold text-2xl md:text-3xl lg:text-4xl">
-              EcomHike, your top choice for empowering business automation
+              EcomHedge, your top choice for empowering business automation
             </h1>
             <p className="text-charcoal">
               We're for the visionaries. Those driven by success, fueled by
@@ -255,7 +255,7 @@ const About = () => {
             </p>
             <p className="text-charcoal">
               For entrepreneurs launching their ventures, for families relying
-              on them, for safeguarding innovative ideas—we are EcomHike. Here
+              on them, for safeguarding innovative ideas—we are EcomHedge. Here
               to formalize aspirations and pave the way forward.
             </p>
           </div>
@@ -335,7 +335,7 @@ const About = () => {
           </div>
           <div className="flex flex-col gap-4">
             <h1 className="text-gold font-bold text-2xl md:text-3xl lg:text-4xl">
-              The EcomHike journey into automation
+              The EcomHedge journey into automation
             </h1>
             <p className="text-charcoal">
               In the wake of the COVID-19 pandemic, the business landscape
@@ -346,13 +346,13 @@ const About = () => {
               strain, leading to widespread job losses.
             </p>
             <p className="text-charcoal">
-              Witnessing these challenges firsthand, EcomHike recognized a
+              Witnessing these challenges firsthand, EcomHedge recognized a
               critical need to pivot from traditional business strategy services
               to pioneering business automation solutions. With a vision to
               empower businesses across over 40 industries.
             </p>
             <p className="text-charcoal">
-              Today, EcomHike continues to evolve, dedicated to empowering
+              Today, EcomHedge continues to evolve, dedicated to empowering
               entrepreneurs and enterprises alike with transformative automation
               solutions that pave the way for success in the new era of
               business.
@@ -402,7 +402,7 @@ const About = () => {
             Making it official for everyone
           </h1>
           <p className="text-charcoal">
-            At EcomHike, we are dedicated to making business automation
+            At EcomHedge, we are dedicated to making business automation
             accessible to all, irrespective of background or circumstance. We
             aim to empower entrepreneurs and businesses alike, ensuring they
             have the tools and support needed to thrive in the digital age.
@@ -442,9 +442,9 @@ const About = () => {
       <MaxWidthWrapper classNames="flex flex-col gap-3 items-center pb-20">
         <h2 className="text-gold font-semibold text-2xl">Get in touch</h2>
         <p className="text-charcoal text-center max-w-3xl w-full">
-          At EcomHike, we value trust, teamwork, and bringing transparency to
+          At EcomHedge, we value trust, teamwork, and bringing transparency to
           help organisations make better decisions. Please don’t hesitate to
-          reach out directly at info@ecomhike.com.
+          reach out directly at info@EcomHedge.com.
         </p>
         <CTAButton />
       </MaxWidthWrapper>

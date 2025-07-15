@@ -10,41 +10,34 @@ import {
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import {
-  Axis3dIcon,
   BoxIcon,
-  Brain,
-  CarIcon,
+  ChartColumnBigIcon,
   CheckIcon,
-  FileQuestionIcon,
-  KeyIcon,
   LaptopIcon,
-  NotepadText,
-  PaperclipIcon,
-  SearchIcon,
-  ShieldUserIcon,
+  Newspaper,
+  SendIcon,
   ShoppingCartIcon,
-  StoreIcon,
 } from "lucide-react";
 
 export const AmazonAutomation = () => {
   const perksData = [
     {
-      href: "/services/tiktok/social.png",
+      href: "/services/amazon-fba/briefcase.png",
       title: "The initial setup",
       desc: "Offering the best Amazon FBA automation services, we help you establish an LLC, get an EIN, and set up a W9 to ensure your business is compliant from the start.",
     },
     {
-      href: "/services/tiktok/video.png",
+      href: "/services/amazon-fba/amazon.png",
       title: "Building an e-commerce store",
       desc: "We build your e-commerce store and help set up products with our Amazon automation services, preparing your store for launch.",
     },
     {
-      href: "/services/tiktok/rocket.png",
+      href: "/services/amazon-fba/shop.png",
       title: "Seamless management",
       desc: "Our Amazon FBA automation experts handle orders, manage inventory, and oversee fulfillment through our warehouse for 12 months, ensuring smooth operations.",
     },
     {
-      href: "/services/tiktok/user.png",
+      href: "/services/amazon-fba/rocket.png",
       title: "Boosted sales",
       desc: "From analyzing competitors, securing wholesaler status to listing unlimited items and implementing strategies to win the 'Buy Box' for 15-25% profit—we do it all!",
     },
@@ -94,7 +87,7 @@ export const AmazonAutomation = () => {
   ];
   const servicesData = [
     {
-      icon: PaperclipIcon,
+      icon: Newspaper,
       title: "Product listing management",
       desc: "We conduct thorough research on high-demand products and collaborate with suppliers to list inventory items in your platform’s account.",
     },
@@ -114,12 +107,12 @@ export const AmazonAutomation = () => {
       desc: "Our team monitors the store account for issues such as policy violations and A-Z claims to maintain its health.",
     },
     {
-      icon: FileQuestionIcon,
+      icon: SendIcon,
       title: "Customer service",
       desc: "We provide comprehensive customer support via email, phone, and our CRM system, offering quick resolutions to ensure customer satisfaction.",
     },
     {
-      icon: Axis3dIcon,
+      icon: ChartColumnBigIcon,
       title: "Growth and scale",
       desc: "We collaborate with you over time to strategize and scale your seller account continuously, aiming for sustained growth and expansion.",
     },
@@ -127,7 +120,7 @@ export const AmazonAutomation = () => {
   const faqData = [
     {
       title: "What are automation services?",
-      desc: "EcomHike automates every aspect of your online store, from product sourcing and listings to inventory, order processing, and customer support, using proprietary tools to scale your business and boost profitability.",
+      desc: "EcomHedge automates every aspect of your online store, from product sourcing and listings to inventory, order processing, and customer support, using proprietary tools to scale your business and boost profitability.",
     },
     {
       title: "Why should i trust your company for storefront automation?",
@@ -139,7 +132,7 @@ export const AmazonAutomation = () => {
     },
     {
       title: "Are there any hidden fees in automation?",
-      desc: "With EcomHike, there are no hidden fees. We prioritize transparency, offering clear, upfront pricing for all our services, so you always know exactly what you're paying for.",
+      desc: "With EcomHedge, there are no hidden fees. We prioritize transparency, offering clear, upfront pricing for all our services, so you always know exactly what you're paying for.",
     },
   ];
   return (
@@ -161,7 +154,7 @@ export const AmazonAutomation = () => {
       <div className="flex flex-col min-h-screen items-center justify-center py-10 px-2">
         <MaxWidthWrapper classNames="flex flex-col gap-10">
           <h1 className="text-charcoal font-bold text-2xl md:text-3xl text-center">
-            Wholesale Benefits with EcomHike's Amazon FBA Automation Service
+            Wholesale Benefits with EcomHedge's Amazon FBA Automation Service
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 w-full">
             <div className="group flex flex-col gap-3 bg-white hover:bg-charcoal rounded-lg py-4 px-5 border border-gray-300 transition-all duration-150 ease-in-out">
@@ -170,7 +163,7 @@ export const AmazonAutomation = () => {
                   Reselling Established Brands
                 </h2>
                 <img
-                  src="/services/tiktok/laptop.png"
+                  src="/services/amazon-fba/tag.png"
                   alt="Laptop"
                   className="w-9 md:w-16 h-9 md:h-16 object-contain"
                 />
@@ -189,7 +182,7 @@ export const AmazonAutomation = () => {
                   Potential for High Sales Volume
                 </h2>
                 <img
-                  src="/services/tiktok/social.png"
+                  src="/services/amazon-fba/ranking.png"
                   alt="Laptop"
                   className="w-9 md:w-16 h-9 md:h-16 object-contain"
                 />
@@ -210,7 +203,7 @@ export const AmazonAutomation = () => {
                     Buy Box Advantage
                   </h2>
                   <img
-                    src="/services/tiktok/hands.png"
+                    src="/services/amazon-fba/box.png"
                     alt="Hands"
                     className="w-9 h-9  md:w-12 md:h-12 object-contain"
                   />
@@ -230,7 +223,7 @@ export const AmazonAutomation = () => {
                     Fulfillment by Amazon (FBA)
                   </h2>
                   <img
-                    src="/services/tiktok/clock.png"
+                    src="/services/amazon-fba/car.png"
                     alt="Clock"
                     className="w-9 h-9  md:w-12 md:h-12 object-contain"
                   />
@@ -251,7 +244,7 @@ export const AmazonAutomation = () => {
                     Organic Sales
                   </h2>
                   <img
-                    src="/services/tiktok/bell.png"
+                    src="/services/amazon-fba/rankingUp.png"
                     alt="Bell"
                     className="w-9 h-9  md:w-12 md:h-12 object-contain"
                   />
@@ -271,7 +264,7 @@ export const AmazonAutomation = () => {
         <MaxWidthWrapper classNames="grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-8">
           <div className="flex flex-col gap-5">
             <h2 className="text-charcoal text-2xl md:text-3xl font-bold">
-              How We Do It at EcomHike?
+              How We Do It at EcomHedge?
             </h2>
             <div className="flex flex-col gap-4">
               {perksData.map((item, index) => (
@@ -376,7 +369,7 @@ export const AmazonAutomation = () => {
                 ))}
               </div>
               <p className="text-charcoal text-base max-md:text-center">
-                Choose EcomHike as your Amazon FBA company, sit back, and relax
+                Choose EcomHedge as your Amazon FBA company, sit back, and relax
                 while we do the heavy lifting for you!
               </p>
               <CTAButton />
@@ -402,7 +395,7 @@ export const AmazonAutomation = () => {
                 How Our Amazon FBA Automation Service Drives Success?
               </h1>
               <p className="text-charcoal text-sm">
-                EcomHike pioneers a transformative online business program,
+                EcomHedge pioneers a transformative online business program,
                 setting benchmarks in the industry. Our mission is to foster and
                 elevate the next generation of agencies.
               </p>
@@ -421,7 +414,7 @@ export const AmazonAutomation = () => {
                 Optimize your inventory and sales with our automation tools
               </h3>
               <p className="text-charcoal text-sm">
-                At EcomHike, we focus on your business’s operational efficiency
+                At EcomHedge, we focus on your business’s operational efficiency
                 to drive sales growth. Whether you operate with FBA, FBM, or PL,
                 we manage listings, orders, product sourcing, and inventory with
                 utmost finesse. With state-of-the-art automation tools, your
@@ -435,7 +428,7 @@ export const AmazonAutomation = () => {
       <div className="w-full min-h-screen flex items-center justify-center py-10 px-2">
         <MaxWidthWrapper classNames="flex flex-col gap-12 max-md:items-center">
           <h1 className="text-charcoal font-bold text-2xl md:text-3xl">
-            Benefits of launching automation with EcomHike
+            Benefits of launching automation with EcomHedge
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-14">
             {benefitsData.map((item, index) => (

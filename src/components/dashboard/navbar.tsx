@@ -56,7 +56,7 @@ export const Navbar = () => {
   }, [location]);
 
   return (
-    <div className="relative flex items-center justify-between bg-charcoal h-16 w-full px-2">
+    <div className="relative flex items-center justify-between bg-white h-16 w-full px-2">
       <div
         className={cn(
           "absolute top-16 left-0 hidden md:flex w-full h-[calc(100vh-64px)] z-50 bg-charcoal transition-all duration-200 ease-in-out",
@@ -97,7 +97,11 @@ export const Navbar = () => {
       <MaxWidthWrapper>
         <div className="flex items-center justify-between flex-1">
           <Link to="/" className="text-white">
-            Ecomhedge
+            <img
+              src="/logo.png"
+              alt="Logo"
+              className="w-32 h-32 object-contain"
+            />
           </Link>
           <div className="flex items-center gap-8">
             <div className="hidden md:flex items-center gap-4">
@@ -111,7 +115,7 @@ export const Navbar = () => {
                           setIsServices(!isServices);
                         }
                       }}
-                      className="text-gray-100 font-extralight text-lg cursor-pointer"
+                      className="text-charcoal text-lg cursor-pointer"
                     >
                       {item.label}
                     </span>
@@ -119,7 +123,7 @@ export const Navbar = () => {
                     <Link
                       key={item.id}
                       to={item.href}
-                      className="text-gray-100 font-extralight text-lg cursor-pointer"
+                      className="text-charcoal text-lg cursor-pointer"
                     >
                       {item.label}
                     </Link>
@@ -129,7 +133,7 @@ export const Navbar = () => {
             </div>
             <Sheet>
               <SheetTrigger>
-                <MenuIcon className="size-8 text-white flex md:hidden" />
+                <MenuIcon className="size-8 text-charcoal flex md:hidden" />
               </SheetTrigger>
               <SheetContent>
                 <SheetHeader>

@@ -10,44 +10,36 @@ import {
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import {
-  Axis3dIcon,
   BoxIcon,
-  Brain,
-  CarIcon,
-  CheckIcon,
-  FileQuestionIcon,
-  KeyIcon,
-  LaptopIcon,
-  NotepadText,
-  PaperclipIcon,
-  SearchIcon,
+  ChartColumnBigIcon,
+  GemIcon,
+  MessageCircleIcon,
+  MessagesSquareIcon,
   ShieldIcon,
-  ShieldUserIcon,
-  ShoppingCartIcon,
-  StoreIcon,
+  SquircleDashedIcon,
 } from "lucide-react";
 
 export const WalmartAutomation = () => {
   const perksData = [
     {
-      href: "/services/tiktok/social.png",
+      href: "/services/walmart/circle.png",
       title: "Tapping Into the Power of Walmart’s Customer Base",
-      desc: "How amazing it would be if you could tap into the millions of loyal Walmart customers? We at EcomHike will help you enhance your store's visibility and drive more traffic by efficiently targeting these customers.",
+      desc: "How amazing it would be if you could tap into the millions of loyal Walmart customers? We at EcomHedge will help you enhance your store's visibility and drive more traffic by efficiently targeting these customers.",
     },
     {
-      href: "/services/tiktok/video.png",
+      href: "/services/walmart/shop.png",
       title: "Easy Expansion of Your Market",
-      desc: "Expand effortlessly with EcomHike Walmart automation. Focus on your core business while we handle marketing, sales, and customer service, ensuring a smooth market expansion.",
+      desc: "Expand effortlessly with EcomHedge Walmart automation. Focus on your core business while we handle marketing, sales, and customer service, ensuring a smooth market expansion.",
     },
     {
-      href: "/services/tiktok/rocket.png",
+      href: "/services/walmart/hand.png",
       title: "Efficient Business Management",
-      desc: "Experience hassle-free store management with EcomHike’s expertise, allowing you to enjoy seamless operations and focus on strategic growth without day-to-day oversight.",
+      desc: "Experience hassle-free store management with EcomHedge’s expertise, allowing you to enjoy seamless operations and focus on strategic growth without day-to-day oversight.",
     },
     {
-      href: "/services/tiktok/user.png",
+      href: "/services/walmart/moneyBag.png",
       title: "Guaranteed Passive Income",
-      desc: "EcomHike manages your store efficiently, enabling you to enjoy steady revenue streams with minimal involvement.",
+      desc: "EcomHedge manages your store efficiently, enabling you to enjoy steady revenue streams with minimal involvement.",
     },
   ];
   const analyticsData = [
@@ -84,7 +76,7 @@ export const WalmartAutomation = () => {
     {
       href: "/services/tiktok/laptop.jpg",
       title: "End-to-end solutions",
-      desc: "We at EcomHike proudly offer comprehensive automation services, covering not just inventory management, listing optimization, and order processing but also customer service that is tailored to your business's unique requirements.",
+      desc: "We at EcomHedge proudly offer comprehensive automation services, covering not just inventory management, listing optimization, and order processing but also customer service that is tailored to your business's unique requirements.",
     },
     {
       href: "/services/tiktok/ranking.jpg",
@@ -94,12 +86,12 @@ export const WalmartAutomation = () => {
   ];
   const servicesData = [
     {
-      icon: PaperclipIcon,
+      icon: SquircleDashedIcon,
       title: "Setting up Walmart Seller Central",
       desc: "Through our Walmart private label management service, we ensure the smooth setup of your Walmart Seller Central account, ensuring all details are configured and optimized to perfection. From registering your business to integrating payment methods, we ensure your storefront is ready for seamless operations.",
     },
     {
-      icon: ShoppingCartIcon,
+      icon: GemIcon,
       title: "Product research and listing",
       desc: "Thorough market research is a key component of our Walmart automation service through which we identify high-demand products for your Walmart store. We then optimize product listings with compelling descriptions, high-quality images, and strategic keywords to enhance visibility and attract more customers.",
     },
@@ -109,17 +101,17 @@ export const WalmartAutomation = () => {
       desc: "Efficient inventory management is crucial for maximizing sales and minimizing costs. We implement advanced tools and strategies to monitor stock levels, streamline replenishment processes, and ensure optimal inventory turnover to meet customer demands effectively.",
     },
     {
-      icon: LaptopIcon,
+      icon: ChartColumnBigIcon,
       title: "Generate sales",
       desc: "Driving sales is at the core of our Walmart Automation services. Through targeted marketing campaigns, SEO optimization, and strategic pricing strategies, we aim to increase your store's visibility and attract qualified traffic that converts into sales.",
     },
     {
-      icon: FileQuestionIcon,
+      icon: MessagesSquareIcon,
       title: "Order fulfillment",
       desc: "We manage the entire order fulfillment process, from receiving customer orders to coordinating with suppliers or using third-party logistics partners. Our goal is to ensure timely delivery and customer satisfaction while optimizing shipping costs and logistics.",
     },
     {
-      icon: Axis3dIcon,
+      icon: MessageCircleIcon,
       title: "Customer support & management",
       desc: "Customer satisfaction is paramount in eCommerce. Our dedicated support team handles inquiries, resolves issues promptly, and provides exceptional customer service. We manage returns, refunds, and exchanges efficiently to maintain positive customer relationships and enhance your store's reputation.",
     },
@@ -140,8 +132,8 @@ export const WalmartAutomation = () => {
     },
     {
       title:
-        "What sets EcomHike's Walmart Automation apart from other providers?",
-      desc: "EcomHike offers a unique blend of expertise, scalability, and flexibility. We employ advanced automation tools and strategies to optimize your storefront and maximize profitability. Our flexible payment options and commitment to client success differentiate us from other service providers.",
+        "What sets EcomHedge's Walmart Automation apart from other providers?",
+      desc: "EcomHedge offers a unique blend of expertise, scalability, and flexibility. We employ advanced automation tools and strategies to optimize your storefront and maximize profitability. Our flexible payment options and commitment to client success differentiate us from other service providers.",
     },
     {
       title: "How does the pricing structure work for Walmart Automation?",
@@ -154,7 +146,7 @@ export const WalmartAutomation = () => {
       <ServicesHero
         title={
           <h1 className="text-white text-3xl font-bold max-md:text-center">
-            EcomHike: The Most{" "}
+            EcomHedge: The Most{" "}
             <div className="inline-flex bg-black text-gold px-4 py-2 rounded-full">
               Trusted Walmart
             </div>{" "}
@@ -176,7 +168,7 @@ export const WalmartAutomation = () => {
                   Unbounded Reach
                 </h2>
                 <img
-                  src="/services/tiktok/laptop.png"
+                  src="/services/walmart/world.png"
                   alt="Laptop"
                   className="w-9 md:w-16 h-9 md:h-16 object-contain"
                 />
@@ -193,7 +185,7 @@ export const WalmartAutomation = () => {
                   Unsaturated Marketplace
                 </h2>
                 <img
-                  src="/services/tiktok/social.png"
+                  src="/services/walmart/rocket.png"
                   alt="Laptop"
                   className="w-9 md:w-16 h-9 md:h-16 object-contain"
                 />
@@ -213,7 +205,7 @@ export const WalmartAutomation = () => {
                     Countless Opportunities
                   </h2>
                   <img
-                    src="/services/tiktok/hands.png"
+                    src="/services/walmart/networks.png"
                     alt="Hands"
                     className="w-9 h-9  md:w-12 md:h-12 object-contain"
                   />
@@ -232,7 +224,7 @@ export const WalmartAutomation = () => {
                     Multiple Business Models
                   </h2>
                   <img
-                    src="/services/tiktok/clock.png"
+                    src="/services/walmart/bulb.png"
                     alt="Clock"
                     className="w-9 h-9  md:w-12 md:h-12 object-contain"
                   />
@@ -240,7 +232,7 @@ export const WalmartAutomation = () => {
                 <p className="text-sm text-charcoal group-hover:text-white transition-all duration-150 ease-in-out">
                   Did you know that you can run multiple business models on your
                   Walmart Store: Walmart Retail Arbitrage, Walmart Fulfillment
-                  Services, and Self-Fulfillment? Fret not, we at EcomHike will
+                  Services, and Self-Fulfillment? Fret not, we at EcomHedge will
                   help you choose the most suitable ones for you.
                 </p>
               </div>
@@ -252,7 +244,7 @@ export const WalmartAutomation = () => {
                     Extensive Seller Support
                   </h2>
                   <img
-                    src="/services/tiktok/bell.png"
+                    src="/services/walmart/headphone.png"
                     alt="Bell"
                     className="w-9 h-9  md:w-12 md:h-12 object-contain"
                   />
@@ -376,7 +368,7 @@ export const WalmartAutomation = () => {
                 ))}
               </div>
               <p className="text-charcoal text-base max-md:text-center">
-                Choose EcomHike as your Amazon FBA company, sit back, and relax
+                Choose EcomHedge as your Amazon FBA company, sit back, and relax
                 while we do the heavy lifting for you!
               </p>
               <CTAButton />
@@ -411,7 +403,7 @@ export const WalmartAutomation = () => {
               <p className="text-charcoal text-sm">
                 No hidden charges and no (unpleasant) surprises when you get
                 your Walmart private label set up and automated by the best in
-                town—EcomHike!
+                town—EcomHedge!
               </p>
               <h2 className="text-gold font-semibold text-2xl">
                 Walmart Automation Services That You Can Trust
@@ -420,7 +412,7 @@ export const WalmartAutomation = () => {
                 Client-centric approach
               </h3>
               <p className="text-charcoal text-sm">
-                At EcomHike, we take pride in offering the most comprehensive
+                At EcomHedge, we take pride in offering the most comprehensive
                 set of Walmart automation services that do not just help you
                 manage the day-to-day operations, but offer insightful reports,
                 and analytics tools for improving store’s performance.
@@ -432,7 +424,7 @@ export const WalmartAutomation = () => {
       <div className="w-full min-h-screen flex items-center justify-center py-10 px-2">
         <MaxWidthWrapper classNames="flex flex-col gap-12 max-md:items-center">
           <h1 className="text-charcoal font-bold text-2xl md:text-3xl">
-            Benefits of Walmart Automation with EcomHike
+            Benefits of Walmart Automation with EcomHedge
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-14">
             {benefitsData.map((item, index) => (
