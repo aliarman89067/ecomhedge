@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { MaxWidthWrapper } from "../max-width-wrapper";
 import { Link } from "react-router-dom";
@@ -12,7 +13,13 @@ export const CaseStudies = () => {
             <span className="text-gold">Our Latest Case Studies:</span>
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full">
-            <div className="flex flex-col w-full gap-1">
+            <motion.div
+              initial={{ opacity: 0, x: -100, y: 50 }}
+              whileInView={{ opacity: 1, x: 0, y: 0 }}
+              transition={{ duration: 0.7, ease: "circInOut" }}
+              viewport={{ once: true, margin: "-60px" }}
+              className="flex flex-col w-full gap-1"
+            >
               <img
                 src="/case-studies1.jpg"
                 alt="Case study image"
@@ -44,8 +51,14 @@ export const CaseStudies = () => {
                   </div>
                 </Link>
               </div>
-            </div>
-            <div className="flex flex-col w-full gap-1">
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 100, y: 50 }}
+              whileInView={{ opacity: 1, x: 0, y: 0 }}
+              transition={{ duration: 0.7, ease: "circInOut" }}
+              viewport={{ once: true, margin: "-60px" }}
+              className="flex flex-col w-full gap-1"
+            >
               <img
                 src="/case-studies2.jpg"
                 alt="Case study 2"
@@ -77,7 +90,7 @@ export const CaseStudies = () => {
                   </div>
                 </Link>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </MaxWidthWrapper>

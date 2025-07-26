@@ -13,7 +13,7 @@ import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { Button } from "../ui/button";
-import { FaWhatsapp } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 export const Navbar = () => {
   const location = useLocation();
@@ -71,8 +71,15 @@ export const Navbar = () => {
   }, [location]);
 
   return (
-    <div className="flex items-center justify-between bg-gradient-to-l from-white to-gold/70 h-24 w-full">
-      <div className="relative w-full flex justify-between h-full">
+    <div className="relative flex items-center justify-between bg-gradient-to-l from-white to-gold/70 h-24 w-full ">
+      <div className="w-full flex justify-between h-full">
+        <div className="pointer-events-none select-none absolute w-full h-full flex-1 flex overflow-hidden max-md:hidden">
+          <img
+            src="/boxesTexture.png"
+            alt="Boxes Texture"
+            className="absolute -right-[250px] top-0 rotate-45 opacity-40"
+          />
+        </div>
         <div
           className={cn(
             "absolute top-24 left-0 hidden md:flex w-full h-[calc(220vh)] z-50 bg-charcoal transition-all duration-200 ease-in-out",
@@ -109,13 +116,16 @@ export const Navbar = () => {
           </MaxWidthWrapper>
         </div>
         <MaxWidthWrapper>
-          <div className="flex h-full items-center justify-between flex-1">
+          <div className="flex h-full items-center justify-between flex-1 px-4">
             <div className="h-full flex items-center">
               <Link to="/" className="text-white ">
-                <img
+                <motion.img
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.7, ease: "linear" }}
                   src="/logo.png"
                   alt="Logo"
-                  className="w-32 h-14 object-contain"
+                  className="w-32 h-14 object-contain z-[100]"
                 />
               </Link>
             </div>

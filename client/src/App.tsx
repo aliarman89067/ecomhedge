@@ -20,14 +20,15 @@ import { FloatingElements } from "./components/floating-elements";
 const App = () => {
   const pathname = window.location.href;
 
-  const isContractPage = pathname.includes("amazon-wholesale-fba");
+  const isContractPage = pathname.includes("tiktok-shop-ds-contract");
 
   return (
     <ContextProvider>
       <BrowserRouter>
-        <OverlayForm />
         <ScrollToTop />
-        <FloatingElements />
+        {!isContractPage && <OverlayForm />}
+        {!isContractPage && <FloatingElements />}
+
         {!isContractPage && <Navbar />}
         <Routes>
           {/* Home/Index */}
@@ -53,7 +54,7 @@ const App = () => {
           <Route path="/contact" Component={Contact} />
           <Route path="/faq" Component={Faq} />
           <Route
-            path="/amazon-wholesale-fba"
+            path="/tiktok-shop-ds-contract"
             Component={AmazonAutomationContract}
           />
         </Routes>

@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bad+Script&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -138,4 +140,23 @@ h4 {
   font-family: "Work Sans", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+}
+.oleo {
+  font-family: "Oleo Script", system-ui;
+}
+.mask-gradient-left {
+  -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 0.6), black);
+  mask-image: linear-gradient(to left, black, transparent);
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+.mask-gradient-right {
+  -webkit-mask-image: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.6));
+  mask-image: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.6));
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
 }

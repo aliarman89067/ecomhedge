@@ -29,17 +29,40 @@ const AmazonAutomationContract = () => {
     heading,
     desc,
     isPoint = true,
+    isMonthNames = false,
   }: {
     point: number;
     heading: string;
     desc: string;
     isPoint?: boolean;
+    isMonthNames?: boolean;
   }) => {
     return (
       <div className="flex flex-col gap-1">
         <span className="font-semibold text-base text-charcoal">
           {isPoint && point + "."} {heading}
         </span>
+        {isMonthNames && (
+          <div className="flex flex-col ml-2">
+            <span className="font-semibold text-base text-charcoal">
+              BreakDown
+            </span>
+            <div className="flex flex-col">
+              <span className="text-[#000000] text-base">
+                First Month $1,000
+              </span>
+              <span className="text-[#000000] text-base">
+                Second Month $1,000
+              </span>
+              <span className="text-[#000000] text-base">
+                Third Month $1,000
+              </span>
+            </div>
+            <span className="font-semibold text-base text-charcoal">
+              Total Cost $4,000
+            </span>
+          </div>
+        )}
         <p className="text-[#000000] text-base">{desc}</p>
       </div>
     );
@@ -67,7 +90,7 @@ const AmazonAutomationContract = () => {
     return (
       <>
         <h1 className="text-[#000000] font-bold text-3xl text-center">
-          Amazon Wholesale (fba) Automation
+          TikTok Shop (DS) Automation
         </h1>
         <span className="text-center text-[#000000] font-medium text-lg">
           Contract on: {getDate()} | With EcomAsis | www.ecomasis.com
@@ -135,11 +158,11 @@ const AmazonAutomationContract = () => {
       desc: "We conduct extensive research to identify trending, high-demand products that align with market needs. Our data-driven approach ensures the selection of products with the highest sales potential.",
     },
     {
-      heading: "Amazon Wholesale (fba) Seller Account Setup",
-      desc: "We take care of the entire seller account setup process, including verification and compliance, ensuring a seamless launch of your Amazon Wholesale (fba) store.",
+      heading: "tikTok shop (DS) Seller Account Setup",
+      desc: "We take care of the entire seller account setup process, including verification and compliance, ensuring a seamless launch of your tikTok shop (DS) store.",
     },
     {
-      heading: "Branding For Amazon Wholesale (fba)",
+      heading: "Branding For tikTok shop (DS)",
       desc: "Branding plays a crucial role in differentiation. We create a distinct brand identity for your store, including logo design, brand colors, and an appealing aesthetic tailored to attract your target audience.",
     },
     {
@@ -177,11 +200,11 @@ const AmazonAutomationContract = () => {
   const pointsFor3 = [
     {
       heading: "Expertise",
-      desc: "Our team has years of experience in e-commerce, marketplace automation, and product management. We understand the complexities of Amazon Wholesale FBA platform and implement proven strategies to ensure success.",
+      desc: "Our team has years of experience in e-commerce, marketplace automation, and product management. We understand the complexities of tikTok shop (DS)  platform and implement proven strategies to ensure success.",
     },
     {
       heading: "Comprehensive Service",
-      desc: "We offer an end-to-end Amazon Wholesale FBA solution, covering everything from product research, account setup, branding, and inventory management to digital marketing and customer engagement.",
+      desc: "We offer an end-to-end tikTok shop (DS)  solution, covering everything from product research, account setup, branding, and inventory management to digital marketing and customer engagement.",
     },
     {
       heading: "Data-Driven Approach",
@@ -193,7 +216,7 @@ const AmazonAutomationContract = () => {
     },
     {
       heading: "Proven Success",
-      desc: "We have a track record of successfully launching and scaling Amazon Wholesale FBA. Our strategies are tailored to meet Amazon Wholesale FBA requirements and best practices, ensuring long-term profitability.",
+      desc: "We have a track record of successfully launching and scaling tikTok shop (DS) . Our strategies are tailored to meet tikTok shop (DS)  requirements and best practices, ensuring long-term profitability.",
     },
   ];
   const pointsFor4 = [
@@ -206,11 +229,11 @@ const AmazonAutomationContract = () => {
       desc: "3 to 5 Working Days",
     },
     {
-      heading: "Amazon Wholesale (fba) Seller Account Setup",
+      heading: "tikTok shop (DS) Seller Account Setup",
       desc: "10 to 15 Working Days",
     },
     {
-      heading: "Amazon Wholesale (fba) Content",
+      heading: "tikTok shop (DS) Content",
       desc: "1 to 2 Working Days",
     },
     {
@@ -219,7 +242,7 @@ const AmazonAutomationContract = () => {
     },
   ];
   const bulletPoints1 = [
-    "Amazon Wholesale (fba) store creation & approval",
+    "tikTok shop (DS) store creation & approval",
     "Product research, listing, and SEO optimization",
     "Order processing and fulfillment",
     "24/7 account monitoring & customer service",
@@ -237,11 +260,12 @@ const AmazonAutomationContract = () => {
   const bulletPoints4 = [
     "Stripe",
     "PayPal",
+    "Wise",
     "Wire Bank Transfer (Preferred for smoother, secure processing)",
   ];
 
   const bulletPoints5 = [
-    "The client retains ownership of all assets developed under this project, including social media pages and the Amazon Wholesale (fba) Seller Account",
+    "The client retains ownership of all assets developed under this project, including social media pages and the tikTok shop (DS) Seller Account",
     "Either party may terminate this agreement by providing a one-month written notice. Upon termination, any outstanding profits will be calculated and distributed based on the agreed profit split.",
     "Both parties agree to maintain confidentiality regarding financial details and business strategies, ensuring no disclosure to third parties without prior written consent.",
   ];
@@ -348,7 +372,7 @@ const AmazonAutomationContract = () => {
 
         <Heading
           heading="Scope and Goals"
-          desc="Ecomasis offers a complete Amazon Wholesale FBA service, optimizing e-commerce operations to enhance profitability. Our cutting-edge strategies ensure a smooth and efficient selling experience on Amazon Wholesale FBA. Below are the key services covered under our Amazon Wholesale FBA package:"
+          desc="Ecomasis offers a complete tikTok shop (DS)  service, optimizing e-commerce operations to enhance profitability. Our cutting-edge strategies ensure a smooth and efficient selling experience on tikTok shop (DS) . Below are the key services covered under our tikTok shop (DS)  package:"
         />
         {pointsFor1.map((item, index) => (
           <Point
@@ -373,7 +397,7 @@ const AmazonAutomationContract = () => {
           />
         </div>
         <Header />
-        <Heading heading="Goals For Amazon Wholesale FBA" desc="" />
+        <Heading heading="Goals For tikTok shop (DS) " desc="" />
         {pointsFor2.map((item, index) => (
           <Point
             key={index}
@@ -450,13 +474,14 @@ const AmazonAutomationContract = () => {
         </div>
         <Header />
         <Heading
-          heading="Amazon Wholesale FBA Plan – Package Breakdown"
+          heading="tikTok shop (DS)  Plan – Package Breakdown"
           desc="In order to effectively implement everything necessary to make your business a success, we'll need around 4 - 5 weeks. We'll start right away after you've signed the proposal."
         />
         <Point
           isPoint={false}
-          heading="Total Investment of One-Year Management & Platform Fees: $2,500"
-          desc="This covers everything needed to set up, manage, and scale your Amazon Wholesale (fba) dropshipping business."
+          isMonthNames
+          heading="Total Investment of One-Year Management & Platform Fees: $4,000 ($1,000 Monthly Instalment)"
+          desc="This covers everything needed to set up, manage, and scale your tikTok shop (DS) dropshipping business."
           point={1}
         />
         <BulletPoints title="Include:" points={bulletPoints1} />
@@ -516,19 +541,19 @@ const AmazonAutomationContract = () => {
         <div className="flex flex-col gap-1">
           <div className="flex items-center gap-1 text-base">
             <b>Name: </b>
-            <span>Joseph R Goebel</span>
+            <span>Leon Tran</span>
           </div>
           <div className="flex items-center gap-1 text-base">
             <b>Address: </b>
-            <span>4530 Marble Dr. NewBurgh IN 47630</span>
+            <span>1413-Dentwood-drive-Garland-Texas-75041</span>
           </div>
           <div className="flex items-center gap-1 text-base">
             <b>Email: </b>
-            <span>boxerjrg@gmail.com</span>
+            <span>leonxtprofessional@gmail.com</span>
           </div>
           <div className="flex items-center gap-1 text-base">
             <b>Phone: </b>
-            <span>812-629-4114</span>
+            <span>+1(469)7131745</span>
           </div>
         </div>
         <Point
@@ -545,7 +570,7 @@ const AmazonAutomationContract = () => {
         />
         <BulletPoints
           title="Project Cost:"
-          points={["Total Service Cost: $2,500 USD for Amazon Wholesale FBA"]}
+          points={["Total Service Cost: $4,000 USD for tikTok shop (DS) "]}
         />
         <Footer />
       </div>
@@ -564,7 +589,7 @@ const AmazonAutomationContract = () => {
         <Header />
         <Heading
           heading="Ecomasis and Client Responsibilities"
-          desc="This agreement is entered into between ecomasis (Service Provider) and Joseph (Client) to define the terms of Amazon Wholesale FBA, including the profit-sharing structure."
+          desc="This agreement is entered into between ecomasis (Service Provider) and Joseph (Client) to define the terms of tikTok shop (DS) , including the profit-sharing structure."
         />
         <BulletPoints title="" points={bulletPoints5} />
         <BulletPoints title="Partnership and Profit Split" points={[]} />
@@ -581,10 +606,10 @@ const AmazonAutomationContract = () => {
         />
         <p className="text-[#000000] text-base">
           This arrangement remains in effect as long as ecomasis continues
-          managing the Client’s Amazon Wholesale FBA. Profit calculation will be
+          managing the Client’s tikTok shop (DS) . Profit calculation will be
           based on total revenue minus all associated expenses, including but
-          not limited to product costs, shipping fees, Amazon Wholesale FBA
-          charges, and operational expenses.
+          not limited to product costs, shipping fees, tikTok shop (DS) charges,
+          and operational expenses.
         </p>
         <Footer />
       </div>

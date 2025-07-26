@@ -140,11 +140,6 @@ export const Footer = () => {
           </a>
         </div>
       </div>
-      <div className="w-full  mx-auto -mt-8">
-        <h1 className="text-white font-extralight text-3xl lg:text-[170px] text-center">
-          Ecomasis
-        </h1>
-      </div>
       <p className="text-white text-center my-2">
         Copyright © 2025 ECOM ASIS. All Rights Reserved.
       </p>

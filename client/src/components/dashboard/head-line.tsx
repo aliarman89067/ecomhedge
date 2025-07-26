@@ -1,5 +1,7 @@
 import { cn } from "@/lib/utils";
 import { MaxWidthWrapper } from "../max-width-wrapper";
+import { motion } from "framer-motion";
+import { ScrollParallax } from "react-just-parallax";
 
 export const Headline = () => {
   const data = [
@@ -31,14 +33,28 @@ export const Headline = () => {
           <span className="font-medium">company changing</span> the lives of
           ecommerce sellers.
         </h1>
-        <img
-          src="/laptop.png"
-          alt="Laptop"
-          className="w-full md:h-[40vh] object-contain"
-        />
+        <ScrollParallax>
+          <motion.img
+            initial={{ opacity: 0, y: -50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-150px" }}
+            transition={{ duration: 0.6, ease: "easeInOut" }}
+            src="/laptop.png"
+            alt="Laptop"
+            className="w-full md:h-[40vh] object-contain"
+          />
+        </ScrollParallax>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full mt-2">
           {data.map((item, index) => (
-            <div
+            <motion.div
+              initial={{ opacity: 0, y: -50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-150px" }}
+              transition={{
+                duration: 0.6,
+                ease: "easeInOut",
+                delay: index * 0.2,
+              }}
               key={item.id}
               className={cn(
                 "w-full h-14 md:h-18 rounded-full flex flex-col items-center justify-center bg-white border border-charcoal",
@@ -62,7 +78,7 @@ export const Headline = () => {
               >
                 {item.label}
               </span>
-            </div>
+            </motion.div>
           ))}
         </div>
       </MaxWidthWrapper>
