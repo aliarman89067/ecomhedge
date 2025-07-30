@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import { useContext, type ReactNode } from "react";
 import { CTAButton } from "../cta-button";
 import { MaxWidthWrapper } from "../max-width-wrapper";
 import { z } from "zod";
@@ -15,6 +15,7 @@ import {
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import { toast } from "sonner";
+import { FormContext } from "@/context/form-context";
 
 interface Props {
   title: ReactNode;
@@ -41,6 +42,8 @@ export const ServicesHero = ({ title, desc }: Props) => {
     },
   });
 
+  const { setIsSubmit } = useContext(FormContext);
+
   const handleSubmit = async (values: FormSchemaType) => {
     try {
       await fetch("https://ecomasis-email-server.vercel.app/generate-lead", {
@@ -53,6 +56,7 @@ export const ServicesHero = ({ title, desc }: Props) => {
       toast.success(
         "We've received your message. Our team will get back to you shortly."
       );
+      setIsSubmit?.(true);
     } catch (error) {
       console.log(error);
       toast.error("Something went wrong. Please try again later.");

@@ -41,7 +41,7 @@ export const VideoSection = () => {
       >
         <source src="/overlay-video.mp4" type="mp4/video" />
       </video>
-      <div className="absolute z-20 max-lg:w-full max-lg:px-2 h-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 grid-cols-1 grid lg:grid-cols-2 gap-5 lg:gap-28 items-center">
+      <div className="absolute z-20 max-lg:w-full px-3 h-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 grid-cols-1 grid lg:grid-cols-2 gap-5 lg:gap-28 items-center">
         <motion.h1
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}

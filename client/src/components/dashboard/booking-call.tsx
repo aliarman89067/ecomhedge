@@ -35,7 +35,7 @@ export const BookingCall = () => {
         viewport={{ once: true, margin: "-50px" }}
         src="/booking.jpg"
         alt="Booking image"
-        className="w-full h-[500px] md:w-full md:h-full object-contain"
+        className="w-full md:h-[500px] md:w-full object-contain"
       />
     </div>
   );

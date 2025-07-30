@@ -5,7 +5,7 @@ import { MouseParallax } from "react-just-parallax";
 
 export const Benefits = () => {
   return (
-    <div className="py-10 relative min-h-screen w-full flex flex-col overflow-hidden items-center justify-center">
+    <div className="py-10 relative min-h-screen w-full flex flex-col overflow-hidden items-center justify-center px-3">
       <div className="absolute z-10 top-0 left-0 w-full h-full bg-black/40 backdrop-blur-xl" />
       <video
         src="/golden-video.mp4"
@@ -54,7 +54,9 @@ export const Benefits = () => {
                   Automate Your Growth on Amazon.
                 </p>
                 <div className="flex items-center gap-2 bg-gold px-6 py-6 rounded-full">
-                  <span className="text-white text-xl">1,200+ Customers</span>
+                  <span className="text-white text-lg sm:text-xl">
+                    1,200+ Customers
+                  </span>
                   <ChartNoAxesColumnIncreasing className="text-white size-7" />
                 </div>
                 <div className="flex items-center gap-5">

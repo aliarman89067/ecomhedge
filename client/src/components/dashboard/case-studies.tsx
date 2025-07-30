@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export const CaseStudies = () => {
   return (
-    <section className="w-full min-h-screen py-10 flex items-center justify-center bg-charcoal">
+    <section className="w-full min-h-screen py-10 flex items-center justify-center bg-charcoal px-3">
       <MaxWidthWrapper>
         <div className="flex flex-col gap-4">
           <h1 className="text-white text-3xl">

@@ -1,5 +1,5 @@
 import { navbarLinks } from "@/constant";
-import { ChevronLeft, ChevronUp, MenuIcon } from "lucide-react";
+import { ChevronDown, ChevronLeft, ChevronUp, MenuIcon } from "lucide-react";
 import { MaxWidthWrapper } from "../max-width-wrapper";
 import {
   Sheet,
@@ -70,6 +70,20 @@ export const Navbar = () => {
     }
   }, [location]);
 
+  useEffect(() => {
+    // Disable scroll
+    if (isServices) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    // Clean up on unmount
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isServices]);
+
   return (
     <div className="relative flex items-center justify-between bg-gradient-to-l from-white to-gold/70 h-24 w-full ">
       <div className="w-full flex justify-between h-full">
@@ -82,7 +96,7 @@ export const Navbar = () => {
         </div>
         <div
           className={cn(
-            "absolute top-24 left-0 hidden md:flex w-full h-[calc(220vh)] z-50 bg-charcoal transition-all duration-200 ease-in-out",
+            "fixed top-24 left-0 hidden md:flex w-full h-full max-h-[calc(100vh-6rem)] overflow-y-auto z-50 bg-charcoal transition-all duration-200 ease-in-out",
             isServices
               ? "opacity-100 pointer-events-auto select-auto"
               : "opacity-0 pointer-events-none select-none"
@@ -162,13 +176,14 @@ export const Navbar = () => {
 
                       {item.label === "Services" ? (
                         <span
-                          onClick={() => {
-                            setIsServices(!isServices);
+                          onMouseEnter={() => {
+                            setIsServices(true);
                             setActiveTab("services");
                           }}
-                          className="text-charcoal text-base cursor-pointer"
+                          className="text-charcoal text-base cursor-pointer flex items-center"
                         >
-                          {item.label}
+                          {item.label}{" "}
+                          <ChevronDown className="size-4 text-charcoal" />
                         </span>
                       ) : (
                         <Link
@@ -205,10 +220,10 @@ export const Navbar = () => {
                           <Link
                             key={index}
                             to={item.href}
-                            className="relative overflow-hidden group w-full h-14 flex items-center gap-3 px-4 cursor-pointer bg-white"
+                            className="relative overflow-hidden group w-full h-10 md:h-14 flex items-center gap-3 px-4 cursor-pointer bg-white"
                           >
                             <div className="absolute -top-14 group-hover:top-0 transition-all duration-150 ease-in-out left-0 w-full h-full bg-charcoal"></div>
-                            <span className="z-10 text-black group-hover:text-white font-extralight text-xl duration-200 transition-all ease-in-out">
+                            <span className="z-10 text-black group-hover:text-white md:font-extralight text-base sm:text-lg md:text-xl duration-200 transition-all ease-in-out">
                               {item.label}
                             </span>
                           </Link>
@@ -223,10 +238,10 @@ export const Navbar = () => {
                             <span
                               key={item.id}
                               onClick={() => setIsServices(true)}
-                              className="relative overflow-hidden group w-full h-14 flex items-center gap-3 px-4 cursor-pointer bg-white"
+                              className="relative overflow-hidden group w-full h-10 md:h-14 flex items-center gap-3 px-4 cursor-pointer bg-white"
                             >
                               <div className="absolute -top-14 group-hover:top-0 transition-all duration-150 ease-in-out left-0 w-full h-full bg-charcoal"></div>
-                              <span className="z-10 text-black group-hover:text-white font-extralight text-xl duration-200 transition-all ease-in-out">
+                              <span className="z-10 text-black group-hover:text-white font-extralight md:font-extralight text-base sm:text-lg md:text-xl duration-200 transition-all ease-in-out">
                                 {item.label}
                               </span>
                             </span>

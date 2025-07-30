@@ -16,11 +16,12 @@ import { ContextProvider } from "./context/form-context";
 import { OverlayForm } from "./components/overlay-form";
 import AmazonAutomationContract from "./pages/automation-wholesale-fba-contract";
 import { FloatingElements } from "./components/floating-elements";
+import { Contract } from "./pages/contract/Contract";
 
 const App = () => {
   const pathname = window.location.href;
 
-  const isContractPage = pathname.includes("tiktok-shop-ds-contract");
+  const isContractPage = pathname.includes("contract-management-cms");
 
   return (
     <ContextProvider>
@@ -57,6 +58,7 @@ const App = () => {
             path="/tiktok-shop-ds-contract"
             Component={AmazonAutomationContract}
           />
+          <Route path="/contract-management-cms" Component={Contract} />
         </Routes>
         {!isContractPage && <Footer />}
       </BrowserRouter>

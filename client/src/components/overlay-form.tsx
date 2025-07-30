@@ -18,7 +18,7 @@ import { Textarea } from "./ui/textarea";
 import { Input } from "./ui/input";
 
 export const OverlayForm = () => {
-  const { isOpen, setIsOpen } = useContext(FormContext);
+  const { isOpen, setIsOpen, setIsSubmit } = useContext(FormContext);
 
   const formSchema = z.object({
     name: z.string().min(1, { message: "Please enter your name" }),
@@ -52,6 +52,7 @@ export const OverlayForm = () => {
         "We've received your message. Our team will get back to you shortly."
       );
       setIsOpen?.(false);
+      setIsSubmit?.(true);
     } catch (error) {
       console.log(error);
       toast.error("Something went wrong. Please try again later.");
@@ -60,10 +61,10 @@ export const OverlayForm = () => {
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
-      <DialogContent className="bg-transparent border-none outline-none shadow-none ring-0 [&>button]:hidden">
+      <DialogContent className="bg-transparent w-full border-none outline-none shadow-none ring-0 [&>button]:hidden">
         <Form {...form}>
           <form
-            className="relative bg-gradient-to-bl from-charcoal to-gold rounded-lg border border-gray-400 flex flex-col px-5 py-3 w-[90%] gap-5"
+            className="relative  bg-gradient-to-bl from-charcoal to-gold rounded-lg border border-gray-400 flex flex-col px-5 py-3 w-full sm:w-[90%] gap-5"
             onSubmit={form.handleSubmit(handleSubmit)}
           >
             <X

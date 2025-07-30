@@ -111,14 +111,14 @@ export const Footer = () => {
         <a href="mailto:info@ecomasis.com">info@ecomasis.com</a>
         <div className="flex items-center gap-4">
           <a
-            href="https://www.facebook.com/profile.php?id=61578681231519"
+            href="https://www.facebook.com/profile.php?id=61578195136578"
             target="_blank"
             className="hover:bg-gold transition-all duration-200 ease-in-out w-10 h-10 rounded-full bg-charcoal flex items-center justify-center cursor-pointer"
           >
             <FacebookIcon className="text-white size-4" />
           </a>
           <a
-            href="https://www.instagram.com/ecomasis/"
+            href="https://www.instagram.com/ecomasis8/"
             target="_blank"
             className="hover:bg-gold transition-all duration-200 ease-in-out w-10 h-10 rounded-full bg-charcoal flex items-center justify-center cursor-pointer"
           >

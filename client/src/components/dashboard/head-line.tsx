@@ -25,7 +25,7 @@ export const Headline = () => {
     },
   ];
   return (
-    <section className="relative w-full h-auto md:min-h-screen flex items-center justify-center py-10">
+    <section className="relative w-full h-auto md:min-h-screen flex items-center justify-center py-10 px-3">
       <div className="w-[400px] h-[400px] rounded-full bg-gold/25 absolute blur-3xl" />
       <MaxWidthWrapper classNames="flex flex-col items-center z-10 gap-10">
         <h1 className="md:w-3xl text-center text-xl md:text-2xl font-extralight text-charcoal">

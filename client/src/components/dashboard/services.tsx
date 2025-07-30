@@ -8,7 +8,7 @@ import { MouseParallax } from "react-just-parallax";
 export const Services = () => {
   const navigate = useNavigate();
   return (
-    <div className="flex w-full min-h-screen items-center justify-center py-10">
+    <div className="flex w-full min-h-screen items-center justify-center py-10 px-3">
       <MaxWidthWrapper classNames="flex flex-col gap-7">
         <h1 className="text-charcoal text-xl md:text-3xl">
           Choose a Service <br />
@@ -44,11 +44,11 @@ export const Services = () => {
               className="absolute top-0 right-0 w-full h-full object-cover opacity-10 mask-gradient-left"
             />
             <div className="w-full flex h-full">
-              <div className="w-[80%] flex flex-col gap-5">
-                <h1 className="text-white font-extrabold text-4xl sm:text-5xl md:text-6xl lg:leading-[70px]">
+              <div className="w-full sm:w-[80%] flex flex-col gap-5 z-10">
+                <h1 className="text-white font-extrabold text-3xl sm:text-5xl md:text-6xl lg:leading-[70px]">
                   Fulfillment by Amazon (FBA)
                 </h1>
-                <span className="text-white text-lg sm:text-xl">
+                <span className="text-white text-base sm:text-xl">
                   Streamline Operations & Boost Sales with FBA Automation.
                 </span>
                 <Button
@@ -64,7 +64,7 @@ export const Services = () => {
               <img
                 src="/services/truck.png"
                 alt="Chart Image"
-                className="absolute -right-44 -top-16 flex-1 scale-x-[-1] h-[600px] object-cover mask-gradient-right"
+                className="absolute -right-20 sm:-right-44 top-1/2 max-sm:-translate-y-1/2 sm:-top-16 flex-1 scale-x-[-1] max-sm:w-60 sm:h-[600px] object-contain sm:object-cover mask-gradient-left max-sm:opacity-30"
               />
             </div>
           </motion.div>
@@ -84,18 +84,18 @@ export const Services = () => {
                 className="absolute top-0 right-0 w-full h-full object-cover opacity-10 mask-gradient-left"
               />
               <div className="w-full flex h-full">
-                <div className="w-[70%] flex flex-col gap-5">
+                <div className="w-full sm:w-[70%] flex flex-col gap-5 z-10">
                   <h1 className="text-white font-extrabold text-3xl sm:text-4xl">
                     Buy Box Advantage
                   </h1>
-                  <span className="text-white text-lg sm:text-xl">
+                  <span className="text-white text-base sm:text-xl">
                     Win the Buy Box, Maximize Your Sales Today.
                   </span>
                 </div>
                 <img
                   src="/services/box.png"
                   alt="Chart Image"
-                  className="absolute -right-28 -top-10 flex-1 h-[350px] object-cover mask-gradient-right"
+                  className="absolute -right-28 -top-10 flex-1 h-[350px] object-cover mask-gradient-right max-sm:opacity-30"
                 />
               </div>
             </motion.div>
@@ -113,18 +113,18 @@ export const Services = () => {
                 className="absolute top-0 right-0 w-full h-full object-cover opacity-10 mask-gradient-left"
               />
               <div className="w-full flex h-full">
-                <div className="w-[70%] flex flex-col gap-5">
+                <div className="w-full sm:w-[70%] flex flex-col gap-5">
                   <h1 className="text-white font-extrabold text-3xl sm:text-4xl">
                     Organic Sales
                   </h1>
-                  <span className="text-white text-lg sm:text-xl">
+                  <span className="text-white text-base sm:text-xl">
                     Leverage Built-In Demand with High-Visibility Brands.
                   </span>
                 </div>
                 <img
                   src="/services/chart.png"
                   alt="Chart Image"
-                  className="absolute -right-28 -top-10 flex-1 h-[350px] scale-x-[-1] object-cover mask-gradient-right"
+                  className="absolute -right-28 -top-10 flex-1 h-[350px] scale-x-[-1] object-cover mask-gradient-right max-sm:opacity-70"
                 />
               </div>
             </motion.div>
