@@ -16,6 +16,7 @@ import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import { toast } from "sonner";
 import { FormContext } from "@/context/form-context";
+import axios from "axios";
 
 interface Props {
   title: ReactNode;
@@ -46,13 +47,10 @@ export const ServicesHero = ({ title, desc }: Props) => {
 
   const handleSubmit = async (values: FormSchemaType) => {
     try {
-      await fetch("https://ecomasis-email-server.vercel.app/generate-lead", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(values),
-      });
+      await axios.post(
+        "https://ecomasis-email-server.vercel.app/generate-lead",
+        values
+      );
       toast.success(
         "We've received your message. Our team will get back to you shortly."
       );

@@ -8,12 +8,14 @@ import {
   BoldIcon,
   ChevronDown,
   CodeIcon,
+  FootprintsIcon,
   ImageIcon,
   ItalicIcon,
   ListIcon,
   ListOrderedIcon,
   MinusIcon,
   PlusIcon,
+  RectangleCircleIcon,
   Redo2,
   SearchIcon,
   SpellCheck,
@@ -392,7 +394,8 @@ export const Toolbar = () => {
         const file = (e.target as HTMLInputElement).files?.[0];
         if (file) {
           const imageUrl = URL.createObjectURL(file);
-          onChange(imageUrl);
+          // console.log
+          onChange(`/${file.name}`);
         }
       };
       input.click();

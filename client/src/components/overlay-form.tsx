@@ -6,6 +6,7 @@ import z from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "sonner";
+import axios from "axios";
 import {
   Form,
   FormControl,
@@ -41,13 +42,10 @@ export const OverlayForm = () => {
 
   const handleSubmit = async (values: FormSchemaType) => {
     try {
-      await fetch("https://ecomasis-email-server.vercel.app/generate-lead", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(values),
-      });
+      await axios.post(
+        "https://ecomasis-email-server.vercel.app/generate-lead",
+        values
+      );
       toast.success(
         "We've received your message. Our team will get back to you shortly."
       );

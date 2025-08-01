@@ -13,13 +13,14 @@ import ImageResize from "tiptap-extension-resize-image";
 import TextAlign from "@tiptap/extension-text-align";
 import { CodeBlock } from "@tiptap/extension-code-block";
 import { useEditorStore } from "@/context/editorStore";
+import { useEffect } from "react";
 
 interface Props {
   pageNumber: number;
 }
 
 export default function Editor({ pageNumber }: Props) {
-  const { addHtml, setEditor, html } = useEditorStore();
+  const { addHtml, setEditor, html, type } = useEditorStore();
   const editor = useEditor({
     immediatelyRender: false,
     onCreate({ editor }) {
@@ -70,9 +71,15 @@ export default function Editor({ pageNumber }: Props) {
     editorProps: {
       attributes: {
         class:
-          "focus:outline-none print:border-0 bg-white border border-[#c7c7c7] flex flex-col min-h-[1054px] w-[816px] p-6 cursor-text",
+          "focus:outline-none print:border-0 bg-white border border-[#c7c7c7] flex flex-col min-h-[1123px] w-[816px] p-6 cursor-text",
       },
     },
   });
+  useEffect(() => {
+    editor?.commands.setContent(
+      html.find((item) => item.key === `page-${pageNumber}`)?.value ?? ""
+    );
+  }, [type]);
+
   return <EditorContent editor={editor} />;
 }

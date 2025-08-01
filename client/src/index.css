@@ -160,3 +160,7 @@ h4 {
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
 }
+
+p:empty::before {
+  content: "\00a0"; /* non-breaking space */
+}

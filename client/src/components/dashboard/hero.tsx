@@ -22,6 +22,7 @@ import { MdAccountBalance } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { FormContext } from "@/context/form-context";
+import axios from "axios";
 
 export const Hero = () => {
   const navigate = useNavigate();
@@ -48,13 +49,10 @@ export const Hero = () => {
 
   const handleSubmit = async (values: FormSchemaType) => {
     try {
-      await fetch("https://ecomasis-email-server.vercel.app/generate-lead", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(values),
-      });
+      await axios.post(
+        "https://ecomasis-email-server.vercel.app/generate-lead",
+        values
+      );
       toast.success(
         "We've received your message. Our team will get back to you shortly."
       );

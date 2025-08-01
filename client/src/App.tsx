@@ -17,11 +17,16 @@ import { OverlayForm } from "./components/overlay-form";
 import AmazonAutomationContract from "./pages/automation-wholesale-fba-contract";
 import { FloatingElements } from "./components/floating-elements";
 import { Contract } from "./pages/contract/Contract";
+import ClientContract from "./pages/contract/client-contract";
+import VerificationCode from "./pages/verification-code";
 
 const App = () => {
   const pathname = window.location.href;
 
-  const isContractPage = pathname.includes("contract-management-cms");
+  const isContractPage =
+    pathname.includes("contract-management-cms") ||
+    /\/contract\/[a-z0-9-]+\/[a-f0-9]{24}/.test(pathname) ||
+    /verification\/(\d{6}|[a-f0-9]{24})/.test(pathname);
 
   return (
     <ContextProvider>
@@ -59,6 +64,8 @@ const App = () => {
             Component={AmazonAutomationContract}
           />
           <Route path="/contract-management-cms" Component={Contract} />
+          <Route path="/contract/:type/:id" Component={ClientContract} />
+          <Route path="/verification/:id" Component={VerificationCode} />
         </Routes>
         {!isContractPage && <Footer />}
       </BrowserRouter>
