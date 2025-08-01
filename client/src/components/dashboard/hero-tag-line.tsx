@@ -11,8 +11,8 @@ export const HeroTagLine = () => {
 
           <p className="text-center text-base text-charcoal">
             Starting a business is one thing—sustaining and scaling it is where
-            most fail. At EcomAsis, we help turn your entrepreneurial vision
-            into a long-term, thriving reality.
+            most fail. At Ecom Automations Hub, we help turn your
+            entrepreneurial vision into a long-term, thriving reality.
           </p>
         </div>
       </MaxWidthWrapper>

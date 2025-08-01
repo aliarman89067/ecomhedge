@@ -27,7 +27,7 @@ export const ContextProvider = ({ children }: { children: ReactNode }) => {
     let timeoutId = setTimeout(() => {
       setIsOpen(true);
       count++;
-    }, 2000);
+    }, 10000);
     let intervalId = setInterval(() => {
       if (count === 3) {
         clearInterval(intervalId);
@@ -36,7 +36,7 @@ export const ContextProvider = ({ children }: { children: ReactNode }) => {
         count++;
         setIsOpen(true);
       }
-    }, 15000);
+    }, 40000);
     if (isSubmit) {
       clearTimeout(timeoutId);
       clearInterval(intervalId);

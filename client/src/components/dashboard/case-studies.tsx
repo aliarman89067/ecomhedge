@@ -9,7 +9,7 @@ export const CaseStudies = () => {
       <MaxWidthWrapper>
         <div className="flex flex-col gap-4">
           <h1 className="text-white text-3xl">
-            Experience Ecomasis - <br />
+            Experience Ecom Automations Hub - <br />
             <span className="text-gold">Our Latest Case Studies:</span>
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full">

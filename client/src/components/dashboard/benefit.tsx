@@ -28,7 +28,7 @@ export const Benefits = () => {
           >
             Wholesale Gains with{" "}
             <span className="inline-flex text-gold font-bold relative">
-              <span>Ecomasis</span>
+              <span>Ecom Automations Hub</span>
               <img
                 src="/heading-stars.png"
                 alt="Stars"

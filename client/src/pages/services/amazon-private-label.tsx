@@ -30,17 +30,17 @@ export const AmazonPrivateLabel = () => {
     {
       href: "/services/amazon-pl/calendar.png",
       title: "Quality control",
-      desc: "ecomasis’s FBA label service for Amazon empowers you to select premium materials and ingredients, ensuring your offerings exceed customer expectations and outshine competitors.",
+      desc: "Ecom Automations Hub’s FBA label service for Amazon empowers you to select premium materials and ingredients, ensuring your offerings exceed customer expectations and outshine competitors.",
     },
     {
       href: "/services/amazon-pl/direction.png",
       title: "Profitability flexibility",
-      desc: "Set your own prices and gain a competitive edge in the market. With ecomasis, you can swiftly adjust prices to capitalize on market opportunities, maximizing your revenue potential.",
+      desc: "Set your own prices and gain a competitive edge in the market. With Ecom Automations Hub, you can swiftly adjust prices to capitalize on market opportunities, maximizing your revenue potential.",
     },
     {
       href: "/services/amazon-pl/ranking.png",
       title: "Reduced competition",
-      desc: "Dive into a less saturated market with ecomasis's FBA label service. Create unique, niche products that resonate with customers, unlocking new market segments and boosting your sales potential.",
+      desc: "Dive into a less saturated market with Ecom Automations Hub's FBA label service. Create unique, niche products that resonate with customers, unlocking new market segments and boosting your sales potential.",
     },
   ];
   const analyticsData = [
@@ -73,17 +73,17 @@ export const AmazonPrivateLabel = () => {
     {
       href: "/services/tiktok/sun.jpg",
       title: "Strategic product selection",
-      desc: "ecomasis excels in guiding you through the intricate process of product selection for your Amazon private label. We conduct thorough market research to identify niche opportunities with low competition, ensuring your products stand out.",
+      desc: "Ecom Automations Hub excels in guiding you through the intricate process of product selection for your Amazon private label. We conduct thorough market research to identify niche opportunities with low competition, ensuring your products stand out.",
     },
     {
       href: "/services/tiktok/laptop.jpg",
       title: "Comprehensive brand development",
-      desc: "ecomasis provides comprehensive support in creating a distinctive brand identity that resonates with your target audience. From logo design to packaging strategies, we ensure every aspect reflects your brand's values and enhances customer trust.",
+      desc: "Ecom Automations Hub provides comprehensive support in creating a distinctive brand identity that resonates with your target audience. From logo design to packaging strategies, we ensure every aspect reflects your brand's values and enhances customer trust.",
     },
     {
       href: "/services/tiktok/ranking.jpg",
       title: "Optimized marketing strategies",
-      desc: "ecomasis leverages advanced SEO techniques, PPC campaigns, and social media integration to maximize your store's exposure. We formulate tailored marketing plans that attract organic traffic and convert visitors into loyal customers.",
+      desc: "Ecom Automations Hub leverages advanced SEO techniques, PPC campaigns, and social media integration to maximize your store's exposure. We formulate tailored marketing plans that attract organic traffic and convert visitors into loyal customers.",
     },
   ];
   const servicesData = [
@@ -120,8 +120,9 @@ export const AmazonPrivateLabel = () => {
   ];
   const faqData = [
     {
-      title: "What is amazon private labeling, and how can ecomasis help?",
-      desc: "ecomasis specializes in Amazon Private Labeling, where we assist sellers in creating and selling their own branded products on platform. We manage everything from product sourcing and branding to listing optimization and sales strategies, ensuring your products stand out in the marketplace.",
+      title:
+        "What is amazon private labeling, and how can Ecom Automations Hub help?",
+      desc: "Ecom Automations Hub specializes in Amazon Private Labeling, where we assist sellers in creating and selling their own branded products on platform. We manage everything from product sourcing and branding to listing optimization and sales strategies, ensuring your products stand out in the marketplace.",
     },
     {
       title:
@@ -130,18 +131,18 @@ export const AmazonPrivateLabel = () => {
     },
     {
       title:
-        "What types of products are suitable for amazon private labeling with ecomasis?",
+        "What types of products are suitable for amazon private labeling with Ecom Automations Hub?",
       desc: "We recommend products that offer a balance of low competition and high demand. Our experts conduct thorough market research to identify profitable niches and product categories, ensuring your private label products have the best chance of success.",
     },
     {
       title:
-        "How long does it take to launch a private label product on platform with ecomasis?",
+        "How long does it take to launch a private label product on platform with Ecom Automations Hub?",
       desc: "The timeline varies depending on product complexity and market readiness. Typically, our streamlined process allows for efficient product development, listing creation, and marketing strategy implementation, aiming to launch your product as swiftly as possible while ensuring quality and compliance.",
     },
     {
       title:
-        "What support does ecomasis provide after launching my amazon private label product?",
-      desc: "Beyond product launch, ecomasis offers ongoing support including inventory management, sales optimization, and marketing strategies. We monitor market trends, adjust strategies as needed, and provide insights to help maximize your product's success and profitability on platform.",
+        "What support does Ecom Automations Hub provide after launching my amazon private label product?",
+      desc: "Beyond product launch, Ecom Automations Hub offers ongoing support including inventory management, sales optimization, and marketing strategies. We monitor market trends, adjust strategies as needed, and provide insights to help maximize your product's success and profitability on platform.",
     },
   ];
   TabName(" | Amazon Private Label");
@@ -270,7 +271,8 @@ export const AmazonPrivateLabel = () => {
         <MaxWidthWrapper classNames="grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-8">
           <div className="flex flex-col gap-5">
             <h2 className="text-charcoal text-2xl md:text-3xl font-bold">
-              How ecomasis, as an Amazon private label agency, helps you
+              How Ecom Automations Hub, as an Amazon private label agency, helps
+              you
             </h2>
             <div className="flex flex-col gap-4">
               {perksData.map((item, index) => (
@@ -375,8 +377,8 @@ export const AmazonPrivateLabel = () => {
                 ))}
               </div>
               <p className="text-charcoal text-base max-md:text-center">
-                Choose ecomasis as your Amazon FBA company, sit back, and relax
-                while we do the heavy lifting for you!
+                Choose Ecom Automations Hub as your Amazon FBA company, sit
+                back, and relax while we do the heavy lifting for you!
               </p>
               <CTAButton />
             </div>
@@ -401,12 +403,13 @@ export const AmazonPrivateLabel = () => {
                 How OAn Amazon FBA Private Label Agency Driving Success for All
               </h1>
               <p className="text-charcoal text-sm">
-                ecomasis propels businesses forward with meticulously crafted
-                strategies for Amazon white label setups. We delve deep into
-                market analysis, identifying growth opportunities and devising
-                strategic plans that align with your business goals. By
-                leveraging our expertise in market trends and consumer behavior,
-                we ensure your business stays ahead of the curve.
+                Ecom Automations Hub propels businesses forward with
+                meticulously crafted strategies for Amazon white label setups.
+                We delve deep into market analysis, identifying growth
+                opportunities and devising strategic plans that align with your
+                business goals. By leveraging our expertise in market trends and
+                consumer behavior, we ensure your business stays ahead of the
+                curve.
               </p>
               <p className="text-charcoal text-sm">
                 Our client-centric approach means we tailor our solutions to
@@ -418,20 +421,20 @@ export const AmazonPrivateLabel = () => {
                 mutual success.
               </p>
               <h2 className="text-gold font-semibold text-2xl">
-                Transform Your Vision into Reality with ecomasis’s Amazon
-                Private Label Services
+                Transform Your Vision into Reality with Ecom Automations Hub’s
+                Amazon Private Label Services
               </h2>
               <h3 className="text-charcoal font-semibold text-xl">
                 Leverage our state-of-the-art tools to efficiently manage your
                 Amazon private label.
               </h3>
               <p className="text-charcoal text-sm">
-                Our success stories speak volumes. Over the years, ecomasis has
-                empowered numerous Entrepreneurs and businesses to achieve
-                remarkable growth and profitability through its private labeling
-                on Amazon. Through data-driven insights and innovative
-                solutions, we navigate challenges, capitalize on opportunities,
-                and deliver sustainable results.
+                Our success stories speak volumes. Over the years, Ecom
+                Automations Hub has empowered numerous Entrepreneurs and
+                businesses to achieve remarkable growth and profitability
+                through its private labeling on Amazon. Through data-driven
+                insights and innovative solutions, we navigate challenges,
+                capitalize on opportunities, and deliver sustainable results.
               </p>
             </div>
           </div>
@@ -440,7 +443,7 @@ export const AmazonPrivateLabel = () => {
       <div className="w-full min-h-screen flex items-center justify-center py-10 px-2">
         <MaxWidthWrapper classNames="flex flex-col gap-12 max-md:items-center">
           <h1 className="text-charcoal font-bold text-2xl md:text-3xl">
-            Benefits of choosing ecomasis’s Amazon FBA label service
+            Benefits of choosing Ecom Automations Hub’s Amazon FBA label service
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-14">
             {benefitsData.map((item, index) => (

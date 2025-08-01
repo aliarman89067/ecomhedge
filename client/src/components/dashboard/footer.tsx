@@ -108,31 +108,33 @@ export const Footer = () => {
         >
           +1(469) 935-7701
         </a>
-        <a href="mailto:info@ecomasis.com">info@ecomasis.com</a>
+        <a href="mailto:info@ecomautomationshub.com">
+          info@ecomautomationshub.com
+        </a>
         <div className="flex items-center gap-4">
           <a
-            href="https://www.facebook.com/profile.php?id=61578195136578"
+            href="#"
             target="_blank"
             className="hover:bg-gold transition-all duration-200 ease-in-out w-10 h-10 rounded-full bg-charcoal flex items-center justify-center cursor-pointer"
           >
             <FacebookIcon className="text-white size-4" />
           </a>
           <a
-            href="https://www.instagram.com/ecomasis8/"
+            href="#"
             target="_blank"
             className="hover:bg-gold transition-all duration-200 ease-in-out w-10 h-10 rounded-full bg-charcoal flex items-center justify-center cursor-pointer"
           >
             <InstagramIcon className="text-white size-4" />
           </a>
           <a
-            href="https://www.pinterest.com/ecomasis/"
+            href="#"
             target="_blank"
             className="hover:bg-gold transition-all duration-200 ease-in-out w-10 h-10 rounded-full bg-charcoal flex items-center justify-center cursor-pointer"
           >
             <TiSocialPinterest className="text-white size-6" />
           </a>
           <a
-            href="https://x.com/ecomasis"
+            href="#"
             target="_blank"
             className="hover:bg-gold transition-all duration-200 ease-in-out w-10 h-10 rounded-full bg-charcoal flex items-center justify-center cursor-pointer"
           >
@@ -141,7 +143,7 @@ export const Footer = () => {
         </div>
       </div>
       <p className="text-white text-center my-2">
-        Copyright © 2025 ECOM ASIS. All Rights Reserved.
+        Copyright © 2025 Ecom Automations Hub. All Rights Reserved.
       </p>
     </footer>
   );

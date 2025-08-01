@@ -27,14 +27,41 @@ export const navbarLinks = [
   },
 ];
 
+// export const contractTypes = [
+//   {
+//     label: "amazon-fba",
+//     title: "Amazon FBA",
+//   },
+//   {
+//     label: "amazon-private",
+//     title: "Amazon Private",
+//   },
+//   {
+//     label: "amazon-reinstatement",
+//     title: "Amazon Reinstatement",
+//   },
+//   {
+//     label: "shopify-automation",
+//     title: "Shopify Automation",
+//   },
+//   {
+//     label: "walmart-automation",
+//     title: "Walmart Automation",
+//   },
+//   {
+//     label: "tiktok-automation",
+//     title: "Tiktok Automation",
+//   },
+// ];
+
 export const contractTypes = [
   {
     label: "amazon-fba",
-    title: "Amazon FBA",
+    title: "Amazon FBA Automation",
   },
   {
     label: "amazon-private",
-    title: "Amazon Private",
+    title: "Amazon Private Label",
   },
   {
     label: "amazon-reinstatement",

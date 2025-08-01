@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { useEffect, useState, type FormEvent } from "react";
 import { useParams } from "react-router-dom";
 // @ts-ignore
@@ -6,6 +5,7 @@ import html2Pdf from "html2pdf.js";
 import { contractTypes } from "@/constant";
 import { toast } from "sonner";
 import axios from "axios";
+import { ContractExpired } from "./contract-expired";
 
 const ClientContract = () => {
   const { type, id } = useParams();
@@ -13,6 +13,7 @@ const ClientContract = () => {
   const [date1, setDate1] = useState("");
   const [date2, setDate2] = useState("");
   const [consultantName, setConsultantName] = useState("");
+  const [isExpired, setIsExpired] = useState(false);
   const [isDownloading, setIsDownloading] = useState(false);
   const [html, setHtml] = useState<
     {
@@ -25,8 +26,11 @@ const ClientContract = () => {
     const loadContract = async () => {
       try {
         const { data } = await axios.get(
-          `http://localhost:8080/api/v1/contract/client/${id}`
+          import.meta.env.VITE_API_BASE_URL! + `/api/v1/contract/client/${id}`
         );
+        if (data?.isExpired) {
+          setIsExpired(true);
+        }
         setHtml(data.html);
       } catch (error) {
         console.log(error);
@@ -52,18 +56,22 @@ const ClientContract = () => {
         .toContainer()
         .toCanvas()
         .toPdf()
-        .finally(() => {
-          setIsDownloading(false);
-        });
+        .finally(() => {});
     }
     const blob = await doc.output("blob");
 
-    uploadToS3(blob, filename);
+    await uploadToS3(blob, filename, id);
+    setIsDownloading(false);
   };
 
-  const uploadToS3 = async (blob: Blob, filename: string) => {
+  const uploadToS3 = async (
+    blob: Blob,
+    filename: string,
+    id: string | undefined
+  ) => {
     const { data } = await axios.get(
-      `http://localhost:8080/api/v1/contract/upload-url/${filename}`
+      import.meta.env.VITE_API_BASE_URL! +
+        `/api/v1/contract/upload-url/${filename}`
     );
     const res = await axios.put(data.url, blob, {
       headers: {
@@ -72,9 +80,13 @@ const ClientContract = () => {
     });
     if (res.status === 200) {
       const fileUrl = `https://ecomasis.s3.eu-north-1.amazonaws.com/${filename}`;
-      await axios.post(`http://localhost:8080/api/v1/contract/send-pdf`, {
-        fileUrl,
-      });
+      await axios.post(
+        import.meta.env.VITE_API_BASE_URL! + `/api/v1/contract/send-pdf`,
+        {
+          fileUrl,
+          id,
+        }
+      );
       downloadFromS3(fileUrl, filename);
     } else {
       toast.error("Something went wrong");
@@ -120,6 +132,10 @@ const ClientContract = () => {
     }
     handleDownloadPdf();
   };
+
+  if (isExpired) {
+    return <ContractExpired />;
+  }
 
   const currentType = contractTypes.find((item) => item.label === type);
   return (

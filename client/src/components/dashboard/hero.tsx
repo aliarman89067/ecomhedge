@@ -50,7 +50,7 @@ export const Hero = () => {
   const handleSubmit = async (values: FormSchemaType) => {
     try {
       await axios.post(
-        "https://ecomasis-email-server.vercel.app/generate-lead",
+        import.meta.env.VITE_API_BASE_URL! + "/generate-lead",
         values
       );
       toast.success(
@@ -121,9 +121,9 @@ export const Hero = () => {
                 transition={{ duration: 1, ease: "easeInOut" }}
                 className="text-white text-base max-md:text-center"
               >
-                Break free from the paycheck-to-paycheck cycle. With EcomHike as
-                your trusted business partner, building passive income is
-                easier, faster, and smarter than ever.
+                Break free from the paycheck-to-paycheck cycle. With Ecom
+                Automations Hub as your trusted business partner, building
+                passive income is easier, faster, and smarter than ever.
               </motion.p>
               <CTAButton />
               <motion.div

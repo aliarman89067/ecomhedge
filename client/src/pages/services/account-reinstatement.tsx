@@ -164,12 +164,12 @@ export const AccountReinstatement = () => {
           </h1>
           <p className="text-base max-md:text-center">
             Running multiple Amazon accounts is a leading cause of account
-            suspension—and it can really mess up your earnings. At ecomasis, we
-            understand how it can negatively impact your profits. We have a team
-            of legal account reinstatement specialists who have the expertise to
-            save your multiple accounts from getting suspended. If needed, we
-            also help you fight a case, make it up, and live so you can start
-            earning from it again.
+            suspension—and it can really mess up your earnings. At Ecom
+            Automations Hub, we understand how it can negatively impact your
+            profits. We have a team of legal account reinstatement specialists
+            who have the expertise to save your multiple accounts from getting
+            suspended. If needed, we also help you fight a case, make it up, and
+            live so you can start earning from it again.
           </p>
           <CTAButton />
         </div>
@@ -354,7 +354,7 @@ export const AccountReinstatement = () => {
         <MaxWidthWrapper classNames="grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-8">
           <div className="flex flex-col gap-5">
             <h2 className="text-charcoal text-2xl md:text-3xl font-bold">
-              How We Do It at ecomasis?
+              How We Do It at Ecom Automations Hub?
             </h2>
             <div className="flex flex-col gap-4">
               {perksData.map((item, index) => (
@@ -482,14 +482,15 @@ export const AccountReinstatement = () => {
             />
             <div className="flex flex-col gap-4">
               <h1 className="text-gold font-semibold text-2xl">
-                With ecomasis’s Amazon Account Reinstatement Service, Your
-                Comeback Is Just a Matter of Time
+                With Ecom Automations Hub’s Amazon Account Reinstatement
+                Service, Your Comeback Is Just a Matter of Time
               </h1>
               <p className="text-charcoal text-sm">
-                At ecomasis, our experts specialize in reinstating suspended
-                accounts. We understand the frustration and difficulties caused
-                by a suspended account. Trust our Amazon reinstatement services
-                to get your account up and live without any hassle.
+                At Ecom Automations Hub, our experts specialize in reinstating
+                suspended accounts. We understand the frustration and
+                difficulties caused by a suspended account. Trust our Amazon
+                reinstatement services to get your account up and live without
+                any hassle.
               </p>
               <p className="text-charcoal text-sm">
                 Drafting a Plan of Action is crucial for regaining access to

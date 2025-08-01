@@ -12,43 +12,44 @@ import { MapPin } from "lucide-react";
 const Contact = () => {
   const faqData = [
     {
-      title: "What is ecomasis, and what does it do?",
-      desc: "ecomasis is a digital consultancy firm that specializes in guiding individuals and businesses through the process of starting, growing, and optimizing their ventures for success.",
+      title: "What is Ecom Automations Hub, and what does it do?",
+      desc: "Ecom Automations Hub is a digital consultancy firm that specializes in guiding individuals and businesses through the process of starting, growing, and optimizing their ventures for success.",
     },
     {
-      title: "How can ecomasis help my business?",
-      desc: "ecomasis offers tailored strategies, expert guidance, and solutions to help businesses increase revenue, optimize operations, and achieve their goals.",
+      title: "How can Ecom Automations Hub help my business?",
+      desc: "Ecom Automations Hub offers tailored strategies, expert guidance, and solutions to help businesses increase revenue, optimize operations, and achieve their goals.",
     },
     {
-      title: "What services does ecomasis provide?",
-      desc: "ecomasis offers a range of services, including business planning, digital marketing, brand development, and more. Explore our services page for details.",
+      title: "What services does Ecom Automations Hub provide?",
+      desc: "Ecom Automations Hub offers a range of services, including business planning, digital marketing, brand development, and more. Explore our services page for details.",
     },
     {
-      title: "Is ecomasis only for startups?",
-      desc: "No, ecomasis caters to both startups and established businesses looking to enhance their revenue streams and expand their market presence.",
+      title: "Is Ecom Automations Hub only for startups?",
+      desc: "No, Ecom Automations Hub caters to both startups and established businesses looking to enhance their revenue streams and expand their market presence.",
     },
     {
-      title: "Can I get a personalized business plan from ecomasis?",
-      desc: "Yes, ecomasis provides personalized business plans tailored to your specific goals and needs.",
+      title:
+        "Can I get a personalized business plan from Ecom Automations Hub?",
+      desc: "Yes, Ecom Automations Hub provides personalized business plans tailored to your specific goals and needs.",
     },
     {
-      title: "How do I schedule a consultation with ecomasis?",
+      title: "How do I schedule a consultation with Ecom Automations Hub?",
       desc: "You can schedule a consultation by visiting our contact page or reaching out via email or phone.",
     },
     {
-      title: "Is ecomasis's guidance confidential?",
-      desc: "Yes, ecomasis values your privacy and follows strict confidentiality practices. We do not share your information without your consent.",
+      title: "Is Ecom Automations Hub's guidance confidential?",
+      desc: "Yes, Ecom Automations Hub values your privacy and follows strict confidentiality practices. We do not share your information without your consent.",
     },
     {
-      title: "What industries does ecomasis specialize in?",
-      desc: "ecomasis has experience across various industries, including e-commerce, digital marketing, technology, and more. We adapt our strategies to fit your industry.",
+      title: "What industries does Ecom Automations Hub specialize in?",
+      desc: "Ecom Automations Hub has experience across various industries, including e-commerce, digital marketing, technology, and more. We adapt our strategies to fit your industry.",
     },
     {
-      title: "How long does it take to see results with ecomasis?",
+      title: "How long does it take to see results with Ecom Automations Hub?",
       desc: "Results vary based on your goals and industry, but many clients experience positive outcomes within a few months.",
     },
     {
-      title: "Does ecomasis offer ongoing support?",
+      title: "Does Ecom Automations Hub offer ongoing support?",
       desc: "Yes, we provide ongoing support to help you adapt and grow as your business evolves.",
     },
   ];
@@ -89,10 +90,10 @@ const Contact = () => {
                   +1(469) 935-7701
                 </a>
                 <a
-                  href="mailto:info@ecomasis.com"
+                  href="mailto:info@ecomautomationshub.com"
                   className="flex items-center gap-2 text-white text-sm"
                 >
-                  info@ecomasis.com
+                  info@ecomautomationshub.com
                 </a>
               </div>
               <div className="flex flex-col items-center justify-center gap-3 w-full py-10 px-5 bg-charcoal rounded-xl">

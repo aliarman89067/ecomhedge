@@ -139,7 +139,7 @@ export const Navbar = () => {
                   transition={{ duration: 0.7, ease: "linear" }}
                   src="/logo.png"
                   alt="Logo"
-                  className="w-32 h-14 object-contain z-[100]"
+                  className="w-24 h-12 object-contain z-[100]"
                 />
               </Link>
             </div>

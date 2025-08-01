@@ -16,9 +16,12 @@ const VerificationCode = () => {
     e.preventDefault();
     setIsPending(true);
     try {
-      await axios.get(`http://localhost:8080/api/v1/verify/${id}/${code}`, {
-        withCredentials: true,
-      });
+      await axios.get(
+        import.meta.env.VITE_API_BASE_URL! + `/api/v1/verify/${id}/${code}`,
+        {
+          withCredentials: true,
+        }
+      );
       navigate("/contract-management-cms");
     } catch (error) {
       console.log(error);

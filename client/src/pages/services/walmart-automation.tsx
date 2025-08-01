@@ -25,22 +25,22 @@ export const WalmartAutomation = () => {
     {
       href: "/services/walmart/circle.png",
       title: "Tapping Into the Power of Walmart’s Customer Base",
-      desc: "How amazing it would be if you could tap into the millions of loyal Walmart customers? We at ecomasis will help you enhance your store's visibility and drive more traffic by efficiently targeting these customers.",
+      desc: "How amazing it would be if you could tap into the millions of loyal Walmart customers? We at Ecom Automations Hub will help you enhance your store's visibility and drive more traffic by efficiently targeting these customers.",
     },
     {
       href: "/services/walmart/shop.png",
       title: "Easy Expansion of Your Market",
-      desc: "Expand effortlessly with ecomasis Walmart automation. Focus on your core business while we handle marketing, sales, and customer service, ensuring a smooth market expansion.",
+      desc: "Expand effortlessly with Ecom Automations Hub Walmart automation. Focus on your core business while we handle marketing, sales, and customer service, ensuring a smooth market expansion.",
     },
     {
       href: "/services/walmart/hand.png",
       title: "Efficient Business Management",
-      desc: "Experience hassle-free store management with ecomasis’s expertise, allowing you to enjoy seamless operations and focus on strategic growth without day-to-day oversight.",
+      desc: "Experience hassle-free store management with Ecom Automations Hub’s expertise, allowing you to enjoy seamless operations and focus on strategic growth without day-to-day oversight.",
     },
     {
       href: "/services/walmart/moneyBag.png",
       title: "Guaranteed Passive Income",
-      desc: "ecomasis manages your store efficiently, enabling you to enjoy steady revenue streams with minimal involvement.",
+      desc: "Ecom Automations Hub manages your store efficiently, enabling you to enjoy steady revenue streams with minimal involvement.",
     },
   ];
   const analyticsData = [
@@ -77,7 +77,7 @@ export const WalmartAutomation = () => {
     {
       href: "/services/tiktok/laptop.jpg",
       title: "End-to-end solutions",
-      desc: "We at ecomasis proudly offer comprehensive automation services, covering not just inventory management, listing optimization, and order processing but also customer service that is tailored to your business's unique requirements.",
+      desc: "We at Ecom Automations Hub proudly offer comprehensive automation services, covering not just inventory management, listing optimization, and order processing but also customer service that is tailored to your business's unique requirements.",
     },
     {
       href: "/services/tiktok/ranking.jpg",
@@ -133,8 +133,8 @@ export const WalmartAutomation = () => {
     },
     {
       title:
-        "What sets ecomasis's Walmart Automation apart from other providers?",
-      desc: "ecomasis offers a unique blend of expertise, scalability, and flexibility. We employ advanced automation tools and strategies to optimize your storefront and maximize profitability. Our flexible payment options and commitment to client success differentiate us from other service providers.",
+        "What sets Ecom Automations Hub's Walmart Automation apart from other providers?",
+      desc: "Ecom Automations Hub offers a unique blend of expertise, scalability, and flexibility. We employ advanced automation tools and strategies to optimize your storefront and maximize profitability. Our flexible payment options and commitment to client success differentiate us from other service providers.",
     },
     {
       title: "How does the pricing structure work for Walmart Automation?",
@@ -148,7 +148,7 @@ export const WalmartAutomation = () => {
       <ServicesHero
         title={
           <h1 className="text-white text-3xl font-bold max-md:text-center">
-            ecomasis: The Most{" "}
+            Ecom Automations Hub: The Most{" "}
             <div className="inline-flex bg-black text-gold px-4 py-2 rounded-full">
               Trusted Walmart
             </div>{" "}
@@ -234,8 +234,9 @@ export const WalmartAutomation = () => {
                 <p className="text-sm text-charcoal group-hover:text-white transition-all duration-150 ease-in-out">
                   Did you know that you can run multiple business models on your
                   Walmart Store: Walmart Retail Arbitrage, Walmart Fulfillment
-                  Services, and Self-Fulfillment? Fret not, we at ecomasis will
-                  help you choose the most suitable ones for you.
+                  Services, and Self-Fulfillment? Fret not, we at Ecom
+                  Automations Hub will help you choose the most suitable ones
+                  for you.
                 </p>
               </div>
             </div>
@@ -370,8 +371,8 @@ export const WalmartAutomation = () => {
                 ))}
               </div>
               <p className="text-charcoal text-base max-md:text-center">
-                Choose ecomasis as your Amazon FBA company, sit back, and relax
-                while we do the heavy lifting for you!
+                Choose Ecom Automations Hub as your Amazon FBA company, sit
+                back, and relax while we do the heavy lifting for you!
               </p>
               <CTAButton />
             </div>
@@ -405,7 +406,7 @@ export const WalmartAutomation = () => {
               <p className="text-charcoal text-sm">
                 No hidden charges and no (unpleasant) surprises when you get
                 your Walmart private label set up and automated by the best in
-                town—ecomasis!
+                town—Ecom Automations Hub!
               </p>
               <h2 className="text-gold font-semibold text-2xl">
                 Walmart Automation Services That You Can Trust
@@ -414,10 +415,11 @@ export const WalmartAutomation = () => {
                 Client-centric approach
               </h3>
               <p className="text-charcoal text-sm">
-                At ecomasis, we take pride in offering the most comprehensive
-                set of Walmart automation services that do not just help you
-                manage the day-to-day operations, but offer insightful reports,
-                and analytics tools for improving store’s performance.
+                At Ecom Automations Hub, we take pride in offering the most
+                comprehensive set of Walmart automation services that do not
+                just help you manage the day-to-day operations, but offer
+                insightful reports, and analytics tools for improving store’s
+                performance.
               </p>
             </div>
           </div>
@@ -426,7 +428,7 @@ export const WalmartAutomation = () => {
       <div className="w-full min-h-screen flex items-center justify-center py-10 px-2">
         <MaxWidthWrapper classNames="flex flex-col gap-12 max-md:items-center">
           <h1 className="text-charcoal font-bold text-2xl md:text-3xl">
-            Benefits of Walmart Automation with ecomasis
+            Benefits of Walmart Automation with Ecom Automations Hub
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-14">
             {benefitsData.map((item, index) => (

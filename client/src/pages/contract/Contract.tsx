@@ -35,7 +35,7 @@ export const Contract = () => {
       setIsVerify(true);
       try {
         const { data } = await axios.get(
-          "http://localhost:8080/api/v1/verify",
+          import.meta.env.VITE_API_BASE_URL! + "/api/v1/verify",
           {
             withCredentials: true,
           }
@@ -61,7 +61,8 @@ export const Contract = () => {
     const loadHtml = async () => {
       try {
         const { data } = await axios.get(
-          `http://localhost:8080/api/v1/contract/${selectedType.label}`,
+          import.meta.env.VITE_API_BASE_URL! +
+            `/api/v1/contract/${selectedType.label}`,
           {
             withCredentials: true,
           }
@@ -92,7 +93,7 @@ export const Contract = () => {
   const handleUpateContract = async () => {
     try {
       const { data } = await axios.post(
-        "http://localhost:8080/api/v1/contract/update",
+        import.meta.env.VITE_API_BASE_URL! + "/api/v1/contract/update",
         {
           html,
           type: selectedType.label,
@@ -109,8 +110,8 @@ export const Contract = () => {
   const handleCreateContract = async () => {
     try {
       const { data } = await axios.post(
-        "http://localhost:8080/api/v1/contract/create",
-        { html, type: selectedType.label },
+        import.meta.env.VITE_API_BASE_URL! + "/api/v1/contract/create",
+        { html, type: selectedType.label, title: selectedType.title },
         { withCredentials: true }
       );
       const { contractId } = data;

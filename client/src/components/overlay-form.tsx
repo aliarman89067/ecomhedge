@@ -43,7 +43,7 @@ export const OverlayForm = () => {
   const handleSubmit = async (values: FormSchemaType) => {
     try {
       await axios.post(
-        "https://ecomasis-email-server.vercel.app/generate-lead",
+        import.meta.env.VITE_API_BASE_URL! + "/generate-lead",
         values
       );
       toast.success(

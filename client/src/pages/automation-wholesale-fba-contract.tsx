@@ -93,7 +93,8 @@ const AmazonAutomationContract = () => {
           TikTok Shop (DS) Automation
         </h1>
         <span className="text-center text-[#000000] font-medium text-lg">
-          Contract on: {getDate()} | With EcomAsis | www.ecomasis.com
+          Contract on: {getDate()} | With Ecom Automations Hub | www.Ecom
+          Automations Hub.com
         </span>
       </>
     );
@@ -138,11 +139,15 @@ const AmazonAutomationContract = () => {
         </span>
         <span className="flex items-center gap-1">
           <MailIcon color="#ffffff" className="text-[#ffffff] size-4" />
-          <p className="text-[#ffffff] text-sm">info@ecomasis.com</p>
+          <p className="text-[#ffffff] text-sm">
+            info@Ecom Automations Hub.com
+          </p>
         </span>
         <span className="flex items-center gap-1">
           <GlobeIcon color="#ffffff" className="text-[#ffffff] size-4" />
-          <p className="text-[#ffffff] text-sm">https://ecomasis.com</p>
+          <p className="text-[#ffffff] text-sm">
+            https://Ecom Automations Hub.com
+          </p>
         </span>
         <span className="flex items-center gap-1">
           <PhoneIcon color="#ffffff" className="text-[#ffffff] size-4" />
@@ -273,7 +278,7 @@ const AmazonAutomationContract = () => {
     "Insolvency or bankruptcy filing by either party.",
     "Appointment of a trustee or similar agent over any business assets.",
     "Assignment of business assets for creditor benefits.",
-    "Ecomasis’s failure to comply with the defined payment terms.",
+    "Ecom Automations Hub’s failure to comply with the defined payment terms.",
   ];
 
   const handleDownload = ({ isSignature }: { isSignature: boolean }) => {
@@ -372,7 +377,7 @@ const AmazonAutomationContract = () => {
 
         <Heading
           heading="Scope and Goals"
-          desc="Ecomasis offers a complete tikTok shop (DS)  service, optimizing e-commerce operations to enhance profitability. Our cutting-edge strategies ensure a smooth and efficient selling experience on tikTok shop (DS) . Below are the key services covered under our tikTok shop (DS)  package:"
+          desc="Ecom Automations Hub offers a complete tikTok shop (DS)  service, optimizing e-commerce operations to enhance profitability. Our cutting-edge strategies ensure a smooth and efficient selling experience on tikTok shop (DS) . Below are the key services covered under our tikTok shop (DS)  package:"
         />
         {pointsFor1.map((item, index) => (
           <Point
@@ -421,7 +426,7 @@ const AmazonAutomationContract = () => {
           />
         </div>
         <Header />
-        <Heading heading="Why Choose Ecomasis?" desc="" />
+        <Heading heading="Why Choose Ecom Automations Hub?" desc="" />
         {pointsFor3.map((item, index) => (
           <Point
             key={index}
@@ -515,7 +520,8 @@ const AmazonAutomationContract = () => {
               <div className="flex items-center gap-1">
                 <div className="w-1 h-1 rounded-full bg-[#ffffff] border border-[#000000]" />
                 <span className="text-[#000000] text-base">
-                  <b>20% profits to ecomasis</b> for ongoing scale & management
+                  <b>20% profits to Ecom Automations Hub</b> for ongoing scale &
+                  management
                 </span>
               </div>
             </div>
@@ -560,13 +566,13 @@ const AmazonAutomationContract = () => {
           point={1}
           isPoint={false}
           heading="Cooperation"
-          desc="Ecomasis is committed to delivering the outlined services with the highest level of effort and professionalism. The client agrees to provide all necessary information and maintain open communication to facilitate the successful execution of the project."
+          desc="Ecom Automations Hub is committed to delivering the outlined services with the highest level of effort and professionalism. The client agrees to provide all necessary information and maintain open communication to facilitate the successful execution of the project."
         />
         <Point
           point={1}
           isPoint={false}
           heading="Charging of our Services"
-          desc="Any additional services requested beyond the agreed scope will result in an adjustment to the charges. If a project remains inactive for more than 90 days, reactivation fees may apply at the discretion of ecomasis."
+          desc="Any additional services requested beyond the agreed scope will result in an adjustment to the charges. If a project remains inactive for more than 90 days, reactivation fees may apply at the discretion of Ecom Automations Hub."
         />
         <BulletPoints
           title="Project Cost:"
@@ -588,8 +594,8 @@ const AmazonAutomationContract = () => {
         </div>
         <Header />
         <Heading
-          heading="Ecomasis and Client Responsibilities"
-          desc="This agreement is entered into between ecomasis (Service Provider) and Joseph (Client) to define the terms of tikTok shop (DS) , including the profit-sharing structure."
+          heading="Ecom Automations Hub and Client Responsibilities"
+          desc="This agreement is entered into between Ecom Automations Hub (Service Provider) and Joseph (Client) to define the terms of tikTok shop (DS) , including the profit-sharing structure."
         />
         <BulletPoints title="" points={bulletPoints5} />
         <BulletPoints title="Partnership and Profit Split" points={[]} />
@@ -600,16 +606,16 @@ const AmazonAutomationContract = () => {
         <BulletPoints
           title="After 5 Months"
           points={[
-            "20% of the profits go to ecomasis",
+            "20% of the profits go to Ecom Automations Hub",
             "In exchange for continued professional services & store management",
           ]}
         />
         <p className="text-[#000000] text-base">
-          This arrangement remains in effect as long as ecomasis continues
-          managing the Client’s tikTok shop (DS) . Profit calculation will be
-          based on total revenue minus all associated expenses, including but
-          not limited to product costs, shipping fees, tikTok shop (DS) charges,
-          and operational expenses.
+          This arrangement remains in effect as long as Ecom Automations Hub
+          continues managing the Client’s tikTok shop (DS) . Profit calculation
+          will be based on total revenue minus all associated expenses,
+          including but not limited to product costs, shipping fees, tikTok shop
+          (DS) charges, and operational expenses.
         </p>
         <Footer />
       </div>

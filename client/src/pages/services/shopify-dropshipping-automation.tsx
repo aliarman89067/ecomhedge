@@ -133,8 +133,8 @@ export const ShopifyDropshippingAutomation = () => {
     },
     {
       title:
-        "What distinguishes ecomasis's Shopify Dropshipping Automation from other providers?",
-      desc: "ecomasis specializes in comprehensive Shopify Dropshipping Automation that includes product research, store setup, marketing strategies, and order management. We emphasize quality service, prompt customer support, and a commitment to client success.",
+        "What distinguishes Ecom Automations Hub's Shopify Dropshipping Automation from other providers?",
+      desc: "Ecom Automations Hub specializes in comprehensive Shopify Dropshipping Automation that includes product research, store setup, marketing strategies, and order management. We emphasize quality service, prompt customer support, and a commitment to client success.",
     },
     {
       title:
@@ -266,7 +266,7 @@ export const ShopifyDropshippingAutomation = () => {
         <MaxWidthWrapper classNames="grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-8">
           <div className="flex flex-col gap-5">
             <h2 className="text-charcoal text-2xl md:text-3xl font-bold">
-              How We Do It at ecomasis?
+              How We Do It at Ecom Automations Hub?
             </h2>
             <div className="flex flex-col gap-4">
               {perksData.map((item, index) => (
@@ -371,8 +371,8 @@ export const ShopifyDropshippingAutomation = () => {
                 ))}
               </div>
               <p className="text-charcoal text-base max-md:text-center">
-                Choose ecomasis as your Shopify automation agency, sit back, and
-                relax while we do the heavy lifting for you!
+                Choose Ecom Automations Hub as your Shopify automation agency,
+                sit back, and relax while we do the heavy lifting for you!
               </p>
               <CTAButton />
             </div>
@@ -398,10 +398,10 @@ export const ShopifyDropshippingAutomation = () => {
                 Private Label
               </h1>
               <p className="text-charcoal text-sm">
-                ecomasis is one of the most reliable and trusted Shopify
-                automation partners in town. Our team excels in setting up and
-                managing recession-proof businesses on this platform, leveraging
-                their unbounded experience and expertise. .
+                Ecom Automations Hub is one of the most reliable and trusted
+                Shopify automation partners in town. Our team excels in setting
+                up and managing recession-proof businesses on this platform,
+                leveraging their unbounded experience and expertise. .
               </p>
               <p className="text-charcoal text-sm">
                 Our team handling automated dropshipping models on Shopify has
@@ -410,8 +410,8 @@ export const ShopifyDropshippingAutomation = () => {
                 are the best at what we do!
               </p>
               <h2 className="text-gold font-semibold text-2xl">
-                ecomasis, a Shopify Automation Agency, Helps Streamline and
-                Scale Your Shopify Store
+                Ecom Automations Hub, a Shopify Automation Agency, Helps
+                Streamline and Scale Your Shopify Store
               </h2>
               <h3 className="text-charcoal font-semibold text-xl">
                 Leverage the best of Shopify dropshipping like never before!
@@ -431,7 +431,7 @@ export const ShopifyDropshippingAutomation = () => {
       <div className="w-full min-h-screen flex items-center justify-center py-10 px-2">
         <MaxWidthWrapper classNames="flex flex-col gap-12 max-md:items-center">
           <h1 className="text-charcoal font-bold text-2xl md:text-3xl">
-            Benefits of Automated Shopify Dropshipping with ecomasis
+            Benefits of Automated Shopify Dropshipping with Ecom Automations Hub
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-14">
             {benefitsData.map((item, index) => (
