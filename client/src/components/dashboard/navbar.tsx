@@ -1,105 +1,45 @@
 import { navbarLinks } from "@/constant";
-import { ChevronDown, ChevronLeft, ChevronUp, MenuIcon } from "lucide-react";
 import { MaxWidthWrapper } from "../max-width-wrapper";
-import {
-  Sheet,
-  SheetTrigger,
-  SheetHeader,
-  SheetTitle,
-  SheetContent,
-} from "@/components/ui/sheet";
-import { useEffect, useState } from "react";
-import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
-import { useLocation } from "react-router-dom";
-import { Button } from "../ui/button";
-import { motion } from "framer-motion";
-import { CTAButton } from "../cta-button";
+import { WetButton } from "../wet-button";
 
 export const Navbar = () => {
-  const location = useLocation();
-  const [isServices, setIsServices] = useState(false);
-  const [activeTab, setActiveTab] = useState<string>(location.pathname); // Default to current path
-
-  const servicesData = [
-    {
-      label: "Amazon FBA Automation",
-      desc: "Effortlessly scale your business with automated Amazon FBA solutions.",
-      href: "/amazon-fba-automation",
-    },
-    {
-      label: "Tiktok Shop Automation",
-      desc: "Launch your TikTok Shop Store and earn Monthly passive income.",
-      href: "/tiktok-shop-automation",
-    },
-    {
-      label: "Amazon Private Label",
-      desc: "Effortlessly scale your business with automated Amazon FBA solutions.",
-      href: "/amazon-private-label",
-    },
-    {
-      label: "Walmart Automation",
-      desc: "Streamline your business operations, driving efficiency and success with Walmart Automation.",
-      href: "/walmart-automation",
-    },
-    {
-      label: "Account Reinstatement",
-      desc: "Efficient Solutions to Swiftly Regain Control of Your platform account",
-      href: "/account-reinstatement",
-    },
-    {
-      label: "Shopify Automation",
-      desc: "Simplify your e-commerce success with automated Shopify dropshipping.",
-      href: "/shopify-dropshipping-automation",
-    },
-  ];
-
-  useEffect(() => {
-    setIsServices(false);
-    const servicesTab = [
-      "/amazon-fba-automation",
-      "/tiktok-shop-automation",
-      "/amazon-private-label",
-      "/walmart-automation",
-      "/account-reinstatement",
-      "/shopify-dropshipping-automation",
-    ];
-    if (servicesTab.includes(location.pathname)) {
-      setActiveTab("services");
-    } else {
-      setActiveTab(location.pathname);
-    }
-  }, [location]);
-
-  useEffect(() => {
-    // Disable scroll
-    if (isServices) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-
-    // Clean up on unmount
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, [isServices]);
-
   return (
-    <div className="fixed top-0 left-0 flex items-center justify-between bg-transparent w-full z-50">
-      <MaxWidthWrapper classNames="flex items-center justify-between w-full py-5">
-        <img src="/logo.png" alt="Logo" className="w-20 object-contain" />
+    <MaxWidthWrapper classNames="fixed top-0 left-1/2 -translate-x-1/2 w-full flex items-center justify-between py-6 z-50">
+      <img src="/logo.png" alt="Logo" className="w-20 object-contain" />
+      <div className="flex items-center gap-10">
         <div className="flex items-center gap-5">
-          <a
-            href="tel:+1(469) 935-7701"
-            className="text-white text-base flex items-center gap-2"
-          >
-            <img src="/usa-flag.gif" alt="Flag gif" className="w-10" />
-            +1(469) 935-7701
-          </a>
-          <CTAButton />
+          {navbarLinks.map((item) => (
+            <Link to={item.href} className="group relative">
+              <button
+                key={item.id}
+                className="group relative z-10 group flex h-10 items-center gap-2 rounded-full bg-black pl-3 pr-4 transition-all duration-300 ease-in-out hover:bg-secondary hover:pl-2 text-white hover:text-background active:bg-neutral-700 cursor-pointer"
+              >
+                <span className="rounded-full bg-white p-1 text-sm transition-colors duration-300 group-hover:bg-white">
+                  <svg
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    className="-translate-x-[200%] text-[0px] transition-all duration-300 group-hover:translate-x-0 group-hover:text-lg group-hover:text-black group-active:-rotate-45"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </span>
+                <span>{item.label}</span>
+              </button>
+              <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-secondary opacity-0 group-hover:opacity-30 transition-all duration-[800ms] ease-in-out w-20 h-14 rounded-full blur-2xl"></span>
+            </Link>
+          ))}
         </div>
-      </MaxWidthWrapper>
-    </div>
+        <WetButton title="Get Started" />
+      </div>
+    </MaxWidthWrapper>
   );
 };

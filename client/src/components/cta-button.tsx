@@ -1,32 +1,17 @@
-import { motion } from "framer-motion";
 import { useContext } from "react";
 import { FormContext } from "@/context/form-context";
-import { ArrowRight, ArrowRightIcon } from "lucide-react";
 
-export const CTAButton = () => {
+export const CTAButton = ({ title }: { title: string }) => {
   const { setIsOpen } = useContext(FormContext);
 
   return (
-    <motion.button className="flex items-center gap-3 border-2 border-purple-700 w-44 py-3 justify-center rounded-full">
-      <span className="text-white z-10 font-semibold text-base">
-        Get Started
-      </span>
-      <ArrowRightIcon className="text-white size-5" />
-    </motion.button>
+    <div className="group relative w-fit transition-transform duration-300 active:scale-95 cursor-pointer">
+      <button className="relative z-10 rounded-lg bg-gradient-to-br from-purple-500 to-blue-500 p-0.5 cursor-pointer duration-300 group-hover:scale-110">
+        <span className="block rounded-md bg-slate-950 px-10 py-4 font-semibold text-slate-100 duration-300 group-hover:bg-slate-950/50 group-hover:text-slate-50 group-active:bg-slate-950/80">
+          {title}
+        </span>
+      </button>
+      <span className="pointer-events-none absolute -inset-4 z-0 transform-gpu rounded-2xl bg-gradient-to-br from-purple-500 to-blue-500 opacity-30 blur-xl transition-all duration-300 group-hover:opacity-60 group-active:opacity-50"></span>
+    </div>
   );
 };
-
-{
-  /* <motion.button
-  initial={{ opacity: 0, x: -50 }}
-  animate={{ opacity: 1, x: 0 }}
-  transition={{ duration: 1, ease: "easeInOut" }}
-  onClick={() => setIsOpen?.(true)}
-  className="group relative pl-7 pr-20 h-16 rounded-full bg-gold flex w-fit items-center cursor-pointer"
->
-  <span className="text-white z-10 font-medium text-lg">Get Started</span>
-  <div className="absolute right-1 top-1/2 -translate-y-1/2 w-14 h-14 bg-charcoal rounded-full group-hover:w-full group-hover:right-0 group-hover:h-16 transition-all duration-200 ease-in-out flex items-center">
-    <ArrowRight className="text-white size-6 absolute right-7 translate-x-1/2 group-hover:-rotate-45 transition-all duration-200 ease-in-out" />
-  </div>
-</motion.button>; */
-}
