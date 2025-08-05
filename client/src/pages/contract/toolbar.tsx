@@ -8,14 +8,12 @@ import {
   BoldIcon,
   ChevronDown,
   CodeIcon,
-  FootprintsIcon,
   ImageIcon,
   ItalicIcon,
   ListIcon,
   ListOrderedIcon,
   MinusIcon,
   PlusIcon,
-  RectangleCircleIcon,
   Redo2,
   SearchIcon,
   SpellCheck,
@@ -110,12 +108,10 @@ export const Toolbar = () => {
     label,
     Icon,
     onClick,
-    isActive,
   }: {
     label: string;
     onClick: () => void;
     Icon: LucideIcon;
-    isActive?: boolean;
   }) => {
     return (
       <TooltipProvider>
@@ -393,7 +389,7 @@ export const Toolbar = () => {
       input.onchange = (e) => {
         const file = (e.target as HTMLInputElement).files?.[0];
         if (file) {
-          const imageUrl = URL.createObjectURL(file);
+          // const imageUrl = URL.createObjectURL(file);
           // console.log
           onChange(`/${file.name}`);
         }

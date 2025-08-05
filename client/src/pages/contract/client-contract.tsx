@@ -79,7 +79,7 @@ const ClientContract = () => {
       },
     });
     if (res.status === 200) {
-      const fileUrl = `https://ecomasis.s3.eu-north-1.amazonaws.com/${filename}`;
+      const fileUrl = `https://ecomautomationshub.s3.eu-north-1.amazonaws.com/${filename}`;
       await axios.post(
         import.meta.env.VITE_API_BASE_URL! + `/api/v1/contract/send-pdf`,
         {
@@ -153,7 +153,7 @@ const ClientContract = () => {
             }}
           />
           <img
-            src="/contractFooter.png"
+            src="/contractFooter.jpg"
             alt="Contract Footer"
             className="w-full"
           />
@@ -165,7 +165,7 @@ const ClientContract = () => {
       >
         <div className="flex flex-col">
           <img
-            src="/contractHeader.png"
+            src="/contractHeader.jpg"
             alt="Header Image"
             className="w-full object-contain"
           />
@@ -256,7 +256,7 @@ const ClientContract = () => {
           </form>
         </div>
         <img
-          src="/contractFooter.png"
+          src="/contractFooter.jpg"
           alt="Header Image"
           className="w-full object-contain mt-auto"
         />
@@ -298,7 +298,7 @@ const ClientContract = () => {
             </label>
           </div>
           <img
-            src="/contractFooter.png"
+            src="/contractFooter.jpg"
             alt="Header Image"
             className="w-full object-contain mt-auto"
           />

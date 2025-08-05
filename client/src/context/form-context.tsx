@@ -22,28 +22,16 @@ export const FormContext = createContext<Props>({
 export const ContextProvider = ({ children }: { children: ReactNode }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isSubmit, setIsSubmit] = useState(false);
-  let count = 0;
   useEffect(() => {
     let timeoutId = setTimeout(() => {
       setIsOpen(true);
-      count++;
-    }, 10000);
-    let intervalId = setInterval(() => {
-      if (count === 3) {
-        clearInterval(intervalId);
-      }
-      if (!isOpen) {
-        count++;
-        setIsOpen(true);
-      }
-    }, 40000);
+    }, 1000);
+
     if (isSubmit) {
       clearTimeout(timeoutId);
-      clearInterval(intervalId);
     }
     return () => {
       clearTimeout(timeoutId);
-      clearInterval(intervalId);
     };
   }, [isSubmit]);
   return (

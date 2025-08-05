@@ -1,6 +1,6 @@
 import { FacebookIcon, InstagramIcon, PhoneIcon } from "lucide-react";
-import { TiSocialPinterest } from "react-icons/ti";
-import { BsTwitterX } from "react-icons/bs";
+// import { TiSocialPinterest } from "react-icons/ti";
+// import { BsTwitterX } from "react-icons/bs";
 
 import { Link } from "react-router-dom";
 
@@ -54,14 +54,14 @@ export const Footer = () => {
           label: "FAQ's",
           href: "/faq",
         },
-        // {
-        //   label: "Privacy Policy",
-        //   href: "/",
-        // },
-        // {
-        //   label: "Term of Services",
-        //   href: "/",
-        // },
+        {
+          label: "Privacy Policy",
+          href: "/privacy-policy",
+        },
+        {
+          label: "Term of Services",
+          href: "term-of-services",
+        },
       ],
     },
     {
@@ -113,20 +113,20 @@ export const Footer = () => {
         </a>
         <div className="flex items-center gap-4">
           <a
-            href="#"
+            href="https://www.facebook.com/ecomautomationshub"
             target="_blank"
             className="hover:bg-gold transition-all duration-200 ease-in-out w-10 h-10 rounded-full bg-charcoal flex items-center justify-center cursor-pointer"
           >
             <FacebookIcon className="text-white size-4" />
           </a>
           <a
-            href="#"
+            href="https://www.instagram.com/ecomautomationshub/"
             target="_blank"
             className="hover:bg-gold transition-all duration-200 ease-in-out w-10 h-10 rounded-full bg-charcoal flex items-center justify-center cursor-pointer"
           >
             <InstagramIcon className="text-white size-4" />
           </a>
-          <a
+          {/* <a
             href="#"
             target="_blank"
             className="hover:bg-gold transition-all duration-200 ease-in-out w-10 h-10 rounded-full bg-charcoal flex items-center justify-center cursor-pointer"
@@ -139,7 +139,7 @@ export const Footer = () => {
             className="hover:bg-gold transition-all duration-200 ease-in-out w-10 h-10 rounded-full bg-charcoal flex items-center justify-center cursor-pointer"
           >
             <BsTwitterX className="text-white size-4" />
-          </a>
+          </a> */}
         </div>
       </div>
       <p className="text-white text-center my-2">

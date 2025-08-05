@@ -5,6 +5,6 @@ export const TabName = (name: string) => {
   // const location = useLocation();
   useEffect(() => {
     // const pageName = location;
-    document.title = `Ecomasis ${name}`;
+    document.title = `Ecom Automations Hub ${name}`;
   }, []);
 };

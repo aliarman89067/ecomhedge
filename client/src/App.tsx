@@ -19,6 +19,8 @@ import { FloatingElements } from "./components/floating-elements";
 import { Contract } from "./pages/contract/Contract";
 import ClientContract from "./pages/contract/client-contract";
 import VerificationCode from "./pages/verification-code";
+import PrivacyPolicy from "./pages/privacy-policy";
+import TermOfServices from "./pages/term-of-services";
 
 const App = () => {
   const pathname = window.location.href;
@@ -59,6 +61,8 @@ const App = () => {
           <Route path="/about" Component={About} />
           <Route path="/contact" Component={Contact} />
           <Route path="/faq" Component={Faq} />
+          <Route path="/privacy-policy" Component={PrivacyPolicy} />
+          <Route path="/term-of-services" Component={TermOfServices} />
           <Route
             path="/tiktok-shop-ds-contract"
             Component={AmazonAutomationContract}

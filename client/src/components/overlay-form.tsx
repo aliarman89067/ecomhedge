@@ -17,6 +17,7 @@ import {
 } from "./ui/form";
 import { Textarea } from "./ui/textarea";
 import { Input } from "./ui/input";
+import { cn } from "@/lib/utils";
 
 export const OverlayForm = () => {
   const { isOpen, setIsOpen, setIsSubmit } = useContext(FormContext);
@@ -58,98 +59,102 @@ export const OverlayForm = () => {
   };
 
   return (
-    <Dialog open={isOpen} onOpenChange={setIsOpen}>
-      <DialogContent className="bg-transparent w-full border-none outline-none shadow-none ring-0 [&>button]:hidden">
-        <Form {...form}>
-          <form
-            className="relative  bg-gradient-to-bl from-charcoal to-gold rounded-lg border border-gray-400 flex flex-col px-5 py-3 w-full sm:w-[90%] gap-5"
-            onSubmit={form.handleSubmit(handleSubmit)}
-          >
-            <X
-              onClick={() => setIsOpen?.(false)}
-              className="absolute top-2 right-2 size-5 text-white cursor-pointer"
-            />
-            <FormField
-              control={form.control}
-              name="name"
-              render={({ field }) => (
-                <FormItem className="flex flex-col gap-1">
-                  <FormLabel className="text-white text-sm font-extralight">
-                    Name
-                  </FormLabel>
-                  <FormControl>
-                    <Input
-                      {...field}
-                      className="bg-white/10 rounded-md border border-gray-200 outline-none h-10 w-full px-3 text-sm text-white"
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="email"
-              render={({ field }) => (
-                <FormItem className="flex flex-col gap-1">
-                  <FormLabel className="text-white text-sm font-extralight">
-                    Email
-                  </FormLabel>
-                  <FormControl>
-                    <Input
-                      {...field}
-                      className="bg-white/10 rounded-md border border-gray-200 outline-none h-10 w-full px-3 text-sm text-white"
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="contact"
-              render={({ field }) => (
-                <FormItem className="flex flex-col gap-1">
-                  <FormLabel className="text-white text-sm font-extralight">
-                    Contact
-                  </FormLabel>
-                  <FormControl>
-                    <Input
-                      {...field}
-                      className="bg-white/10 rounded-md border border-gray-200 outline-none h-10 w-full px-3 text-sm text-white"
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="message"
-              render={({ field }) => (
-                <FormItem className="flex flex-col gap-1">
-                  <FormLabel className="text-white text-sm font-extralight">
-                    Message
-                  </FormLabel>
-                  <FormControl>
-                    <Textarea
-                      {...field}
-                      className="bg-white/10 rounded-md border border-gray-200 outline-none h-20 resize-none w-full px-3 text-sm text-white"
-                    ></Textarea>
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <button
-              type="submit"
-              className="w-full py-4 text-white cursor-pointer rounded-md bg-charcoal hover:bg-charcoal/90 transition-all duration-150 ease-in-out"
-            >
-              Submit
-            </button>
-          </form>
-        </Form>
-      </DialogContent>
-    </Dialog>
+    // <div
+    //   className={cn(
+    //     "fixed top-0 left-0 z-50 bg-black/40 backdrop-blur-sm w-full h-screen flex items-center justify-center"
+    //   )}
+    // >
+    //   <Form {...form}>
+    //     <form
+    //       className="relative  bg-gradient-to-bl from-charcoal to-gold rounded-lg border border-gray-400 flex flex-col px-5 py-3 max-w-md w-full gap-5"
+    //       onSubmit={form.handleSubmit(handleSubmit)}
+    //     >
+    //       <X
+    //         onClick={() => setIsOpen?.(false)}
+    //         className="absolute top-2 right-2 size-5 text-white cursor-pointer"
+    //       />
+    //       <FormField
+    //         control={form.control}
+    //         name="name"
+    //         render={({ field }) => (
+    //           <FormItem className="flex flex-col gap-1">
+    //             <FormLabel className="text-white text-sm font-extralight">
+    //               Name
+    //             </FormLabel>
+    //             <FormControl>
+    //               <Input
+    //                 {...field}
+    //                 className="bg-white/10 rounded-md border border-gray-200 outline-none h-10 w-full px-3 text-sm text-white"
+    //               />
+    //             </FormControl>
+    //             <FormMessage />
+    //           </FormItem>
+    //         )}
+    //       />
+    //       <FormField
+    //         control={form.control}
+    //         name="email"
+    //         render={({ field }) => (
+    //           <FormItem className="flex flex-col gap-1">
+    //             <FormLabel className="text-white text-sm font-extralight">
+    //               Email
+    //             </FormLabel>
+    //             <FormControl>
+    //               <Input
+    //                 {...field}
+    //                 className="bg-white/10 rounded-md border border-gray-200 outline-none h-10 w-full px-3 text-sm text-white"
+    //               />
+    //             </FormControl>
+    //             <FormMessage />
+    //           </FormItem>
+    //         )}
+    //       />
+    //       <FormField
+    //         control={form.control}
+    //         name="contact"
+    //         render={({ field }) => (
+    //           <FormItem className="flex flex-col gap-1">
+    //             <FormLabel className="text-white text-sm font-extralight">
+    //               Contact
+    //             </FormLabel>
+    //             <FormControl>
+    //               <Input
+    //                 {...field}
+    //                 className="bg-white/10 rounded-md border border-gray-200 outline-none h-10 w-full px-3 text-sm text-white"
+    //               />
+    //             </FormControl>
+    //             <FormMessage />
+    //           </FormItem>
+    //         )}
+    //       />
+    //       <FormField
+    //         control={form.control}
+    //         name="message"
+    //         render={({ field }) => (
+    //           <FormItem className="flex flex-col gap-1">
+    //             <FormLabel className="text-white text-sm font-extralight">
+    //               Message
+    //             </FormLabel>
+    //             <FormControl>
+    //               <Textarea
+    //                 {...field}
+    //                 className="bg-white/10 rounded-md border border-gray-200 outline-none h-20 resize-none w-full px-3 text-sm text-white"
+    //               ></Textarea>
+    //             </FormControl>
+    //             <FormMessage />
+    //           </FormItem>
+    //         )}
+    //       />
+    //       <button
+    //         type="submit"
+    //         className="w-full py-4 text-white cursor-pointer rounded-md bg-charcoal hover:bg-charcoal/90 transition-all duration-150 ease-in-out"
+    //       >
+    //         Submit
+    //       </button>
+    //     </form>
+    //   </Form>
+    //   ;
+    // </div>
+    <></>
   );
 };
