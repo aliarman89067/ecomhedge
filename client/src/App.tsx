@@ -37,7 +37,7 @@ const App = () => {
         {!isContractPage && <OverlayForm />}
         {!isContractPage && <FloatingElements />}
 
-        {!isContractPage && <Navbar />}
+        {/* {!isContractPage && <Navbar />} */}
         <Routes>
           {/* Home/Index */}
           <Route path="/" Component={Home} />

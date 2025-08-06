@@ -2,11 +2,13 @@ import { navbarLinks } from "@/constant";
 import { MaxWidthWrapper } from "../max-width-wrapper";
 import { Link } from "react-router-dom";
 import { WetButton } from "../wet-button";
+import { CTAButton } from "../cta-button";
+import { FillButton } from "../fill-button";
 
 export const Navbar = () => {
   return (
-    <MaxWidthWrapper classNames="fixed top-0 left-1/2 -translate-x-1/2 w-full flex items-center justify-between py-6 z-50">
-      <img src="/logo.png" alt="Logo" className="w-20 object-contain" />
+    <MaxWidthWrapper classNames="absolute top-0 left-1/2 -translate-x-1/2 w-full flex items-center justify-between py-6 z-50">
+      <img src="/logo.png" alt="Logo" className="w-[110px] object-contain" />
       <div className="flex items-center gap-10">
         <div className="flex items-center gap-5">
           {navbarLinks.map((item) => (
@@ -38,7 +40,7 @@ export const Navbar = () => {
             </Link>
           ))}
         </div>
-        <WetButton title="Get Started" />
+        <FillButton title="Get Started" />
       </div>
     </MaxWidthWrapper>
   );
