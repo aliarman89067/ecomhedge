@@ -1,7 +1,5 @@
 import { CTAButton } from "../cta-button";
 import { MaxWidthWrapper } from "../max-width-wrapper";
-import Spline from "@splinetool/react-spline";
-import { ServicesList } from "./services-list";
 import { servicesData } from "@/constant";
 import HeroVideosLine from "./hero-videos-line";
 import { useState } from "react";

@@ -206,3 +206,53 @@ p:empty::before {
 .hoverText:has(+ .hoverText + .hoverText:hover) {
   font-weight: 300;
 }
+
+.mask-gradient-benefits {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3),
+    transparent
+  );
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), transparent);
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@layer utilities {
+  .animate-gradient {
+    animation: gradient 6s ease infinite;
+  }
+}
+
+.mask-gradient-snap-edges {
+  -webkit-mask-image: radial-gradient(
+    ellipse at center,
+    black 40%,
+    rgba(0, 0, 0, 0.6) 60%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(
+    ellipse at center,
+    black 10%,
+    rgba(0, 0, 0, 0.1) 50%,
+    transparent 70%
+  );
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}

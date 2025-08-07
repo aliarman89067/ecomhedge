@@ -1,142 +1,158 @@
-import { ChartNoAxesColumnIncreasing, QuoteIcon } from "lucide-react";
+import Spline from "@splinetool/react-spline";
 import { MaxWidthWrapper } from "../max-width-wrapper";
 import { motion } from "framer-motion";
-import { MouseParallax } from "react-just-parallax";
+import { FillBox } from "../fill-box";
 
 export const Benefits = () => {
   return (
-    <div className="py-10 relative min-h-screen w-full flex flex-col overflow-hidden items-center justify-center px-3">
-      <div className="absolute z-10 top-0 left-0 w-full h-full bg-black/40 backdrop-blur-xl" />
+    <section className="relative min-h-screen w-full flex justify-center py-20 lg:py-10 overflow-hidden">
+      <img
+        src="/new/noise.png"
+        alt="Noise Image"
+        className="pointer-events-none select-none absolute top-0 left-0 w-full h-full z-1 object-cover opacity-15"
+      />
       <video
-        src="/golden-video.mp4"
+        src="/new/benefits/light-rays.mp4"
+        loop
         autoPlay
         muted
-        loop
-        className="z-0 w-full h-full object-cover absolute top-0 left-0"
+        className="absolute top-0 h-ful object-contain z-10 mask-gradient-benefits"
       >
-        <source src="/golden-video.mp4" />
+        <source src="/new/benefits/light-rays.mp4" />
       </video>
-      <MaxWidthWrapper classNames="relative z-[10] flex flex-col gap-4 items-center">
-        <div className="grid grid-cols-1 lg:grid-cols-[2fr_1.5fr]  gap-10 w-full">
-          {/* Top Left */}
-          <motion.h1
-            initial={{ opacity: 0, y: -50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-150px" }}
-            transition={{ duration: 0.6, ease: "easeInOut" }}
-            className="text-white text-2xl lg:text-4xl"
-          >
-            Wholesale Gains with{" "}
-            <span className="inline-flex text-gold font-bold relative">
-              <span>Ecom Automations Hub</span>
-              <img
-                src="/heading-stars.png"
-                alt="Stars"
-                className="absolute -top-2 -right-6 rotate-[20deg] w-7 lg:w-10 h-7 lg:h-10 object-contain"
+      <div className="absolute inset-0 bg-[url(/new/background.png)] bg-cover"></div>
+      <MaxWidthWrapper classNames="relative z-10 w-full min-h-full flex flex-col items-center">
+        <h1 className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl text-center">
+          Automate & Dominate the{" "}
+          <span className="relative">
+            Wholesale
+            <svg
+              viewBox="0 0 286 73"
+              fill="none"
+              className="absolute -left-2 -right-2 -top-3 bottom-0 translate-y-1"
+            >
+              <motion.path
+                initial={{ pathLength: 0 }}
+                whileInView={{ pathLength: 1 }}
+                transition={{
+                  duration: 1.25,
+                  ease: "easeInOut",
+                }}
+                d="M142.293 1C106.854 16.8908 6.08202 7.17705 1.23654 43.3756C-2.10604 68.3466 29.5633 73.2652 122.688 71.7518C215.814 70.2384 316.298 70.689 275.761 38.0785C230.14 1.37835 97.0503 24.4575 52.9384 1"
+                stroke="#FACC15"
+                strokeWidth="3"
               />
-            </span>{" "}
-            <br />
-            FBA Automation
-          </motion.h1>
-
-          {/* Right - Spans 2 Rows */}
-          <div className="row-span-2 flex">
-            <MouseParallax strength={0.05}>
-              <motion.div
-                initial={{ opacity: 0, x: 70 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-200px" }}
-                transition={{ duration: 0.6, ease: "easeInOut" }}
-                className="h-full bg-white/10 p-6 shadow rounded-xl flex flex-col gap-3 lg:gap-0 items-center justify-between"
-              >
-                {/* Right box content here */}
-                <p className="text-xl sm:text-2xl lg:text-3xl text-white font-semibold md:font-bold">
-                  Automate Your Growth on Amazon.
-                </p>
-                <div className="flex items-center gap-2 bg-gold px-6 py-6 rounded-full">
-                  <span className="text-white text-lg sm:text-xl">
-                    1,200+ Customers
-                  </span>
-                  <ChartNoAxesColumnIncreasing className="text-white size-7" />
+            </svg>
+          </span>{" "}
+          Game
+        </h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-20 w-full h-full overflow-hidden mt-10">
+          <div className="grid h-full w-full gap-4 grid-cols-1 bg-secondary/20 rounded-xl p-5">
+            {/* Top Section – Single Column */}
+            <FillBox>
+              <div className="relative p-4 bg-secondary/10 rounded-xl h-full overflow-hidden">
+                <div className="absolute -top-5 left-0 w-32 h-32 rounded-full animate-gradient bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-[length:300%_300%] opacity-40 blur-3xl"></div>
+                <img
+                  src="/new/noise.png"
+                  alt="Noise Image"
+                  className="pointer-events-none select-none absolute top-0 left-0 w-full h-full object-cover opacity-30"
+                />
+                <div className="flex flex-col gap-5 h-full w-full sm:w-[90%] lg:w-[70%] justify-between relative">
+                  <h1 className="text-white font-bold text-3xl sm:text-4xl">
+                    Automate Your Growth on{" "}
+                    <span className="relative">
+                      Amazon.
+                      <svg
+                        viewBox="0 0 286 73"
+                        fill="none"
+                        className="absolute -left-2 -right-2 -top-1 bottom-0 translate-y-1"
+                      >
+                        <motion.path
+                          initial={{ pathLength: 0 }}
+                          whileInView={{ pathLength: 1 }}
+                          transition={{
+                            duration: 1.25,
+                            ease: "easeInOut",
+                          }}
+                          d="M142.293 1C106.854 16.8908 6.08202 7.17705 1.23654 43.3756C-2.10604 68.3466 29.5633 73.2652 122.688 71.7518C215.814 70.2384 316.298 70.689 275.761 38.0785C230.14 1.37835 97.0503 24.4575 52.9384 1"
+                          stroke="#FACC15"
+                          strokeWidth="3"
+                        />
+                      </svg>
+                    </span>{" "}
+                  </h1>
+                  <h2 className="bebas text-white lg:font-semibold text-2xl lg:text-3xl tracking-wider">
+                    1,200 Customers
+                  </h2>
                 </div>
-                <div className="flex items-center gap-5">
-                  <div className="w-10 h-10 rounded-full bg-white overflow-hidden shrink-0 grow flex items-center justify-center">
-                    <img
-                      src="/benefits/p3.png"
-                      alt="Person Image"
-                      className="w-8 h-8 object-contain"
-                    />
+                <motion.img
+                  src="/new/benefits/guy.png"
+                  alt="Guy"
+                  className="w-52 object-contain absolute top-0 -right-10 max-sm:hidden mask-gradient-left pointer-events-none select-none"
+                  initial={{ rotate: 10 }}
+                  animate={{ rotate: [10, 14, 10] }} // subtle back-and-forth
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    repeatType: "loop",
+                    ease: "easeInOut",
+                  }}
+                />
+              </div>
+            </FillBox>
+
+            {/* Bottom Section – 2-Column Grid */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+              <FillBox>
+                <div className="relative px-4 py-10 md:py-4 overflow-hidden h-full bg-secondary/10 rounded-xl">
+                  <div className="absolute -right-5 -bottom-5 w-32 h-32 rounded-full animate-gradient bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-[length:300%_300%] opacity-20 blur-3xl"></div>
+                  <img
+                    src="/new/noise.png"
+                    alt="Noise Image"
+                    className="pointer-events-none select-none absolute top-0 left-0 w-full h-full object-cover opacity-30"
+                  />
+                  <div className="flex flex-col gap-3 justify-center h-full">
+                    <h1 className="text-white font-semibold text-xl">
+                      Reselling Established Brands
+                    </h1>
+                    <p className="text-white text-sm">
+                      Automated wholesale: resell top brands with less risk,
+                      more sales.
+                    </p>
                   </div>
-                  <span className="text-white font-extralight text-base">
-                    Start Your Business Today.
-                  </span>
                 </div>
-              </motion.div>
-            </MouseParallax>
-          </div>
+              </FillBox>
 
-          {/* Bottom Left */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-200px" }}
-              transition={{ duration: 0.6, ease: "easeInOut" }}
-              className="w-full bg-white/10 rounded-lg p-4 flex flex-col gap-2"
-            >
-              <div className="flex items-center gap-2">
-                <div className="w-10 h-10 rounded-full bg-white/50 overflow-hidden  flex items-center justify-center">
+              <FillBox>
+                <div className="relative px-4 py-10 md:py-4 h-full overflow-hidden bg-secondary/10 rounded-xl">
+                  <div className="absolute -left-5 -bottom-5 w-32 h-32 rounded-full animate-gradient bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-[length:300%_300%] opacity-20 blur-3xl"></div>
                   <img
-                    src="/benefits/p1.png"
-                    alt="Person Image"
-                    className="w-8 h-8 object-contain"
+                    src="/new/noise.png"
+                    alt="Noise Image"
+                    className="pointer-events-none select-none absolute top-0 left-0 w-full h-full object-cover opacity-30"
                   />
+                  <div className="flex flex-col gap-3 justify-center h-full">
+                    <h1 className="text-white font-semibold text-xl">
+                      Potential for High Sales Volume
+                    </h1>
+                    <p className="text-white text-sm">
+                      Grow fast with repeatable orders—no product dev or
+                      branding.
+                    </p>
+                  </div>
                 </div>
-                <h1 className="text-gold font-medium text-sm lg:text-base">
-                  Reselling Established Brands
-                </h1>
-              </div>
-              <div className="relative mt-2">
-                <QuoteIcon className="text-white absolute hidden md:flex -left-3 -top-1 size-3 rotate-[200deg]" />
-                <QuoteIcon className="text-white absolute hidden md:flex left-24 lg:left-[235px] -bottom-1 size-3 rotate-[20deg]" />
-                <p className="text-white text-sm">
-                  With our Amazon wholesale automation, resell trusted brands
-                  with built-in demand—minimizing risk and maximizing reliable
-                  sales.
-                </p>
-              </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-150px" }}
-              transition={{ duration: 0.6, ease: "easeInOut" }}
-              className="w-full bg-white/10 rounded-lg p-4 flex flex-col gap-2"
-            >
-              <div className="flex items-center gap-2">
-                <div className="w-10 h-10 rounded-full bg-white/10 overflow-hidden  flex items-center justify-center">
-                  <img
-                    src="/benefits/p2.png"
-                    alt="Person Image"
-                    className="w-8 h-8 object-contain"
-                  />
-                </div>
-                <h1 className="text-gold font-medium text-sm lg:text-base">
-                  Potential for High Sales Volume
-                </h1>
-              </div>
-              <div className="relative mt-2">
-                <QuoteIcon className="text-white absolute hidden md:flex -left-3 -top-1 size-3 rotate-[200deg]" />
-                <QuoteIcon className="text-white absolute hidden md:flex right-[90px] lg:left-16 -bottom-1 size-3 rotate-[20deg]" />
-                <p className="text-white text-sm">
-                  Our wholesale model is built for scale—grow by increasing
-                  orders, no need for new products or branding.
-                </p>
-              </div>
-            </motion.div>
+              </FillBox>
+            </div>
+          </div>
+          <div className="relative w-full h-full hidden md:flex items-center justify-center">
+            <Spline
+              scene="https://prod.spline.design/rYD9gqwlUjldGQNB/scene.splinecode"
+              className="relative z-10"
+            />
+            <div className="absolute  w-64 h-64 rounded-full animate-gradient bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-[length:300%_300%] opacity-40 blur-3xl"></div>
           </div>
         </div>
       </MaxWidthWrapper>
-    </div>
+    </section>
   );
 };
