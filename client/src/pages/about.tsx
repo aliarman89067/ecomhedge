@@ -1,4 +1,4 @@
-import { CTAButton } from "@/components/cta-button";
+import { motion } from "framer-motion";
 import { MaxWidthWrapper } from "@/components/max-width-wrapper";
 import { TabName } from "@/lib/tab-name";
 import { cn } from "@/lib/utils";
@@ -11,6 +11,10 @@ import {
   SearchIcon,
   UsersIcon,
 } from "lucide-react";
+import { CTAButton } from "@/components/cta-button";
+import { InfoCols } from "@/components/about/info-cols";
+import { MouseParallax } from "react-just-parallax";
+import { FillBox } from "@/components/fill-box";
 
 const About = () => {
   const keyFeatureData = [
@@ -62,147 +66,254 @@ const About = () => {
   const servicesData = [
     {
       icon: HandCoinsIcon,
-      title: "Lift together",
+      label: "Lift together",
       desc: "Pioneering solutions that leverage cutting-edge technology to streamline business processes and enhance efficiency, setting new standards in the digital industry.",
     },
     {
       icon: UsersIcon,
-      title: "Champion our customers",
+      label: "Champion our customers",
       desc: "Our clients are our priority. We strive to be trusted partners, supporting their journey with essential tools and expertise. By understanding their challenges, we anticipate needs to simplify and enhance their business operations.",
     },
     {
       icon: PuzzleIcon,
-      title: "See the whole picture",
+      label: "See the whole picture",
       desc: "Driven by curiosity, we connect the dots to ensure a seamless experience. Collaborating to comprehend the broader impact of our decisions, we prioritize every detail of our clients' journey. Our focus is on creating a comprehensive, flawless solution.",
     },
     {
       icon: SearchIcon,
-      title: "Focus on results",
+      label: "Focus on results",
       desc: "Ownership defines our approach to achieving excellence. We set clear goals, monitor progress, and uphold accountability. Embracing an entrepreneurial spirit, we innovate fearlessly, learn from mistakes, and push boundaries to deliver exceptional outcomes",
     },
     {
       icon: MessageCircleOffIcon,
-      title: "Keep it simple",
+      label: "Keep it simple",
       desc: "Clear and direct communication is key to simplicity at Ecom Automations Hub. We actively listen, incorporate diverse viewpoints, and encourage open dialogue. Our transparent approach builds trust with both our team and clients.",
     },
     {
       icon: HeartHandshakeIcon,
-      title: "Together we achieve",
+      label: "Together we achieve",
       desc: "Collaboration is ingrained in our DNA. By working together seamlessly, we harness collective strengths to drive success. Embracing inclusivity and mutual respect, we foster an environment where ideas flourish and innovation thrives.",
     },
   ];
   TabName(" | About");
 
   return (
-    <section className="flex flex-col w-full h-full">
-      {/* Hero */}
-      <div className="py-10 px-2 relative min-h-screen w-full flex flex-col overflow-hidden items-center justify-center">
-        <MaxWidthWrapper classNames="z-20">
-          <div className="flex flex-col items-center justify-center gap-6">
-            <h1 className="text-white font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
-              Go global with Ecom Automations Hub
+    <section className="relative min-h-screen w-full flex flex-col bg-cover justify-center overflow-hidden">
+      <div className="w-full relative">
+        <img
+          src="/new/noise.png"
+          alt="Noise Image"
+          className="pointer-events-none select-none absolute top-0 left-0 w-full h-full z-1 object-cover opacity-15"
+        />
+        <div className="absolute inset-0 bg-[url(/new/background.png)] bg-cover"></div>
+        <MaxWidthWrapper classNames="relative z-10 w-full min-h-full flex flex-col">
+          <div className="relative w-full min-h-screen lg:h-screen py-16 flex flex-col">
+            <h1 className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl text-center">
+              Go global with{" "}
+              <span className="relative">
+                Ecom
+                <svg
+                  viewBox="0 0 290 150"
+                  fill="none"
+                  className="absolute -left-2 -right-2 top-3 bottom-0 translate-y-1"
+                >
+                  <motion.path
+                    initial={{ pathLength: 0 }}
+                    whileInView={{ pathLength: 1 }}
+                    transition={{
+                      duration: 1.25,
+                      ease: "easeInOut",
+                    }}
+                    d="M142.293 1C106.854 16.8908 6.08202 7.17705 1.23654 43.3756C-2.10604 68.3466 29.5633 73.2652 122.688 71.7518C215.814 70.2384 316.298 70.689 275.761 38.0785C230.14 1.37835 97.0503 24.4575 52.9384 1"
+                    stroke="#FACC15"
+                    strokeWidth="3"
+                  />
+                </svg>
+              </span>{" "}
+              Automations Hub.
             </h1>
-            <p className="text-white text-center px-2">
-              Ecom Automations Hub aims to lead the way in digital solutions,
-              empowering global businesses through expert account setup,
-              marketing strategies, and business consultancy. Our vision is to
-              innovate and streamline operations, ensuring every client achieves
-              sustainable growth and success. We are dedicated to providing
-              unparalleled support and guidance, driving businesses towards
-              their full potential.
-            </p>
-            <p className="text-white text-center px-2">
-              At Ecom Automations Hub, we leverage cutting-edge automation
-              solutions to simplify processes for our clients. Our innovative
-              approach streamlines account setup, enhances marketing efficiency,
-              and provides strategic business consultancy. By integrating
-              automation, we empower businesses to achieve greater productivity
-              and success in today's digital age.
-            </p>
-          </div>
-        </MaxWidthWrapper>
-        <div className="absolute z-10 top-0 left-0 w-full h-full bg-black/40 backdrop-blur-xl" />
-        <video
-          src="/golden-video.mp4"
-          autoPlay
-          muted
-          loop
-          className="z-0 w-full h-full object-cover absolute top-0 left-0"
-        >
-          <source src="/golden-video.mp4" />
-        </video>
-      </div>
-      <div className="flex fle-col gap-5 mt-10 pb-64">
-        <MaxWidthWrapper>
-          <img
-            src="/about/banner.jpg"
-            alt="Banner"
-            className="w-full h-[300px] rounded-2xl object-cover"
-          />
-        </MaxWidthWrapper>
-      </div>
-      <div className="relative w-full min-h-screen bg-gradient-to-t from-charcoal to-gold px-2">
-        <MaxWidthWrapper>
-          <div className="flex flex-col md:flex-row gap-10 -translate-y-52">
-            {/* Box 1 */}
-            <div className="px-5 py-10 rounded-lg bg-radial from-black to-charcoal flex flex-col gap-4">
-              <h1 className="text-white font-bold text-xl">Our Heritage</h1>
-              <div className="flex flex-col gap-2">
-                <span className="text-gold">2019 - 2020 : B2B Marketplace</span>
-                <span className="text-white">
-                  We started our journey as a Global B2B Marketplace connecting
-                  buyers & suppliers.
-                </span>
+            <div className="relative grid grid-cols-1 md:grid-cols-2 w-full h-full gap-5 mt-10">
+              <div className="relative w-full h-full px-3 py-3 flex items-center justify-center rounded-xl overflow-hidden bg-secondary/20">
+                <div className="absolute overflow-hidden -top-5 left-0 w-32 h-32 rounded-full animate-gradient bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-[length:300%_300%] opacity-40 blur-3xl"></div>
+                <img
+                  src="/new/noise.png"
+                  alt="Noise Image"
+                  className="pointer-events-none select-none absolute top-0 left-0 w-full h-full object-cover opacity-30"
+                />
+                <div className="relative w-full h-full px-3 py-10 md:py-3 flex rounded-xl bg-secondary/10">
+                  <motion.img
+                    initial={{ opacity: 0, y: 100 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, ease: "easeInOut", delay: 1 }}
+                    src="/new/about/moon.jpg"
+                    alt="Moon"
+                    className="absolute opacity-60 -bottom-10 left-0 w-full object-contain mask-gradient-snap-edges"
+                  />
+                  <h1 className="text-2xl sm:text-4xl lg:text-5xl w-full lg:w-[90%] font-bold text-white relative">
+                    Automation-Driven Success Across Every Major Ecom Platform
+                  </h1>
+                </div>
               </div>
-              <div className="flex flex-col gap-2">
-                <span className="text-gold">2021 - 2022 : Digital Agency</span>
-                <span className="text-white">
-                  We transitioned to serve as a digital agency, catering to
-                  clients worldwide.
-                </span>
-              </div>
-              <div className="flex flex-col gap-2">
-                <span className="text-gold">
-                  2023 - Present: Ecom Automation
-                </span>
-                <span className="text-white">
-                  Became the e-com solution provider, helping entrepreneurs to
-                  generate passive income.
-                </span>
-              </div>
-            </div>
-            {/* Box 2 */}
-            <div className="px-5 py-10 rounded-lg bg-radial from-black to-charcoal flex flex-col gap-4">
-              <h1 className="text-white font-bold text-xl">Our Heritage</h1>
-              <div className="flex flex-col gap-2">
-                <span className="text-gold">2019 - 2020 : B2B Marketplace</span>
-                <span className="text-white">
-                  We started our journey as a Global B2B Marketplace connecting
-                  buyers & suppliers.
-                </span>
-              </div>
-              <div className="flex flex-col gap-2">
-                <span className="text-gold">2021 - 2022 : Digital Agency</span>
-                <span className="text-white">
-                  We transitioned to serve as a digital agency, catering to
-                  clients worldwide.
-                </span>
-              </div>
-              <div className="flex flex-col gap-2">
-                <span className="text-gold">
-                  2023 - Present: Ecom Automation
-                </span>
-                <span className="text-white">
-                  Became the e-com solution provider, helping entrepreneurs to
-                  generate passive income.
-                </span>
+              <div className="grid grid-cols-1 gap-5">
+                <div className="relative w-full h-full p-3 flex items-center justify-center rounded-xl bg-secondary/20">
+                  <div className="absolute overflow-hidden -top-5 left-0 w-32 h-32 rounded-full animate-gradient bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-[length:300%_300%] opacity-40 blur-3xl"></div>
+                  <img
+                    src="/new/noise.png"
+                    alt="Noise Image"
+                    className="pointer-events-none select-none absolute top-0 left-0 w-full h-full object-cover opacity-30"
+                  />
+                  <div className="w-full h-full px-3 py-10 md:py-3 flex items-center justify-center rounded-xl bg-secondary/10">
+                    <h1 className="text-2xl font-bold text-white relative">
+                      Driving Digital Success with Ecom Automation & Business
+                      Expertise
+                    </h1>
+                  </div>
+                </div>
+                <div className="relative w-full h-full p-3 flex items-center justify-center rounded-xl bg-secondary/20">
+                  <div className="absolute overflow-hidden -top-5 left-0 w-32 h-32 rounded-full animate-gradient bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-[length:300%_300%] opacity-40 blur-3xl"></div>
+                  <img
+                    src="/new/noise.png"
+                    alt="Noise Image"
+                    className="pointer-events-none select-none absolute top-0 left-0 w-full h-full object-cover opacity-30"
+                  />
+                  <div className="w-full h-full px-3 py-10 md:py-3 flex items-center justify-center rounded-xl bg-secondary/10">
+                    <h1 className="text-2xl font-bold text-white relative">
+                      Boosting Productivity with Smart Automation & Expert
+                      Strategy
+                    </h1>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div className="flex flex-col w-full -translate-y-36">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-              <h1 className="text-white font-bold text-2xl md:text-3xl lg:text-4xl">
-                Key Features of <br /> Seller Account:
+        </MaxWidthWrapper>
+      </div>
+      <div className="w-full relative">
+        <img
+          src="/new/noise.png"
+          alt="Noise Image"
+          className="pointer-events-none select-none absolute top-0 left-0 w-full h-full z-1 object-cover opacity-15"
+        />
+        <div className="absolute inset-0 bg-[url(/new/background.png)] scale-y-[-1] bg-cover"></div>
+
+        <MaxWidthWrapper classNames="relative z-10 w-full min-h-full flex flex-col">
+          <div className="w-full flex flex-col items-center mt-10">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease: "easeInOut" }}
+              viewport={{ once: true, margin: "-80px" }}
+              className="flex bg-white rounded-xl sm:rounded-2xl md:rounded-4xl"
+            >
+              <img
+                src="/new/about/team.png"
+                alt="Team"
+                className="w-full object-contain"
+              />
+            </motion.div>
+          </div>
+        </MaxWidthWrapper>
+      </div>
+      <div className="w-full relative">
+        <img
+          src="/new/noise.png"
+          alt="Noise Image"
+          className="pointer-events-none select-none absolute top-0 left-0 w-full h-full z-1 object-cover opacity-15"
+        />
+        <div className="absolute inset-0 bg-[url(/new/background.png)] bg-cover"></div>
+        <MaxWidthWrapper classNames="relative z-10 w-full min-h-full flex flex-col">
+          <div className="w-full flex flex-col items-center mt-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 w-full">
+              <div className="relative w-full p-3 rounded-xl bg-secondary/20 overflow-hidden">
+                <div className="absolute overflow-hidden -top-5 left-0 w-32 h-32 rounded-full animate-gradient bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-[length:300%_300%] opacity-40 blur-3xl"></div>
+                <img
+                  src="/new/noise.png"
+                  alt="Noise Image"
+                  className="pointer-events-none select-none absolute top-0 left-0 w-full h-full object-cover opacity-30"
+                />
+                <div className="w-full p-3 rounded-xl bg-secondary/10 relative flex flex-col gap-2">
+                  <h3 className="text-white font-semibold text-xl">
+                    Our Heritage
+                  </h3>
+                  <span className="text-secondary bebas text-xl">
+                    2019 - 2020 : B2B Marketplace
+                  </span>
+                  <span className="text-secondary text-base">
+                    We started our journey as a Global B2B Marketplace
+                    connecting buyers & suppliers.
+                  </span>
+                  <span className="text-secondary bebas text-xl">
+                    2021 - 2022 : Digital Agency
+                  </span>
+                  <span className="text-secondary text-base">
+                    We transitioned to serve as a digital agency, catering to
+                    clients worldwide.
+                  </span>
+                  <span className="text-secondary bebas text-xl">
+                    2023 - Present: Ecom Automation
+                  </span>
+                  <span className="text-secondary text-base">
+                    Became the e-com solution provider, helping entrepreneurs to
+                    generate passive income.
+                  </span>
+                </div>
+              </div>
+              <div className="relative w-full p-3 rounded-xl bg-secondary/20 overflow-hidden">
+                <div className="absolute overflow-hidden -top-5 left-0 w-32 h-32 rounded-full animate-gradient bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-[length:300%_300%] opacity-40 blur-3xl"></div>
+                <img
+                  src="/new/noise.png"
+                  alt="Noise Image"
+                  className="pointer-events-none select-none absolute top-0 left-0 w-full h-full object-cover opacity-30"
+                />
+                <div className="w-full p-3 rounded-xl bg-secondary/10 relative flex flex-col gap-2">
+                  <h3 className="text-white font-semibold text-xl">
+                    Our Heritage
+                  </h3>
+                  <span className="text-secondary bebas text-xl">
+                    2019 - 2020 : B2B Marketplace
+                  </span>
+                  <span className="text-secondary text-base">
+                    We started our journey as a Global B2B Marketplace
+                    connecting buyers & suppliers.
+                  </span>
+                  <span className="text-secondary bebas text-xl">
+                    2021 - 2022 : Digital Agency
+                  </span>
+                  <span className="text-secondary text-base">
+                    We transitioned to serve as a digital agency, catering to
+                    clients worldwide.
+                  </span>
+                  <span className="text-secondary bebas text-xl">
+                    2023 - Present: Ecom Automation
+                  </span>
+                  <span className="text-secondary text-base">
+                    Became the e-com solution provider, helping entrepreneurs to
+                    generate passive income.
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </MaxWidthWrapper>
+      </div>
+      <div className="w-full relative">
+        <img
+          src="/new/noise.png"
+          alt="Noise Image"
+          className="pointer-events-none select-none absolute top-0 left-0 w-full h-full z-1 object-cover opacity-15"
+        />
+        <div className="absolute inset-0 bg-[url(/new/background.png)] scale-y-[-1] bg-cover"></div>
+        <MaxWidthWrapper classNames="relative z-10 w-full min-h-full flex flex-col">
+          <div className="relative w-full h-full flex items-center justify-between overflow-hidden mt-10 bg-secondary/20 p-3 rounded-3xl">
+            <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-64 h-64 rounded-full animate-gradient bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-[length:300%_300%] opacity-40 blur-3xl"></div>
+            <img
+              src="/new/noise.png"
+              alt="Noise Image"
+              className="pointer-events-none select-none absolute top-0 left-0 w-full h-full object-cover opacity-30"
+            />
+            <div className="relative px-3 py-4 rounded-3xl bg-secondary/10 flex flex-col items-center text-center w-full gap-2">
+              <h1 className="text-white font-bold text-3xl">
+                Key Features of Seller Account
               </h1>
               <p className="text-white">
                 The Seller Account service is the gateway for individuals and
@@ -210,249 +321,321 @@ const About = () => {
                 marketplace. By creating an Seller Account, sellers can list
                 their products, manage their inventory, process orders, and
                 engage with customers through platform. Here’s an overview of
-                what the Seller Account service entails:
+                what the Seller Account service entails
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 mb-7">
-              <div className="flex flex-col gap-3">
-                {keyFeatureData.map((item, index) => (
-                  <div key={index} className="flex flex-col gap-1">
-                    <h2 className="text-white text-lg font-bold">
-                      {item.label}
-                    </h2>
-                    <span className="text-white text-sm">{item.desc}</span>
+          </div>
+        </MaxWidthWrapper>
+      </div>
+      <div className="w-full relative">
+        <img
+          src="/new/noise.png"
+          alt="Noise Image"
+          className="pointer-events-none select-none absolute top-0 left-0 w-full h-full z-1 object-cover opacity-15"
+        />
+        <div className="absolute inset-0 bg-[url(/new/background.png)] bg-cover"></div>
+        <MaxWidthWrapper classNames="relative z-10 w-full min-h-full flex flex-col">
+          <InfoCols data={keyFeatureData} />
+        </MaxWidthWrapper>
+      </div>
+      <div className="w-full relative">
+        <img
+          src="/new/noise.png"
+          alt="Noise Image"
+          className="pointer-events-none select-none absolute top-0 left-0 w-full h-full z-1 object-cover opacity-15"
+        />
+        <div className="absolute inset-0 bg-[url(/new/background.png)] scale-y-[-1] bg-cover"></div>
+        <MaxWidthWrapper classNames="relative z-10 w-full min-h-full flex flex-col">
+          <div className="relative w-full h-full flex items-center justify-between overflow-hidden mt-10 bg-secondary/20 p-3 rounded-3xl">
+            <div className="absolute left-0 top-0 w-64 h-64 rounded-full animate-gradient bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-[length:300%_300%] opacity-40 blur-3xl"></div>
+            <img
+              src="/new/noise.png"
+              alt="Noise Image"
+              className="pointer-events-none select-none absolute top-0 left-0 w-full h-full object-cover opacity-30"
+            />
+            <div className="relative z-50 px-3 py-4 rounded-3xl bg-secondary/10 w-full h-full flex flex-col gap-2">
+              <h1 className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl text-center">
+                Ecom Automations Hub, your top choice for{" "}
+                <span className="relative">
+                  empowering
+                  <svg
+                    viewBox="0 0 286 73"
+                    fill="none"
+                    className="absolute -left-2 -right-2 -top-3 bottom-0 translate-y-1"
+                  >
+                    <motion.path
+                      initial={{ pathLength: 0 }}
+                      whileInView={{ pathLength: 1 }}
+                      transition={{
+                        duration: 1.25,
+                        ease: "easeInOut",
+                      }}
+                      d="M142.293 1C106.854 16.8908 6.08202 7.17705 1.23654 43.3756C-2.10604 68.3466 29.5633 73.2652 122.688 71.7518C215.814 70.2384 316.298 70.689 275.761 38.0785C230.14 1.37835 97.0503 24.4575 52.9384 1"
+                      stroke="#FACC15"
+                      strokeWidth="3"
+                    />
+                  </svg>
+                </span>{" "}
+                business automation
+              </h1>
+              <p className="text-white text-center mt-5">
+                We're for the visionaries. Those driven by success, fueled by
+                ambition, and inspired by their loved ones. We're about
+                technology that simplifies, strategists and experts who
+                streamline, and trusted partners who turn challenges into
+                opportunities. We're about unlocking doors, expanding horizons,
+                and revealing what's achievable. We empower individuals to take
+                that crucial first step and every subsequent stride. We ensure
+                everyone has an equal chance. For entrepreneurs launching their
+                ventures, for families relying on them, for safeguarding
+                innovative ideas—we are Ecom Automations Hub. Here to formalize
+                aspirations and pave the way forward.
+              </p>
+            </div>
+          </div>
+        </MaxWidthWrapper>
+      </div>
+      <div className="w-full relative">
+        <img
+          src="/new/noise.png"
+          alt="Noise Image"
+          className="pointer-events-none select-none absolute top-0 left-0 w-full h-full z-1 object-cover opacity-15"
+        />
+        <div className="absolute inset-0 bg-[url(/new/background.png)] bg-cover"></div>
+        <MaxWidthWrapper classNames="relative z-10 w-full min-h-full flex flex-col">
+          <div className="relative w-full h-full flex items-center text-center flex-col overflow-hidden mt-10">
+            <h1 className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl text-center">
+              A{" "}
+              <span className="relative">
+                few
+                <svg
+                  viewBox="0 0 290 150"
+                  fill="none"
+                  className="absolute -left-2 -right-2 top-4 bottom-0 translate-y-1"
+                >
+                  <motion.path
+                    initial={{ pathLength: 0 }}
+                    whileInView={{ pathLength: 1 }}
+                    transition={{
+                      duration: 1.25,
+                      ease: "easeInOut",
+                    }}
+                    d="M142.293 1C106.854 16.8908 6.08202 7.17705 1.23654 43.3756C-2.10604 68.3466 29.5633 73.2652 122.688 71.7518C215.814 70.2384 316.298 70.689 275.761 38.0785C230.14 1.37835 97.0503 24.4575 52.9384 1"
+                    stroke="#FACC15"
+                    strokeWidth="3"
+                  />
+                </svg>
+              </span>{" "}
+              highlights.
+            </h1>
+            <div className="relative w-[250px] sm:w-[300px] h-[250px] sm:h-[300px] my-5">
+              <div className="relative z-10 w-full h-full rounded-full overflow-hidden">
+                <MouseParallax strength={0.03}>
+                  <img
+                    src="/new/ranking/circle.png"
+                    alt="Circle"
+                    className="w-full h-full object-contain relative scale-[110%]"
+                  />
+                </MouseParallax>
+              </div>
+              <div className="absolute -top-5 left-0 w-full h-full rounded-full animate-gradient bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-[length:300%_300%] opacity-50 blur-3xl"></div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-xs md:max-w-2xl w-full">
+              {analyticsData.map((item, i) => (
+                <FillBox
+                  key={i}
+                  classNames={`${
+                    i === 0
+                      ? "md:-rotate-10 mt-4"
+                      : i === 1
+                      ? ""
+                      : "md:rotate-10 mt-4"
+                  }`}
+                >
+                  <div
+                    key={i}
+                    className="w-full h-64 px-3 rounded-b-full bg-secondary/20 flex flex-col items-center overflow-hidden"
+                  >
+                    <div className="flex flex-col gap-2 items-center relative py-4">
+                      <h1 className="text-white font-bold text-3xl">
+                        {item.title}
+                      </h1>
+                      <span className="text-secondary text-base">
+                        {item.count} {item.prefix}
+                      </span>
+                      <span className="text-secondary text-sm">
+                        {item.desc}
+                      </span>
+                    </div>
                   </div>
-                ))}
+                </FillBox>
+              ))}
+            </div>
+          </div>
+        </MaxWidthWrapper>
+      </div>
+      <div className="w-full relative">
+        <img
+          src="/new/noise.png"
+          alt="Noise Image"
+          className="pointer-events-none select-none absolute top-0 left-0 w-full h-full z-1 object-cover opacity-15"
+        />
+        <div className="absolute inset-0 bg-[url(/new/background.png)] scale-y-[-1] bg-cover"></div>
+        <MaxWidthWrapper classNames="relative z-10 w-full min-h-full flex flex-col">
+          <div className="relative w-full h-full flex items-center justify-between overflow-hidden mt-10 bg-secondary/20 p-3 rounded-3xl">
+            <div className="absolute left-0 top-0 w-64 h-64 rounded-full animate-gradient bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-[length:300%_300%] opacity-40 blur-3xl"></div>
+            <img
+              src="/new/noise.png"
+              alt="Noise Image"
+              className="pointer-events-none select-none absolute top-0 left-0 w-full h-full object-cover opacity-30"
+            />
+            <div className="relative z-50 px-3 py-4 rounded-3xl bg-secondary/10 w-full h-full flex flex-col gap-2">
+              <h1 className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl text-center">
+                The Ecom Automations Hub{" "}
+                <span className="relative">
+                  journey
+                  <svg
+                    viewBox="0 0 286 73"
+                    fill="none"
+                    className="absolute -left-2 -right-2 top-0 bottom-0 translate-y-1"
+                  >
+                    <motion.path
+                      initial={{ pathLength: 0 }}
+                      whileInView={{ pathLength: 1 }}
+                      transition={{
+                        duration: 1.25,
+                        ease: "easeInOut",
+                      }}
+                      d="M142.293 1C106.854 16.8908 6.08202 7.17705 1.23654 43.3756C-2.10604 68.3466 29.5633 73.2652 122.688 71.7518C215.814 70.2384 316.298 70.689 275.761 38.0785C230.14 1.37835 97.0503 24.4575 52.9384 1"
+                      stroke="#FACC15"
+                      strokeWidth="3"
+                    />
+                  </svg>
+                </span>{" "}
+                into automation
+              </h1>
+              <p className="text-white text-center mt-5">
+                In the wake of the COVID-19 pandemic, the business landscape
+                underwent unprecedented challenges. Thousands of businesses
+                struggled to adapt, facing shortages in skilled personnel and
+                operational inefficiencies. The ripple effects were profound,
+                with many enterprises experiencing reduced performance and
+                financial strain, leading to widespread job losses. Witnessing
+                these challenges firsthand, Ecom Automations Hub recognized a
+                critical need to pivot from traditional business strategy
+                services to pioneering business automation solutions. With a
+                vision to empower businesses across over 40 industries. Today,
+                Ecom Automations Hub continues to evolve, dedicated to
+                empowering entrepreneurs and enterprises alike with
+                transformative automation solutions that pave the way for
+                success in the new era of business.
+              </p>
+            </div>
+          </div>
+        </MaxWidthWrapper>
+      </div>
+      <div className="w-full relative">
+        <img
+          src="/new/noise.png"
+          alt="Noise Image"
+          className="pointer-events-none select-none absolute top-0 left-0 w-full h-full z-1 object-cover opacity-15"
+        />
+        <div className="absolute inset-0 bg-[url(/new/background.png)] bg-cover"></div>
+        <MaxWidthWrapper classNames="relative z-10 w-full min-h-full flex flex-col">
+          <InfoCols data={servicesData} />
+        </MaxWidthWrapper>
+      </div>
+      <div className="w-full relative">
+        <img
+          src="/new/noise.png"
+          alt="Noise Image"
+          className="pointer-events-none select-none absolute top-0 left-0 w-full h-full z-1 object-cover opacity-15"
+        />
+        <div className="absolute inset-0 bg-[url(/new/background.png)] scale-y-[-1] bg-cover"></div>
+        <MaxWidthWrapper classNames="relative z-10 w-full min-h-full flex flex-col">
+          <div className="relative w-full h-full flex items-center justify-between overflow-hidden mt-10 bg-secondary/20 p-3 rounded-3xl">
+            <div className="absolute left-0 top-0 w-64 h-64 rounded-full animate-gradient bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-[length:300%_300%] opacity-40 blur-3xl"></div>
+            <img
+              src="/new/noise.png"
+              alt="Noise Image"
+              className="pointer-events-none select-none absolute top-0 left-0 w-full h-full object-cover opacity-30"
+            />
+            <div className="relative z-50 px-3 py-4 rounded-3xl bg-secondary/10 w-full h-full flex flex-col gap-2">
+              <h1 className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl text-center">
+                Making it{" "}
+                <span className="relative">
+                  official
+                  <svg
+                    viewBox="0 0 286 73"
+                    fill="none"
+                    className="absolute -left-2 -right-2 top-0 bottom-0 translate-y-1"
+                  >
+                    <motion.path
+                      initial={{ pathLength: 0 }}
+                      whileInView={{ pathLength: 1 }}
+                      transition={{
+                        duration: 1.25,
+                        ease: "easeInOut",
+                      }}
+                      d="M142.293 1C106.854 16.8908 6.08202 7.17705 1.23654 43.3756C-2.10604 68.3466 29.5633 73.2652 122.688 71.7518C215.814 70.2384 316.298 70.689 275.761 38.0785C230.14 1.37835 97.0503 24.4575 52.9384 1"
+                      stroke="#FACC15"
+                      strokeWidth="3"
+                    />
+                  </svg>
+                </span>{" "}
+                for everyone
+              </h1>
+              <p className="text-white text-center mt-5">
+                At Ecom Automations Hub, we are dedicated to making business
+                automation accessible to all, irrespective of background or
+                circumstance. We aim to empower entrepreneurs and businesses
+                alike, ensuring they have the tools and support needed to thrive
+                in the digital age. We are deeply committed to supporting the
+                broader business community through our social impact
+                initiatives. By forming strategic partnerships, we aim to uplift
+                underserved sectors and communities that may not have easy
+                access to advanced business solutions. Furthermore, we actively
+                participate in corporate giving and provide our employees with
+                opportunities for community service and corporate matching
+                programs.
+              </p>
+            </div>
+          </div>
+        </MaxWidthWrapper>
+      </div>
+      <div className="w-full relative">
+        <img
+          src="/new/noise.png"
+          alt="Noise Image"
+          className="pointer-events-none select-none absolute top-0 left-0 w-full h-full z-1 object-cover opacity-15"
+        />
+        <div className="absolute inset-0 bg-[url(/new/background.png)] bg-cover"></div>
+        <MaxWidthWrapper classNames="relative z-10 w-full min-h-full flex flex-col">
+          <div className="relative my-10 w-full p-3 bg-secondary/20 rounded-xl">
+            <div className="absolute -top-5 left-0 w-32 h-32 rounded-full animate-gradient bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-[length:300%_300%] opacity-40 blur-3xl"></div>
+            <img
+              src="/new/noise.png"
+              alt="Noise Image"
+              className="pointer-events-none select-none absolute top-0 left-0 w-full h-full object-cover opacity-30"
+            />
+            <div className="grid grid-cols-1 md:grid-cols-2 w-full p-5 bg-secondary/10 rounded-xl">
+              <div className="flex flex-col gap-4">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+                  "We believe every business deserves the full protection of the
+                  legal system as well as a simple way to start, operate, and
+                  run their business daily."
+                </h1>
+                <span className="text-secondary">- Dan Wernikoff, CEO</span>
               </div>
               <img
-                src="/about/image1.jpg"
-                alt="Image 1"
-                className="w-full h-[500px] object-cover rounded-xl"
+                src="/new/about/image5.jpg"
+                alt="Person Image"
+                className="w-full h-full rounded-xl object-cover max-md:hidden"
               />
             </div>
-            <CTAButton />
           </div>
         </MaxWidthWrapper>
       </div>
-      <div className="w-full min-h-screen py-10">
-        <MaxWidthWrapper classNames="grid grid-cols-1 md:grid-cols-2 gap-10">
-          <div className="flex flex-col gap-4">
-            <h1 className="text-gold font-bold text-2xl md:text-3xl lg:text-4xl">
-              Ecom Automations Hub, your top choice for empowering business
-              automation
-            </h1>
-            <p className="text-charcoal">
-              We're for the visionaries. Those driven by success, fueled by
-              ambition, and inspired by their loved ones.
-            </p>
-            <p className="text-charcoal">
-              We're about technology that simplifies, strategists and experts
-              who streamline, and trusted partners who turn challenges into
-              opportunities.
-            </p>
-            <p className="text-charcoal">
-              We're about unlocking doors, expanding horizons, and revealing
-              what's achievable. We empower individuals to take that crucial
-              first step and every subsequent stride. We ensure everyone has an
-              equal chance.
-            </p>
-            <p className="text-charcoal">
-              For entrepreneurs launching their ventures, for families relying
-              on them, for safeguarding innovative ideas—we are Ecom Automations
-              Hub. Here to formalize aspirations and pave the way forward.
-            </p>
-          </div>
-          <div className="relative w-full h-full">
-            <div className="absolute left-0 bottom-0 flex flex-col gap-2 bg-charcoal/60 backdrop-blur-lg w-fit px-10 py-6 rounded-lg">
-              <CheckIcon className="size-10 text-white" />
-              <p className="w-52 text-sm text-white">
-                Achieved Best Seller status in your category!
-              </p>
-            </div>
-            <img
-              src="/about/image2.jpg"
-              alt="Image 2"
-              className="h-full object-cover rounded-xl"
-            />
-          </div>
-        </MaxWidthWrapper>
-      </div>
-      <div className="w-full relative h-[80vh] md:h-[60vh] flex items-center justify-center">
-        <div className="absolute flex flex-col items-center gap-10 px-2 z-20">
-          <h2 className="text-white font-extralight text-2xl max-md:text-center md:text-3xl">
-            A few highlights
-          </h2>
-          <MaxWidthWrapper classNames="flex items-center justify-center flex-col md:flex-row gap-5 md:gap-20">
-            {analyticsData.map((item, index) => (
-              <div
-                key={index}
-                className={cn(
-                  "flex flex-col gap-3 max-md:items-center",
-                  index === 1 && "items-center md:items-center",
-                  index === 2 && "items-center md:items-end"
-                )}
-              >
-                <h1 className="text-white font-bold text-2xl md:text-3xl">
-                  {item.count}
-                  {item.prefix}
-                </h1>
-                <span className="text-white text-base">{item.title}</span>
-                <span
-                  className={cn(
-                    "text-white font-extralight max-md:text-center text-sm",
-                    index === 1 && "text-center",
-                    index === 2 && "text-right"
-                  )}
-                >
-                  {item.desc}
-                </span>
-              </div>
-            ))}
-          </MaxWidthWrapper>
-        </div>
-        <div className="absolute z-10 top-0 left-0 h-full w-full bg-black/50 backdrop-blur-lg" />
-        <video
-          src="/overlay-video.mp4"
-          className="absolute top-0 left-0 h-full w-full object-cover z-0"
-          loop
-          autoPlay
-          muted
-        >
-          <source src="/overlay-video.mp4" />
-        </video>
-      </div>
-      <div className="w-full min-h-screen py-10">
-        <MaxWidthWrapper classNames="grid grid-cols-1 md:grid-cols-2 gap-10">
-          <div className="relative w-full h-[600px]">
-            <div className="absolute left-0 bottom-0 flex flex-col gap-2 bg-charcoal/60 backdrop-blur-lg w-fit px-10 py-6 rounded-lg">
-              <CheckIcon className="size-10 text-white" />
-              <p className="w-52 text-sm text-white">
-                Achieved Best Seller status in your category!
-              </p>
-            </div>
-            <img
-              src="/about/image3.jpg"
-              alt="Image 3"
-              className="h-full w-full object-cover rounded-xl"
-            />
-          </div>
-          <div className="flex flex-col gap-4">
-            <h1 className="text-gold font-bold text-2xl md:text-3xl lg:text-4xl">
-              The Ecom Automations Hub journey into automation
-            </h1>
-            <p className="text-charcoal">
-              In the wake of the COVID-19 pandemic, the business landscape
-              underwent unprecedented challenges. Thousands of businesses
-              struggled to adapt, facing shortages in skilled personnel and
-              operational inefficiencies. The ripple effects were profound, with
-              many enterprises experiencing reduced performance and financial
-              strain, leading to widespread job losses.
-            </p>
-            <p className="text-charcoal">
-              Witnessing these challenges firsthand, Ecom Automations Hub
-              recognized a critical need to pivot from traditional business
-              strategy services to pioneering business automation solutions.
-              With a vision to empower businesses across over 40 industries.
-            </p>
-            <p className="text-charcoal">
-              Today, Ecom Automations Hub continues to evolve, dedicated to
-              empowering entrepreneurs and enterprises alike with transformative
-              automation solutions that pave the way for success in the new era
-              of business.
-            </p>
-          </div>
-        </MaxWidthWrapper>
-      </div>
-      <MaxWidthWrapper classNames="py-10 px-2">
-        <div className="mt-14 flex flex-col gap-5 items-center">
-          <h1 className="text-gold font-medium text-2xl md:text-3xl">
-            Our Shopify dropshipping automation services include
-          </h1>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-9 gap-y-7 w-full">
-            {servicesData.map((item, index) => (
-              <div
-                key={index}
-                className="flex flex-col gap-3 max-sm:items-center"
-              >
-                <div className="w-16 h-16 rounded-full bg-charcoal flex items-center justify-center">
-                  <item.icon className="size-8 text-white" />
-                </div>
-                <h2 className="text-charcoal font-semibold text-xl">
-                  {item.title}
-                </h2>
-                <p className="text-charcoal text-sm">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </MaxWidthWrapper>
-      <MaxWidthWrapper classNames="grid grid-cols-1 md:grid-cols-2 gap-10 py-10 px-2">
-        <div className="relative w-full h-full">
-          <div className="absolute left-0 bottom-0 flex flex-col gap-2 bg-charcoal/60 backdrop-blur-lg w-fit px-10 py-6 rounded-lg">
-            <CheckIcon className="size-10 text-white" />
-            <p className="w-52 text-sm text-white">
-              Achieved Best Seller status in your category!
-            </p>
-          </div>
-          <img
-            src="/about/image4.jpg"
-            alt="Image 4"
-            className="h-full object-cover rounded-xl"
-          />
-        </div>
-        <div className="flex flex-col gap-4">
-          <h1 className="text-gold font-bold text-2xl md:text-3xl lg:text-4xl">
-            Making it official for everyone
-          </h1>
-          <p className="text-charcoal">
-            At Ecom Automations Hub, we are dedicated to making business
-            automation accessible to all, irrespective of background or
-            circumstance. We aim to empower entrepreneurs and businesses alike,
-            ensuring they have the tools and support needed to thrive in the
-            digital age.
-          </p>
-          <p className="text-charcoal">
-            We are deeply committed to supporting the broader business community
-            through our social impact initiatives. By forming strategic
-            partnerships, we aim to uplift underserved sectors and communities
-            that may not have easy access to advanced business solutions.
-            Furthermore, we actively participate in corporate giving and provide
-            our employees with opportunities for community service and corporate
-            matching programs.
-          </p>
-        </div>
-      </MaxWidthWrapper>
-      <div className="min-h-screen py-10 px-2">
-        <MaxWidthWrapper>
-          <div className="border-2 border-gold rounded-xl grid grid-cols-1 md:grid-cols-2 gap-2 overflow-hidden">
-            <div className="flex flex-col gap-4 py-14 pl-6 pr-2">
-              <h1 className="text-charcoal font-bold text-2xl md:text-3xl lg:text-4xl">
-                "We believe every business deserves the full protection of the
-                legal system as well as a simple way to start, operate, and run
-                their business daily."
-              </h1>
-              <span className="text-charcoal text-lg">
-                - Dan Wernikoff, CEO
-              </span>
-            </div>
-            <img
-              src="/about/image5.jpg"
-              alt="Image 5"
-              className="h-[300px] md:h-full w-full rounded-xl object-cover"
-            />
-          </div>
-        </MaxWidthWrapper>
-      </div>
-      <MaxWidthWrapper classNames="flex flex-col gap-3 items-center pb-20">
-        <h2 className="text-gold font-semibold text-2xl">Get in touch</h2>
-        <p className="text-charcoal text-center max-w-3xl w-full">
-          At Ecom Automations Hub, we value trust, teamwork, and bringing
-          transparency to help organisations make better decisions. Please don’t
-          hesitate to reach out directly at
-          info@https://ecomautomationshub.com/.
-        </p>
-        <CTAButton />
-      </MaxWidthWrapper>
     </section>
   );
 };

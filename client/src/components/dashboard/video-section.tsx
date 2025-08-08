@@ -2,34 +2,6 @@ import { motion } from "framer-motion";
 import { MaxWidthWrapper } from "../max-width-wrapper";
 
 export const VideoSection = () => {
-  const data = [
-    {
-      id: 1,
-      label: "",
-      desc: "",
-    },
-    {
-      id: 2,
-      label: "20+",
-      desc: "Brands Launched (Private Label)",
-    },
-    {
-      id: 3,
-      label: "2,809+",
-      desc: "Wholesale Brands Partnered",
-    },
-    {
-      id: 4,
-      label: "5+ year",
-      desc: "Year Fine Tuned Processes",
-    },
-    {
-      id: 5,
-      label: "1,000+",
-      desc: "Customers Delighted",
-    },
-  ];
-
   return (
     <section className="relative min-h-screen w-full flex justify-center py-20 lg:py-10 overflow-hidden">
       <img
@@ -72,14 +44,14 @@ export const VideoSection = () => {
           </span>{" "}
           with Confidence.
         </h1>
-        <div className="grid grid-cols-[1fr_1fr_1fr] gap-4 h-full w-full mx-auto p-5 bg-secondary/20 rounded-xl mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr_1fr] text-center gap-4 h-full w-full mx-auto p-5 bg-secondary/20 rounded-xl mt-10">
           {/* First column, takes full height (2 rows tall) */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, ease: "easeInOut" }}
             viewport={{ once: true, margin: "-20px" }}
-            className="relative overflow-hidden  row-span-2 bg-secondary/10 rounded-lg backdrop-blur-sm flex items-center justify-center"
+            className="relative overflow-hidden max-md:py-10 px-5 row-span-2 bg-secondary/10 rounded-lg backdrop-blur-sm flex items-center justify-center"
           >
             <motion.img
               src="/new/benefits/guy.png"
@@ -109,7 +81,7 @@ export const VideoSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeInOut" }}
             viewport={{ once: true, margin: "-20px" }}
-            className="bg-secondary/10 rounded-lg backdrop-blur-sm flex items-center justify-center"
+            className="bg-secondary/10 max-md:py-10 px-5 rounded-lg backdrop-blur-sm flex items-center justify-center"
           >
             <div className="relative flex flex-col gap-3 items-center">
               <h1 className="text-4xl font-extrabold text-white z-10">20+</h1>
@@ -126,7 +98,7 @@ export const VideoSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeInOut" }}
             viewport={{ once: true, margin: "-20px" }}
-            className="bg-secondary/10 rounded-lg backdrop-blur-sm flex items-center justify-center"
+            className="bg-secondary/10 max-md:py-10 px-5 rounded-lg backdrop-blur-sm flex items-center justify-center"
           >
             <div className="relative flex flex-col gap-3 items-center">
               <h1 className="text-4xl font-extrabold text-white z-10">
@@ -145,7 +117,7 @@ export const VideoSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeInOut" }}
             viewport={{ once: true, margin: "-20px" }}
-            className="bg-secondary/10 rounded-lg backdrop-blur-sm flex items-center justify-center"
+            className="bg-secondary/10 max-md:py-10 px-5 rounded-lg backdrop-blur-sm flex items-center justify-center"
           >
             <div className="relative flex flex-col gap-3 items-center">
               <h1 className="text-4xl font-extrabold text-white z-10">
@@ -164,7 +136,7 @@ export const VideoSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeInOut" }}
             viewport={{ once: true, margin: "-20px" }}
-            className="bg-secondary/10 rounded-lg backdrop-blur-sm flex items-center justify-center"
+            className="bg-secondary/10 max-md:py-10 px-5 rounded-lg backdrop-blur-sm flex items-center justify-center"
           >
             <div className="relative flex flex-col gap-3 items-center">
               <h1 className="text-4xl font-extrabold text-white z-10">

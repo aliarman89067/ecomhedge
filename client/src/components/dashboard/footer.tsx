@@ -1,8 +1,10 @@
-import { FacebookIcon, InstagramIcon, PhoneIcon } from "lucide-react";
-// import { TiSocialPinterest } from "react-icons/ti";
-// import { BsTwitterX } from "react-icons/bs";
+import { FacebookIcon, InstagramIcon, MailIcon, PhoneIcon } from "lucide-react";
+import { TiSocialPinterest } from "react-icons/ti";
+import { BsTwitterX } from "react-icons/bs";
 
 import { Link } from "react-router-dom";
+import { MaxWidthWrapper } from "../max-width-wrapper";
+import { Button } from "../ui/button";
 
 export const Footer = () => {
   const data = [
@@ -75,76 +77,62 @@ export const Footer = () => {
     },
   ];
   return (
-    <footer
-      id="footer"
-      className="bg-black flex flex-col min-h-screen pt-20 pb-5 gap-10"
-    >
-      <div className="flex justify-between px-2 max-w-5xl max-md:gap-8 flex-col md:flex-row w-full mx-auto">
-        {data.map((item, index) => (
-          <div key={index} className="flex flex-col gap-3">
-            <h3 className="text-white font-medium text-lg">{item.title}</h3>
-            <div className="flex flex-col gap-1">
-              {item.links.map((item, i) => (
-                <Link
-                  key={i}
-                  to={item.href}
-                  className="text-gray-200 text-base font-extralight"
-                >
-                  {item.label}
-                </Link>
-              ))}
+    <section className="relative w-full flex bg-[url(/new/background.png)] bg-cover justify-center">
+      <img
+        src="/new/noise.png"
+        alt="Noise Image"
+        className="pointer-events-none select-none absolute top-0 left-0 w-full h-full z-1 object-cover opacity-15"
+      />
+      <MaxWidthWrapper classNames="flex w-full flex-col gap-5 justify-between">
+        <div className="flex flex-wrap gap-20 w-full py-14">
+          <div className="flex flex-col gap-3">
+            <img src="/logo.png" alt="Logo" className="w-28 object-contain" />
+            <p className="text-white text-lg bebas tracking-wider">
+              Start your business today.
+            </p>
+            <a href="tel:+1(469) 935-7701">
+              <Button variant="secondary" className="w-full py-5 text-white">
+                <PhoneIcon />
+                +1(469) 935-7701
+              </Button>
+            </a>
+            <a
+              href="mailto:info@ecomautomationshub.com"
+              className="text-white flex items-center gap-2"
+            >
+              <MailIcon className="size-5" />
+              info@ecomautomationshub.com
+            </a>
+            <div className="flex gap-4 items-center">
+              <FacebookIcon className="text-white size-6 hover:text-secondary cursor-pointer transition-all duration-200 ease-in-out" />
+              <InstagramIcon className="text-white size-6 hover:text-secondary cursor-pointer transition-all duration-200 ease-in-out" />
+              <TiSocialPinterest className="text-white size-6 hover:text-secondary cursor-pointer transition-all duration-200 ease-in-out" />
+              <BsTwitterX className="text-white size-6 hover:text-secondary cursor-pointer transition-all duration-200 ease-in-out" />
             </div>
           </div>
-        ))}
-      </div>
-      <div className="flex flex-col gap-1 bg-white py-14 items-center">
-        <div className="flex items-center gap-1">
-          <h3 className="text-charcoal text-base">Let&apos;s Talk.</h3>
-          <PhoneIcon className="size-4 text-charcoal" />
+          {data.map((item, index) => (
+            <div key={index} className="flex flex-col gap-3">
+              <h2 className="text-white text-lg font-semibold">{item.title}</h2>
+              <div className="flex flex-col gap-1">
+                {item.links.map((link, i) => (
+                  <Link
+                    key={i}
+                    to={link.href}
+                    className="text-secondary text-base font-light"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
-        <a
-          href="tel:+1(469) 935-7701"
-          className="text-gold font-medium text-3xl"
-        >
-          +1(469) 935-7701
-        </a>
-        <a href="mailto:info@ecomautomationshub.com">
-          info@ecomautomationshub.com
-        </a>
-        <div className="flex items-center gap-4">
-          <a
-            href="https://www.facebook.com/ecomautomationshub"
-            target="_blank"
-            className="hover:bg-gold transition-all duration-200 ease-in-out w-10 h-10 rounded-full bg-charcoal flex items-center justify-center cursor-pointer"
-          >
-            <FacebookIcon className="text-white size-4" />
-          </a>
-          <a
-            href="https://www.instagram.com/ecomautomationshub/"
-            target="_blank"
-            className="hover:bg-gold transition-all duration-200 ease-in-out w-10 h-10 rounded-full bg-charcoal flex items-center justify-center cursor-pointer"
-          >
-            <InstagramIcon className="text-white size-4" />
-          </a>
-          {/* <a
-            href="#"
-            target="_blank"
-            className="hover:bg-gold transition-all duration-200 ease-in-out w-10 h-10 rounded-full bg-charcoal flex items-center justify-center cursor-pointer"
-          >
-            <TiSocialPinterest className="text-white size-6" />
-          </a>
-          <a
-            href="#"
-            target="_blank"
-            className="hover:bg-gold transition-all duration-200 ease-in-out w-10 h-10 rounded-full bg-charcoal flex items-center justify-center cursor-pointer"
-          >
-            <BsTwitterX className="text-white size-4" />
-          </a> */}
+        <div className="pb-10">
+          <p className="text-center text-white text-base font-light">
+            Copyright © 2025 Ecom Automations Hub. All Rights Reserved.
+          </p>
         </div>
-      </div>
-      <p className="text-white text-center my-2">
-        Copyright © 2025 Ecom Automations Hub. All Rights Reserved.
-      </p>
-    </footer>
+      </MaxWidthWrapper>
+    </section>
   );
 };

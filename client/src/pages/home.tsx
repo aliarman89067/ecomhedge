@@ -4,7 +4,6 @@ import { CaseStudies } from "@/components/dashboard/case-studies";
 import { Headline } from "@/components/dashboard/head-line";
 import { Hero } from "@/components/dashboard/hero";
 import { HeroBento } from "@/components/dashboard/hero-bento";
-import { IntroVideo } from "@/components/dashboard/intro-video";
 import { Services } from "@/components/dashboard/services";
 import { ServicesList } from "@/components/dashboard/services-list";
 import { SnapShots } from "@/components/dashboard/snap-shots";
@@ -21,7 +20,6 @@ export const Home = () => {
       <SnapShots />
       <Headline />
       <VideoSection />
-      {/* <IntroVideo /> */}
       <ServicesList />
       <Services />
       <CaseStudies />

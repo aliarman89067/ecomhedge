@@ -219,7 +219,18 @@ p:empty::before {
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
 }
-
+.video-glow-mask {
+  mask-image: radial-gradient(circle at center, white 40%, transparent 100%);
+  -webkit-mask-image: radial-gradient(
+    circle at center,
+    white 10%,
+    transparent 70%
+  );
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: cover;
+  pointer-events: none; /* Optional if you want it unclickable */
+}
 @keyframes gradient {
   0% {
     background-position: 0% 50%;

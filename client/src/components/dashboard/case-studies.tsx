@@ -1,96 +1,54 @@
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
 import { MaxWidthWrapper } from "../max-width-wrapper";
-import { Link } from "react-router-dom";
+import rocketAnimation from "../../../public/new/animations/rocket.json";
+import trophyAnimation from "../../../public/new/animations/trophy.json";
+import { CaseStudyCard } from "./case-study-card";
 
 export const CaseStudies = () => {
   return (
-    <section className="w-full min-h-screen py-10 flex items-center justify-center bg-charcoal px-3">
-      <MaxWidthWrapper>
-        <div className="flex flex-col gap-4">
-          <h1 className="text-white text-3xl">
-            Experience Ecom Automations Hub - <br />
-            <span className="text-gold">Our Latest Case Studies:</span>
-          </h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full">
-            <motion.div
-              initial={{ opacity: 0, x: -100, y: 50 }}
-              whileInView={{ opacity: 1, x: 0, y: 0 }}
-              transition={{ duration: 0.7, ease: "circInOut" }}
-              viewport={{ once: true, margin: "-60px" }}
-              className="flex flex-col w-full gap-1"
+    <section className="relative min-h-screen w-full flex bg-[url(/new/background.png)] bg-cover  justify-center pt-20 lg:pt-10">
+      <img
+        src="/new/noise.png"
+        alt="Noise Image"
+        className="pointer-events-none select-none absolute top-0 left-0 w-full h-full z-1 object-cover opacity-15"
+      />
+      <MaxWidthWrapper classNames="relative z-10 w-full flex flex-col items-center mb-20">
+        <h1 className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl text-center">
+          Experience Ecom Automations Hub{" "}
+          <span className="relative">
+            Our
+            <svg
+              viewBox="0 0 290 150"
+              fill="none"
+              className="absolute -left-2 -right-2 top-4 bottom-0 translate-y-1"
             >
-              <img
-                src="/case-studies1.jpg"
-                alt="Case study image"
-                className="w-full rounded-lg h-[230px] object-cover"
+              <motion.path
+                initial={{ pathLength: 0 }}
+                whileInView={{ pathLength: 1 }}
+                transition={{
+                  duration: 1.25,
+                  ease: "easeInOut",
+                }}
+                d="M142.293 1C106.854 16.8908 6.08202 7.17705 1.23654 43.3756C-2.10604 68.3466 29.5633 73.2652 122.688 71.7518C215.814 70.2384 316.298 70.689 275.761 38.0785C230.14 1.37835 97.0503 24.4575 52.9384 1"
+                stroke="#FACC15"
+                strokeWidth="3"
               />
-              <h1 className="text-2xl text-white">
-                $19,760 Profit in 8 Months with FBA Wholesale
-              </h1>
-              <div className="flex flex-wrap mt-6 gap-x-3 gap-y-1">
-                <Link
-                  to="/amazon-automation"
-                  className="py-2 px-4 rounded-full bg-gold text-white text-xs"
-                >
-                  Stable Cashflow
-                </Link>
-                <Link
-                  to="/amazon-automation"
-                  className="py-2 px-4 rounded-full bg-gold text-white text-xs"
-                >
-                  FBA Wholesale Automtion
-                </Link>
-                <Link
-                  to="/faq"
-                  className="py-2 px-4 rounded-full bg-white text-charcoal text-xs flex items-center gap-2"
-                >
-                  Read full case study{" "}
-                  <div className="w-4 h-4 rounded-full bg-gold flex items-center justify-center">
-                    <ArrowRight className="text-white size-3" />
-                  </div>
-                </Link>
-              </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 100, y: 50 }}
-              whileInView={{ opacity: 1, x: 0, y: 0 }}
-              transition={{ duration: 0.7, ease: "circInOut" }}
-              viewport={{ once: true, margin: "-60px" }}
-              className="flex flex-col w-full gap-1"
-            >
-              <img
-                src="/case-studies2.jpg"
-                alt="Case study 2"
-                className="w-full rounded-lg h-[230px] object-cover"
-              />
-              <h1 className="text-2xl text-white">
-                201.62% Sales Growth With 5x Less PPC Cost
-              </h1>
-              <div className="flex flex-wrap mt-6 gap-x-3 gap-y-1">
-                <Link
-                  to="/account-reinstatement"
-                  className="py-2 px-4 rounded-full bg-gold text-white text-xs"
-                >
-                  Account Reinstatement
-                </Link>
-                <Link
-                  to="/amazon-private-label"
-                  className="py-2 px-4 rounded-full bg-gold text-white text-xs"
-                >
-                  Amazon Private Label
-                </Link>
-                <Link
-                  to="/faq"
-                  className="py-2 px-4 rounded-full bg-white text-charcoal text-xs flex items-center gap-2"
-                >
-                  Read full case study{" "}
-                  <div className="w-4 h-4 rounded-full bg-gold flex items-center justify-center">
-                    <ArrowRight className="text-white size-3" />
-                  </div>
-                </Link>
-              </div>
-            </motion.div>
+            </svg>
+          </span>{" "}
+          Latest Case Studies.
+        </h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full mt-10">
+          <div className="w-full gap-4 grid-cols-1 bg-secondary/20 rounded-xl p-4">
+            <CaseStudyCard
+              title="$19,760 Profit in 8 Months with FBA Wholesale"
+              href={rocketAnimation}
+            />
+          </div>
+          <div className="w-full gap-4 grid-cols-1 bg-secondary/20 rounded-xl p-4">
+            <CaseStudyCard
+              title="$19,760 Profit in 8 Months with FBA Wholesale"
+              href={trophyAnimation}
+            />
           </div>
         </div>
       </MaxWidthWrapper>

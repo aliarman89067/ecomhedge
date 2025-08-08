@@ -1,42 +1,71 @@
+import { CTAButton } from "../cta-button";
+import { MaxWidthWrapper } from "../max-width-wrapper";
 import { motion } from "framer-motion";
-import { PhoneIcon } from "lucide-react";
 
 export const BookingCall = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 py-10">
-      <div className="w-full flex flex-col max-md:mb-10 items-center md:items-start gap-4 h-full bg-white justify-center pl-5">
-        <motion.h1
-          initial={{ opacity: 0, y: -50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeInOut" }}
-          viewport={{ once: true, margin: "-50px" }}
-          className="text-gold font-extralight text-2xl max-md:text-center sm:text-3xl md:text-4xl lg:text-6xl"
-        >
-          Let&apos;s Tap Into Your Hidden Potential Together
-        </motion.h1>
-        <motion.a
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, ease: "easeInOut", delay: 0.1 }}
-          viewport={{ once: true, margin: "-50px" }}
-          href="tel:+1(469) 935-7701"
-          className="h-14 pl-6 pr-1 w-fit rounded-full bg-charcoal flex items-center justify-between gap-3 cursor-pointer"
-        >
-          <span className="text-white">Book a Call Now</span>
-          <span className="h-12 w-12 rounded-full bg-white flex items-center justify-center">
-            <PhoneIcon className="size-6 text-charcoal" />
-          </span>
-        </motion.a>
-      </div>
-      <motion.img
-        initial={{ opacity: 0, x: 50 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.6, ease: "easeInOut" }}
-        viewport={{ once: true, margin: "-50px" }}
-        src="/booking.jpg"
-        alt="Booking image"
-        className="w-full md:h-[500px] md:w-full object-contain"
+    <section className="relative min-h-screen w-full flex justify-center py-20 lg:py-10 overflow-hidden">
+      <img
+        src="/new/noise.png"
+        alt="Noise Image"
+        className="pointer-events-none select-none absolute top-0 left-0 w-full h-full z-1 object-cover opacity-15"
       />
-    </div>
+      <MaxWidthWrapper classNames="relative z-10 w-full min-h-full flex flex-col items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-10 w-full h-full">
+          <div className="w-full flex flex-col justify-center max-lg:items-center gap-10">
+            <motion.h1
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease: "easeInOut" }}
+              viewport={{ once: true, margin: "-100px" }}
+              className="text-white font-extrabold text-3xl sm:text-4xl md:text-7xl max-lg:text-center"
+            >
+              Let's Tap Into{" "}
+              <span className="relative">
+                Your
+                <svg
+                  viewBox="0 0 286 73"
+                  fill="none"
+                  className="absolute -left-2 -right-2 top-6 bottom-0 translate-y-1"
+                >
+                  <motion.path
+                    initial={{ pathLength: 0 }}
+                    whileInView={{ pathLength: 1 }}
+                    transition={{
+                      duration: 1.25,
+                      ease: "easeInOut",
+                    }}
+                    d="M142.293 1C106.854 16.8908 6.08202 7.17705 1.23654 43.3756C-2.10604 68.3466 29.5633 73.2652 122.688 71.7518C215.814 70.2384 316.298 70.689 275.761 38.0785C230.14 1.37835 97.0503 24.4575 52.9384 1"
+                    stroke="#FACC15"
+                    strokeWidth="3"
+                  />
+                </svg>
+              </span>{" "}
+              Hidden Potential Together.
+            </motion.h1>
+            <motion.div
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease: "easeInOut" }}
+              viewport={{ once: true, margin: "-50px" }}
+            >
+              <CTAButton title="Book a Call Now" />
+            </motion.div>
+          </div>
+          <div className="relative w-full hidden sm:flex flex-col justify-center items-center gap-10">
+            <video
+              src="/new/booking/sphere.mp4"
+              autoPlay
+              muted
+              loop
+              className="relative w-full h-full object-cover video-glow-mask z-10"
+            >
+              <source src="/new/booking/sphere.mp4" />
+            </video>
+            <div className="absolute w-[320px] h-[320px] rounded-full animate-gradient bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-[length:300%_300%]  blur-3xl"></div>
+          </div>
+        </div>
+      </MaxWidthWrapper>
+    </section>
   );
 };

@@ -1,7 +1,6 @@
 import { cn } from "@/lib/utils";
 import { MaxWidthWrapper } from "../max-width-wrapper";
 import { motion } from "framer-motion";
-import { CTAButton } from "../cta-button";
 import { FillButton } from "../fill-button";
 
 export const ServicesList = () => {
