@@ -6,8 +6,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { TabName } from "@/lib/tab-name";
-import { MapPin } from "lucide-react";
+import { motion } from "framer-motion";
+import { MailIcon, MapIcon, PhoneIcon } from "lucide-react";
 
 const Contact = () => {
   const faqData = [
@@ -54,77 +54,159 @@ const Contact = () => {
     },
   ];
 
-  TabName(" | Contact");
-
   return (
-    <section className="flex flex-col w-full h-full">
-      {/* Hero */}
-      <div className="py-10 px-2 relative min-h-screen w-full flex flex-col overflow-hidden items-center justify-center">
-        <MaxWidthWrapper classNames="z-20">
-          <div className="flex flex-col gap-3">
-            <h1 className="text-white font-bold text-2xl md:text-3xl lg:text-4xl">
-              Contact us
+    <section className="relative min-h-screen w-full flex flex-col bg-cover justify-center overflow-hidden">
+      <div className="w-full relative">
+        <img
+          src="/new/noise.png"
+          alt="Noise Image"
+          className="pointer-events-none select-none absolute top-0 left-0 w-full h-full z-1 object-cover opacity-15"
+        />
+        <div className="absolute inset-0 bg-[url(/new/background.png)] bg-cover"></div>
+        <MaxWidthWrapper classNames="relative z-10 w-full min-h-full flex flex-col">
+          <div className="relative w-full min-h-screen lg:h-screen py-16 flex flex-col">
+            <h1 className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl text-center">
+              <span className="relative">
+                Contact
+                <svg
+                  viewBox="0 0 290 150"
+                  fill="none"
+                  className="absolute -left-2 -right-2 top-1 bottom-0 translate-y-1"
+                >
+                  <motion.path
+                    initial={{ pathLength: 0 }}
+                    whileInView={{ pathLength: 1 }}
+                    transition={{
+                      duration: 1.25,
+                      ease: "easeInOut",
+                    }}
+                    d="M142.293 1C106.854 16.8908 6.08202 7.17705 1.23654 43.3756C-2.10604 68.3466 29.5633 73.2652 122.688 71.7518C215.814 70.2384 316.298 70.689 275.761 38.0785C230.14 1.37835 97.0503 24.4575 52.9384 1"
+                    stroke="#FACC15"
+                    strokeWidth="3"
+                  />
+                </svg>
+              </span>{" "}
+              Us.
             </h1>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
-              <div className="flex flex-col gap-3 w-full py-10 px-5 bg-charcoal rounded-xl">
-                <h2 className="text-white font-semibold text-xl md:text-2xl lg:text-3xl">
-                  Find Us
-                </h2>
-                <div className="flex flex-col gap-1">
-                  <span className="flex items-center gap-2 text-white text-sm">
-                    <MapPin /> 777 S Central Expy #4h Richardson, TX 75080, USA
-                  </span>
-                  <div className="mt-3">
-                    <CTAButton />
+            <div className="relative grid grid-cols-1 md:grid-cols-2 w-full h-full gap-5 mt-10">
+              <div className="relative w-full h-full px-3 py-3 flex items-center justify-center rounded-xl overflow-hidden bg-secondary/20">
+                <div className="absolute overflow-hidden -top-5 left-0 w-32 h-32 rounded-full animate-gradient bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-[length:300%_300%] opacity-40 blur-3xl"></div>
+                <img
+                  src="/new/noise.png"
+                  alt="Noise Image"
+                  className="pointer-events-none select-none absolute top-0 left-0 w-full h-full object-cover opacity-30"
+                />
+                <div className="relative w-full h-full px-3 py-10 md:py-3 flex rounded-xl bg-secondary/10  flex-col gap-2">
+                  <motion.img
+                    initial={{ opacity: 0, y: 100 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, ease: "easeInOut", delay: 1 }}
+                    src="/new/about/moon.jpg"
+                    alt="Moon"
+                    className="absolute opacity-60 -bottom-10 left-0 w-full object-contain mask-gradient-snap-edges"
+                  />
+                  <h1 className="text-2xl sm:text-4xl lg:text-5xl w-full lg:w-[90%] font-bold text-white relative">
+                    Find Us
+                  </h1>
+                  <div className="flex gap-2 items-center">
+                    <MapIcon className="text-white size-4" />
+                    <span className="text-white text-base">
+                      777 S Central Expy #4h Richardson, TX 75080, USA
+                    </span>
                   </div>
+                  <CTAButton title="Get Started" />
                 </div>
               </div>
-              <div className="flex flex-col items-center justify-center gap-3 w-full py-10 px-5 bg-charcoal rounded-xl">
-                <h2 className="text-white font-semibold text-xl md:text-2xl lg:text-3xl">
-                  Contact Info
-                </h2>
-                <a
-                  href="tel:+1(469) 935-7701"
-                  className="flex items-center gap-2 text-white text-sm"
-                >
-                  +1(469) 935-7701
-                </a>
-                <a
-                  href="mailto:info@ecomautomationshub.com"
-                  className="flex items-center gap-2 text-white text-sm"
-                >
-                  info@ecomautomationshub.com
-                </a>
-              </div>
-              <div className="flex flex-col items-center justify-center gap-3 w-full py-10 px-5 bg-charcoal rounded-xl">
-                <h2 className="text-white font-semibold text-xl md:text-2xl lg:text-3xl">
-                  Ask a question
-                </h2>
-                <span className="flex items-center gap-2 text-white text-sm text-center">
-                  Our agents will get back to you as soon as possible.
-                </span>
-                <CTAButton />
+              <div className="grid grid-cols-1 gap-5">
+                <div className="relative w-full h-full p-3 flex items-center justify-center rounded-xl bg-secondary/20">
+                  <div className="absolute overflow-hidden -top-5 left-0 w-32 h-32 rounded-full animate-gradient bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-[length:300%_300%] opacity-40 blur-3xl"></div>
+                  <img
+                    src="/new/noise.png"
+                    alt="Noise Image"
+                    className="pointer-events-none select-none absolute top-0 left-0 w-full h-full object-cover opacity-30"
+                  />
+                  <div className="w-full h-full px-3 py-10 md:py-3 gap-3 flex items-center justify-center flex-col rounded-xl bg-secondary/10">
+                    <h1 className="text-2xl font-bold text-white relative">
+                      Contact Info
+                    </h1>
+                    <div className="flex flex-col items-center">
+                      <a
+                        href="tel:+1(469) 935-7701"
+                        className="flex items-center gap-2"
+                      >
+                        <PhoneIcon className="text-white size-4" />
+                        <span className="text-white text-base">
+                          +1(469) 935-7701
+                        </span>
+                      </a>
+                      <a
+                        href="mailto:info@ecomautomationshub.com"
+                        className="flex items-center gap-2"
+                      >
+                        <MailIcon className="text-white size-4" />
+                        <span className="text-white text-base">
+                          info@ecomautomationshub.com
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className="relative w-full h-full p-3 flex items-center justify-center rounded-xl bg-secondary/20">
+                  <div className="absolute overflow-hidden -top-5 left-0 w-32 h-32 rounded-full animate-gradient bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-[length:300%_300%] opacity-40 blur-3xl"></div>
+                  <img
+                    src="/new/noise.png"
+                    alt="Noise Image"
+                    className="pointer-events-none select-none absolute top-0 left-0 w-full h-full object-cover opacity-30"
+                  />
+                  <div className="w-full h-full px-3 py-10 md:py-3 gap-3 flex items-center justify-center flex-col rounded-xl bg-secondary/10">
+                    <h1 className="text-2xl font-bold text-white relative">
+                      Ask a question
+                    </h1>
+                    <div className="flex flex-col items-center">
+                      <span className="text-white text-base">
+                        Our agents will get back to you as soon as possible.
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </MaxWidthWrapper>
-        <div className="absolute z-10 top-0 left-0 w-full h-full bg-black/40 backdrop-blur-xl" />
-        <video
-          src="/golden-video.mp4"
-          autoPlay
-          muted
-          loop
-          className="z-0 w-full h-full object-cover absolute top-0 left-0"
-        >
-          <source src="/golden-video.mp4" />
-        </video>
       </div>
-      <div className="w-full h-auto py-10 px-2">
-        <MaxWidthWrapper classNames="flex flex-col gap-4">
-          <h1 className="text-charcoal font-semibold text-3xl">
-            Frequently asked questions
+      <div className="w-full relative">
+        <img
+          src="/new/noise.png"
+          alt="Noise Image"
+          className="pointer-events-none select-none absolute top-0 left-0 w-full h-full z-1 object-cover opacity-15"
+        />
+        <div className="absolute inset-0 bg-[url(/new/background.png)] scale-y-[-1] bg-cover"></div>
+        <MaxWidthWrapper classNames="relative z-10 w-full min-h-full flex flex-col">
+          <h1 className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl text-center">
+            Frequently{" "}
+            <span className="relative">
+              Asked
+              <svg
+                viewBox="0 0 290 150"
+                fill="none"
+                className="absolute -left-2 -right-2 top-2 bottom-0 translate-y-1"
+              >
+                <motion.path
+                  initial={{ pathLength: 0 }}
+                  whileInView={{ pathLength: 1 }}
+                  transition={{
+                    duration: 1.25,
+                    ease: "easeInOut",
+                  }}
+                  d="M142.293 1C106.854 16.8908 6.08202 7.17705 1.23654 43.3756C-2.10604 68.3466 29.5633 73.2652 122.688 71.7518C215.814 70.2384 316.298 70.689 275.761 38.0785C230.14 1.37835 97.0503 24.4575 52.9384 1"
+                  stroke="#FACC15"
+                  strokeWidth="3"
+                />
+              </svg>
+            </span>{" "}
+            Questions.
           </h1>
-          <div className="w-full h-3 bg-charcoal" />
+          <div className="mt-5" />
           <Accordion
             type="single"
             collapsible
@@ -133,8 +215,12 @@ const Contact = () => {
           >
             {faqData.map((item, index) => (
               <AccordionItem key={index} value={`item-${index + 1}`}>
-                <AccordionTrigger>{item.title}</AccordionTrigger>
-                <AccordionContent>{item.desc}</AccordionContent>
+                <AccordionTrigger className="text-white font-medium text-lg">
+                  {item.title}
+                </AccordionTrigger>
+                <AccordionContent className="text-secondary text-base">
+                  {item.desc}
+                </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
