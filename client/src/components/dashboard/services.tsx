@@ -1,8 +1,11 @@
 import { MaxWidthWrapper } from "../max-width-wrapper";
 import { motion } from "framer-motion";
 import { CTAButton } from "../cta-button";
+import { useContext } from "react";
+import { FormContext } from "@/context/form-context";
 
 export const Services = () => {
+  const { setIsOpen } = useContext(FormContext);
   return (
     <section className="relative min-h-screen w-full flex justify-center py-20 lg:py-10 overflow-hidden">
       <img
@@ -59,7 +62,7 @@ export const Services = () => {
                   <span className="text-white text-base sm:text-xl">
                     Streamline Operations & Boost Sales with FBA Automation.
                   </span>
-                  <CTAButton title="About us" />
+                  <CTAButton title="About us" onClick={() => setIsOpen(true)} />
                 </div>
                 <img
                   src="/services/truck.png"

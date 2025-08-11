@@ -1,45 +1,85 @@
 import { CTAButton } from "@/components/cta-button";
 import { MaxWidthWrapper } from "@/components/max-width-wrapper";
-import { ServicesHero } from "@/components/service/services-hero";
+import { motion } from "framer-motion";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Button } from "@/components/ui/button";
 import { TabName } from "@/lib/tab-name";
-import { cn } from "@/lib/utils";
 import {
+  BoxesIcon,
   BrainIcon,
+  BriefcaseIcon,
+  ChartAreaIcon,
+  ChartBarIcon,
   ChartNetworkIcon,
-  CheckIcon,
+  DollarSignIcon,
   GemIcon,
+  LaptopIcon,
   NotepadText,
+  PaperclipIcon,
+  ParkingMeterIcon,
+  ScaleIcon,
   ShoppingBagIcon,
   StoreIcon,
+  SunIcon,
 } from "lucide-react";
+import { FormBox } from "@/components/service/form";
+import { InfoCols } from "@/components/about/info-cols";
+import { MouseParallax } from "react-just-parallax";
+import { useContext } from "react";
+import { FormContext } from "@/context/form-context";
 
 export const ShopifyDropshippingAutomation = () => {
+  const { setIsOpen } = useContext(FormContext);
+  const gridData = [
+    {
+      icon: DollarSignIcon,
+      label: "Affordable Setup",
+      desc: "Subscription, domain name, and some marketing budget are all you need to set up a Shopify ecommerce store. Steer clear of the stress of purchasing and managing an inventory.",
+    },
+    {
+      icon: BoxesIcon,
+      label: "Inventory-free Business",
+      desc: "A dropshipping business frees you from the worries of managing inventory, tracking stock levels, or dealing with unsold products. This way you can easily focus on sales and marketing.",
+    },
+    {
+      icon: ParkingMeterIcon,
+      label: "Minimum Risk Setup",
+      desc: "One of the best things about automated dropshipping through Shopify is that it comes with a minimum financial risk factor. Unsold inventory? Not a problem!",
+    },
+    {
+      icon: BriefcaseIcon,
+      label: "Product Variety",
+      desc: "You can choose from a wide range of products in your store without needing to invest in them upfront—you have the space to test different products without financial risk.",
+    },
+    {
+      icon: ScaleIcon,
+      label: "Scalability",
+      desc: "With our private label dropshipping model on Shopify, you can easily scale your business. You can save yourself from the hassle of shipping or storing products. Your operations remain manageable.",
+    },
+  ];
   const perksData = [
     {
-      href: "/services/shopify/paper.png",
-      title: "Specifically-Tailored Solutions",
+      icon: PaperclipIcon,
+      label: "Specifically-Tailored Solutions",
       desc: "We understand your requirements and draw up a customized Shopify automation strategy tailored to maximize your business’s efficiency and growth.",
     },
     {
-      href: "/services/shopify/shopify.png",
-      title: "The Automation You Need",
+      icon: StoreIcon,
+      label: "The Automation You Need",
       desc: "From design to shipping, we implement the automation processes your Shopify dropshipping private label needs to run smoothly.",
     },
     {
-      href: "/services/shopify/screen.png",
-      title: "Continuous Monitoring",
+      icon: LaptopIcon,
+      label: "Continuous Monitoring",
       desc: "We continuously monitor the performance of your private label on Shopify and make real-time adjustments to enhance efficiency and achieve optimal results.",
     },
     {
-      href: "/services/shopify/chart.png",
-      title: "Reporting and Improving",
+      icon: ChartAreaIcon,
+      label: "Reporting and Improving",
       desc: "Keep a close eye on your business’s performance with clear, concise reports that we provide you, showing a roadmap for future scaling to drive sales and boost performance.",
     },
   ];
@@ -63,58 +103,52 @@ export const ShopifyDropshippingAutomation = () => {
       desc: "Facilitating over $2.6 million in member sales through effective strategies.",
     },
   ];
-  const stepsData = [
-    "Efficient and hassle-free Shopify dropshipping store",
-    "Sell only winning products",
-    "Partner with the best and reliable suppliers",
-    "Boosted revenues and profit margins!",
-  ];
   const benefitsData = [
     {
-      href: "/services/tiktok/sun.jpg",
-      title: "Optimize for conversions",
+      icon: SunIcon,
+      label: "Optimize for conversions",
       desc: "We help you deal with high ROI products, leading you to enjoy 15-25%+ profit margins with maximized conversions.",
     },
     {
-      href: "/services/tiktok/laptop.jpg",
-      title: "Streamlined fulfillment",
+      icon: LaptopIcon,
+      label: "Streamlined fulfillment",
       desc: "Through our Shopify private label set up, you get a chance to partner with our exclusive suppliers, ensuring a smooth experience for you and your customers.",
     },
     {
-      href: "/services/tiktok/ranking.jpg",
-      title: "Passive cash flow",
+      icon: ChartBarIcon,
+      label: "Passive cash flow",
       desc: "Scale your store to its fullest potential, creating a sustainable and passive cash flow with our proven strategies.",
     },
   ];
   const servicesData = [
     {
       icon: StoreIcon,
-      title: "Initial setup",
+      label: "Initial setup",
       desc: "We setup and configure your Shopify store, customizing the design and settings to attract and retain customers, keeping in mind your vision and goals.",
     },
     {
       icon: GemIcon,
-      title: "Extensive research",
+      label: "Extensive research",
       desc: "Our expertise allows us to identify profitable products and niches through extensive research and analysis, guaranteeing a high ROI on your store.",
     },
     {
       icon: NotepadText,
-      title: "Optimizing listings",
+      label: "Optimizing listings",
       desc: "We help you add selected products, optimize listings, and make them available for customers, ensuring a seamless shopping experience.",
     },
     {
       icon: BrainIcon,
-      title: "Marketing strategies",
+      label: "Marketing strategies",
       desc: "Implement effective Shopify marketing automation strategies to ensure high visibility in a crowded market.",
     },
     {
       icon: ShoppingBagIcon,
-      title: "Order management",
+      label: "Order management",
       desc: "We ensure a smooth experience for both you and your customers with our efficient order management, transaction tracking, and overseeing product shipments.",
     },
     {
       icon: ChartNetworkIcon,
-      title: "Reputation management",
+      label: "Reputation management",
       desc: "Ensuring your store’s reputation remains unhurt through effective management of reviews, customer feedback, and offering reliable customer service to enhance trust and loyalty.",
     },
   ];
@@ -144,369 +178,519 @@ export const ShopifyDropshippingAutomation = () => {
   ];
   TabName(" | Shopify Dropshipping Automation");
   return (
-    <section className="flex flex-col w-full min-h-screen">
-      {/* Hero */}
-      <ServicesHero
-        title={
-          <h1 className="text-white text-3xl font-bold max-md:text-center">
-            A Shopify Automation Agency{" "}
-            <div className="inline-flex bg-black text-gold px-4 py-2 rounded-full">
-              Simplifying
-            </div>{" "}
-            Profitable Dropshipping
-          </h1>
-        }
-        desc="Running a Shopify ecommerce business was never this convenient!"
-      />
-
-      <div className="flex flex-col min-h-screen items-center justify-center py-10 px-2">
-        <MaxWidthWrapper classNames="flex flex-col gap-10">
-          <h1 className="text-charcoal font-bold text-2xl md:text-3xl text-center">
-            Benefits of Automated Dropshipping on Shopify
-          </h1>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 w-full">
-            <div className="group flex flex-col gap-3 bg-white hover:bg-charcoal rounded-lg py-4 px-5 border border-gray-300 transition-all duration-150 ease-in-out">
-              <div className="flex items-center justify-between gap-4">
-                <h2 className="text-charcoal group-hover:text-white text-lg md:text-xl font-semibold transition-all duration-150 ease-in-out">
-                  Affordable Setup
-                </h2>
-                <img
-                  src="/services/shopify/sale.png"
-                  alt="Laptop"
-                  className="w-9 md:w-16 h-9 md:h-16 object-contain"
-                />
-              </div>
-              <p className="text-sm text-charcoal group-hover:text-white transition-all duration-150 ease-in-out">
-                Subscription, domain name, and some marketing budget are all you
-                need to set up a Shopify ecommerce store. Steer clear of the
-                stress of purchasing and managing an inventory.
-              </p>
-            </div>
-            <div className="group flex flex-col gap-3 bg-white hover:bg-charcoal rounded-lg py-4 px-5 border border-gray-300 transition-all duration-150 ease-in-out">
-              <div className="flex items-center justify-between gap-4">
-                <h2 className="text-charcoal group-hover:text-white text-lg md:text-xl font-semibold transition-all duration-150 ease-in-out">
-                  Inventory-free Business
-                </h2>
-                <img
-                  src="/services/shopify/squares.png"
-                  alt="Laptop"
-                  className="w-9 md:w-16 h-9 md:h-16 object-contain"
-                />
-              </div>
-              <p className="text-sm text-charcoal group-hover:text-white transition-all duration-150 ease-in-out">
-                A dropshipping business frees you from the worries of managing
-                inventory, tracking stock levels, or dealing with unsold
-                products. This way you can easily focus on sales and marketing.
-              </p>
-            </div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 w-full">
-            <div className="flex flex-col gap-3">
-              <div className="group flex flex-col gap-3 bg-white hover:bg-charcoal rounded-lg py-4 px-5 border border-gray-300 transition-all duration-150 ease-in-out">
-                <div className="flex items-center gap-4">
-                  <h2 className="text-charcoal group-hover:text-white text-lg font-semibold transition-all duration-150 ease-in-out">
-                    Minimum Risk Setup
-                  </h2>
-                  <img
-                    src="/services/shopify/meter.png"
-                    alt="Hands"
-                    className="w-9 h-9  md:w-12 md:h-12 object-contain"
-                  />
-                </div>
-                <p className="text-sm text-charcoal group-hover:text-white transition-all duration-150 ease-in-out">
-                  One of the best things about automated dropshipping through
-                  Shopify is that it comes with a minimum financial risk factor.
-                  Unsold inventory? Not a problem!
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-col gap-3">
-              <div className="group flex flex-col gap-3 bg-white hover:bg-charcoal rounded-lg py-4 px-5 border border-gray-300 transition-all duration-150 ease-in-out">
-                <div className="flex items-center gap-4">
-                  <h2 className="text-charcoal group-hover:text-white text-lg font-semibold transition-all duration-150 ease-in-out">
-                    Product Variety
-                  </h2>
-                  <img
-                    src="/services/shopify/bucket.png"
-                    alt="Clock"
-                    className="w-9 h-9  md:w-12 md:h-12 object-contain"
-                  />
-                </div>
-                <p className="text-sm text-charcoal group-hover:text-white transition-all duration-150 ease-in-out">
-                  You can choose from a wide range of products in your store
-                  without needing to invest in them upfront—you have the space
-                  to test different products without financial risk.
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-col gap-3">
-              <div className="group flex flex-col gap-3 bg-white hover:bg-charcoal rounded-lg py-4 px-5 border border-gray-300 transition-all duration-150 ease-in-out">
-                <div className="flex items-center gap-4">
-                  <h2 className="text-charcoal group-hover:text-white text-lg font-semibold transition-all duration-150 ease-in-out">
-                    Scalability
-                  </h2>
-                  <img
-                    src="/services/shopify/scale.png"
-                    alt="Bell"
-                    className="w-9 h-9  md:w-12 md:h-12 object-contain"
-                  />
-                </div>
-                <p className="text-sm text-charcoal group-hover:text-white transition-all duration-150 ease-in-out">
-                  With our private label dropshipping model on Shopify, you can
-                  easily scale your business. You can save yourself from the
-                  hassle of shipping or storing products. Your operations remain
-                  manageable.
-                </p>
-              </div>
-            </div>
-          </div>
-        </MaxWidthWrapper>
-      </div>
-      <div className="flex flex-col min-h-screen items-center justify-center py-10 px-2">
-        <MaxWidthWrapper classNames="grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-8">
-          <div className="flex flex-col gap-5">
-            <h2 className="text-charcoal text-2xl md:text-3xl font-bold">
-              How We Do It at Ecom Automations Hub?
-            </h2>
-            <div className="flex flex-col gap-4">
-              {perksData.map((item, index) => (
-                <div key={index} className="flex gap-3">
-                  <img
-                    src={item.href}
-                    alt="Image"
-                    className="w-8 h-8 md:w-10 md:h-10 object-contain"
-                  />
-                  <div className="flex flex-col gap-1">
-                    <h3 className="text-charcoal font-semibold text-lg">
-                      {item.title}
-                    </h3>
-                    <p className="text-charcoal text-sm">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <CTAButton />
-          </div>
-          <div className="relative max-md:hidden w-full h-[80%] rounded-xl overflow-hidden">
-            <div className="absolute left-0 bottom-0 flex flex-col gap-2 bg-charcoal/60 backdrop-blur-lg w-fit px-10 py-6 rounded-lg">
-              <CheckIcon className="size-10 text-white" />
-              <p className="w-52 text-sm text-white">
-                Achieved best seller status in your category!
-              </p>
-            </div>
-            <img
-              src="/services/shopify/shopify.jpg"
-              alt="Person"
-              className="w-full h-full object-cover"
-            />
-          </div>
-        </MaxWidthWrapper>
-      </div>
-      <div className="w-full relative h-[80vh] md:h-[60vh] flex items-center justify-center">
-        <div className="absolute flex flex-col items-center gap-10 px-2 z-20">
-          <h2 className="text-white font-extralight text-2xl max-md:text-center md:text-3xl">
-            Changing the lives Of ecommerce sellers
-          </h2>
-          <MaxWidthWrapper classNames="flex items-center justify-center flex-col md:flex-row gap-5 md:gap-20">
-            {analyticsData.map((item, index) => (
-              <div
-                key={index}
-                className={cn(
-                  "flex flex-col gap-3 max-md:items-center",
-                  index === 1 && "items-center md:items-center",
-                  index === 2 && "items-center md:items-end"
-                )}
-              >
-                <h1 className="text-white font-bold text-2xl md:text-3xl">
-                  {item.count}
-                  {item.prefix}
-                </h1>
-                <span className="text-white text-base">{item.title}</span>
-                <span
-                  className={cn(
-                    "text-white font-extralight max-md:text-center text-sm",
-                    index === 1 && "text-center",
-                    index === 2 && "text-right"
-                  )}
-                >
-                  {item.desc}
-                </span>
-              </div>
-            ))}
-          </MaxWidthWrapper>
-        </div>
-        <div className="absolute z-10 top-0 left-0 h-full w-full bg-black/50 backdrop-blur-lg" />
-        <video
-          src="/overlay-video.mp4"
-          className="absolute top-0 left-0 h-full w-full object-cover z-0"
-          loop
-          autoPlay
-          muted
-        >
-          <source src="/overlay-video.mp4" />
-        </video>
-      </div>
-      <div className="w-full min-h-screen py-10 px-2">
-        <MaxWidthWrapper classNames="py-10 h-full">
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-10 overflow-hidden border border-charcoal rounded-lg h-full px-10 py-5 md:py-0 md:pl-10">
-            <div className="flex flex-col gap-3 justify-center max-md:items-center">
-              <h3 className="text-gold font-bold text-3xl">
-                Our success lies in YOUR victory!
-              </h3>
-              <p className="text-charcoal text-base">
-                Establish a profitable ecommerce business with our automated
-                dropshipping model on Shopify.
-              </p>
-              <div className="h-[1px] w-full bg-gray-200" />
-              <div className="flex flex-col gap-2">
-                {stepsData.map((item, index) => (
-                  <div className="flex gap-2">
-                    <span className="font-semibold text-charcoal text-base">
-                      {index + 1}
-                    </span>
-                    <span className="font-medium text-charcoal text-base">
-                      {item}
-                    </span>
-                  </div>
-                ))}
-              </div>
-              <p className="text-charcoal text-base max-md:text-center">
-                Choose Ecom Automations Hub as your Shopify automation agency,
-                sit back, and relax while we do the heavy lifting for you!
-              </p>
-              <CTAButton />
-            </div>
-            <img
-              src="/services/shopify/shopify2.jpg"
-              alt="Tik Tok"
-              className="w-full h-full object-cover hidden md:flex"
-            />
-          </div>
-        </MaxWidthWrapper>
-      </div>
-      <div className="w-full min-h-screen py-10 px-2">
-        <MaxWidthWrapper>
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_1.3fr] gap-10 overflow-hidden h-full">
-            <img
-              src="/services/shopify/shopify3.jpg"
-              alt="Tiktok 2"
-              className="w-full h-[450px] object-cover rounded-lg"
-            />
-            <div className="flex flex-col gap-4">
-              <h1 className="text-gold font-semibold text-2xl">
-                Enjoy the Power of a Recession-proof and Profitable Shopify
-                Private Label
+    <section className="relative w-full min-h-screen flex flex-col bg-cover justify-center overflow-hidden">
+      <div className="w-full min-h-screen relative py-20">
+        <img
+          src="/new/noise.png"
+          alt="Noise Image"
+          className="pointer-events-none select-none absolute top-0 left-0 w-full h-full z-1 object-cover opacity-15"
+        />
+        <div className="absolute inset-0 bg-[url(/new/background.png)] bg-cover"></div>
+        <MaxWidthWrapper classNames="relative z-10 w-full min-h-screen flex items-center">
+          <div className="h-full grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <div className="flex flex-col max-md:items-center max-md:text-center gap-3">
+              <h1 className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl">
+                A Shopify Automation Agency{" "}
+                <span className="relative">
+                  Simplifying
+                  <svg
+                    viewBox="0 0 290 150"
+                    fill="none"
+                    className="absolute -left-2 -right-2 -top-3 bottom-0 translate-y-1"
+                  >
+                    <motion.path
+                      initial={{ pathLength: 0 }}
+                      whileInView={{ pathLength: 1 }}
+                      transition={{
+                        duration: 1.25,
+                        ease: "easeInOut",
+                      }}
+                      d="M142.293 1C106.854 16.8908 6.08202 7.17705 1.23654 43.3756C-2.10604 68.3466 29.5633 73.2652 122.688 71.7518C215.814 70.2384 316.298 70.689 275.761 38.0785C230.14 1.37835 97.0503 24.4575 52.9384 1"
+                      stroke="#FACC15"
+                      strokeWidth="3"
+                    />
+                  </svg>
+                </span>{" "}
+                Profitable Dropshipping.
               </h1>
-              <p className="text-charcoal text-sm">
-                Ecom Automations Hub is one of the most reliable and trusted
-                Shopify automation partners in town. Our team excels in setting
-                up and managing recession-proof businesses on this platform,
-                leveraging their unbounded experience and expertise. .
+              <p className="bebas font-light text-gray-400 text-lg sm:text-xl xl:text-2xl max-lg:text-center tracking-wider mb-5">
+                Running a Shopify ecommerce business was never this convenient!
               </p>
-              <p className="text-charcoal text-sm">
-                Our team handling automated dropshipping models on Shopify has
-                the skills to effectively analyze trends, identify in-demand
-                products. From setting up to scaling of your Shopify store, we
-                are the best at what we do!
-              </p>
-              <h2 className="text-gold font-semibold text-2xl">
-                Ecom Automations Hub, a Shopify Automation Agency, Helps
-                Streamline and Scale Your Shopify Store
-              </h2>
-              <h3 className="text-charcoal font-semibold text-xl">
-                Leverage the best of Shopify dropshipping like never before!
-              </h3>
-              <p className="text-charcoal text-sm">
-                With a Shopify private label for dropshipping created by us, you
-                don’t have to worry about any upfront inventory risks. We
-                purchase inventory only after making sales.
-                <br />
-                We aim to help you create a valuable digital asset that grows
-                continuously.
-              </p>
+              <CTAButton title="Get Started" onClick={() => setIsOpen(true)} />
+            </div>
+            <div className="w-[300px] sm:w-[400px] h-auto mx-auto md:ml-auto">
+              <FormBox />
             </div>
           </div>
         </MaxWidthWrapper>
       </div>
-      <div className="w-full min-h-screen flex items-center justify-center py-10 px-2">
-        <MaxWidthWrapper classNames="flex flex-col gap-12 max-md:items-center">
-          <h1 className="text-charcoal font-bold text-2xl md:text-3xl">
-            Benefits of Automated Shopify Dropshipping with Ecom Automations Hub
-          </h1>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-14">
-            {benefitsData.map((item, index) => (
-              <div
-                key={index}
-                className="flex flex-col gap-2 max-md:items-center"
+      <div className="w-full min-h-screen relative py-5">
+        {/* Background Noise */}
+        <img
+          src="/new/noise.png"
+          alt="Noise Image"
+          className="pointer-events-none select-none absolute top-0 left-0 w-full h-full z-1 object-cover opacity-15"
+        />
+
+        {/* Background Image */}
+        <div className="absolute scale-y-[-1] inset-0 bg-[url(/new/background.png)] bg-cover"></div>
+
+        {/* Content Wrapper */}
+        <MaxWidthWrapper classNames="relative z-10 w-full min-h-screen flex flex-col gap-10 items-center">
+          <h1 className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl text-center">
+            Benefits of Automated{" "}
+            <span className="relative">
+              Dropshipping
+              <svg
+                viewBox="0 0 290 150"
+                fill="none"
+                className="absolute -left-2 -right-2 -top-4 bottom-0 translate-y-1"
               >
-                <img
-                  src={item.href}
-                  alt="Image"
-                  className="w-12 h-12 object-contain"
+                <motion.path
+                  initial={{ pathLength: 0 }}
+                  whileInView={{ pathLength: 1 }}
+                  transition={{
+                    duration: 1.25,
+                    ease: "easeInOut",
+                  }}
+                  d="M142.293 1C106.854 16.8908 6.08202 7.17705 1.23654 43.3756C-2.10604 68.3466 29.5633 73.2652 122.688 71.7518C215.814 70.2384 316.298 70.689 275.761 38.0785C230.14 1.37835 97.0503 24.4575 52.9384 1"
+                  stroke="#FACC15"
+                  strokeWidth="3"
                 />
-                <h2 className="text-charcoal font-bold text-xl">
-                  {item.title}
-                </h2>
-                <h2 className="text-charcoal text-base max-md:text-center">
-                  {item.desc}
-                </h2>
-              </div>
-            ))}
-          </div>
-          <CTAButton />
+              </svg>
+            </span>{" "}
+            on Shopify.
+          </h1>
+          <InfoCols data={gridData} />
         </MaxWidthWrapper>
       </div>
-      <div className="w-full min-h-screen py-10 px-2">
-        <MaxWidthWrapper>
-          <div className="flex flex-col gap-5 w-full">
-            <h1 className="text-gold font-medium text-2xl md:text-3xl">
-              Unlock your business potential with Amazon FBA agency
-            </h1>
-            <div className="h-3 w-full bg-charcoal" />
-            <div className="mt-2 flex flex-col gap-3">
-              <h2 className="text-charcoal font-semibold text-base">
-                Are you ready to turn your vision into a thriving business?
-              </h2>
-              <p className="text-charcoal text-base">
-                Take the first step towards success by sharing essential details
-                about your venture with us. We're here to guide you through the
-                journey.
-              </p>
-              <h2 className="text-charcoal font-semibold text-base">
-                Help us get an idea of what business or idea is all about.
-              </h2>
-            </div>
-            <CTAButton />
-          </div>
-          <div className="mt-14 flex flex-col gap-5 items-center">
-            <h1 className="text-gold font-medium text-3xl">
-              Our Shopify dropshipping automation services include
-            </h1>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-9 gap-y-7 w-full">
-              {servicesData.map((item, index) => (
-                <div
-                  key={index}
-                  className="flex flex-col gap-3 max-sm:items-center"
+      <div className="w-full relative py-5">
+        <img
+          src="/new/noise.png"
+          alt="Noise Image"
+          className="pointer-events-none select-none absolute top-0 left-0 w-full h-full z-1 object-cover opacity-15"
+        />
+        <div className="absolute inset-0 bg-[url(/new/background.png)] bg-cover"></div>
+        <MaxWidthWrapper classNames="relative z-10 w-full min-h-full flex flex-col">
+          <h1 className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl text-center">
+            How We Do It at{" "}
+            <span className="relative">
+              Ecom
+              <svg
+                viewBox="0 0 290 150"
+                fill="none"
+                className="absolute -left-2 -right-2 top-3 bottom-0 translate-y-1"
+              >
+                <motion.path
+                  initial={{ pathLength: 0 }}
+                  whileInView={{ pathLength: 1 }}
+                  transition={{
+                    duration: 1.25,
+                    ease: "easeInOut",
+                  }}
+                  d="M142.293 1C106.854 16.8908 6.08202 7.17705 1.23654 43.3756C-2.10604 68.3466 29.5633 73.2652 122.688 71.7518C215.814 70.2384 316.298 70.689 275.761 38.0785C230.14 1.37835 97.0503 24.4575 52.9384 1"
+                  stroke="#FACC15"
+                  strokeWidth="3"
+                />
+              </svg>
+            </span>{" "}
+            Automations Hub?
+          </h1>
+          <InfoCols data={perksData} />
+        </MaxWidthWrapper>
+      </div>
+      <div className="w-full relative py-5">
+        <img
+          src="/new/noise.png"
+          alt="Noise Image"
+          className="pointer-events-none select-none absolute top-0 left-0 w-full h-full z-1 object-cover opacity-15"
+        />
+        <div className="absolute inset-0 bg-[url(/new/background.png)] scale-y-[-1] bg-cover"></div>
+        <MaxWidthWrapper classNames="relative z-10 w-full min-h-full flex flex-col">
+          <div className="relative w-full h-full flex items-center text-center flex-col overflow-hidden mt-10">
+            <h1 className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl text-center">
+              Changing the{" "}
+              <span className="relative">
+                lives
+                <svg
+                  viewBox="0 0 290 150"
+                  fill="none"
+                  className="absolute -left-2 -right-2 top-0 bottom-0 translate-y-1"
                 >
-                  <div className="w-16 h-16 rounded-full bg-charcoal flex items-center justify-center">
-                    <item.icon className="size-8 text-white" />
+                  <motion.path
+                    initial={{ pathLength: 0 }}
+                    whileInView={{ pathLength: 1 }}
+                    transition={{
+                      duration: 1.25,
+                      ease: "easeInOut",
+                    }}
+                    d="M142.293 1C106.854 16.8908 6.08202 7.17705 1.23654 43.3756C-2.10604 68.3466 29.5633 73.2652 122.688 71.7518C215.814 70.2384 316.298 70.689 275.761 38.0785C230.14 1.37835 97.0503 24.4575 52.9384 1"
+                    stroke="#FACC15"
+                    strokeWidth="3"
+                  />
+                </svg>
+              </span>{" "}
+              of ecommerce sellers.
+            </h1>
+            <div className="relative w-[250px] sm:w-[300px] h-[250px] sm:h-[300px] my-5">
+              <div className="relative z-10 w-full h-full rounded-full overflow-hidden">
+                <MouseParallax strength={0.03}>
+                  <img
+                    src="/new/ranking/circle.png"
+                    alt="Circle"
+                    className="w-full h-full object-contain relative scale-[110%]"
+                  />
+                </MouseParallax>
+              </div>
+              <div className="absolute -top-5 left-0 w-full h-full rounded-full animate-gradient bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-[length:300%_300%] opacity-50 blur-3xl"></div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-xs md:max-w-2xl w-full">
+              {analyticsData.map((item, i) => (
+                <div
+                  key={i}
+                  className={`w-full h-64 px-3 rounded-b-full bg-secondary/20 flex flex-col items-center overflow-hidden ${
+                    i === 0
+                      ? "md:-rotate-10 mt-4"
+                      : i === 1
+                      ? ""
+                      : "md:rotate-10 mt-4"
+                  }`}
+                >
+                  <div className="flex flex-col gap-2 items-center relative py-4">
+                    <h1 className="text-white font-bold text-3xl">
+                      {item.title}
+                    </h1>
+                    <span className="text-secondary text-base">
+                      {item.count} {item.prefix}
+                    </span>
+                    <span className="text-secondary text-sm">{item.desc}</span>
                   </div>
-                  <h2 className="text-charcoal font-semibold text-xl">
-                    {item.title}
-                  </h2>
-                  <p className="text-charcoal text-sm">{item.desc}</p>
                 </div>
               ))}
             </div>
           </div>
         </MaxWidthWrapper>
       </div>
-      <div className="w-full h-auto py-10 px-2">
-        <MaxWidthWrapper classNames="flex flex-col gap-4">
-          <h1 className="text-charcoal font-semibold text-3xl">
-            Frequently asked questions
+      <div className="w-full relative py-5">
+        <img
+          src="/new/noise.png"
+          alt="Noise Image"
+          className="pointer-events-none select-none absolute top-0 left-0 w-full h-full z-1 object-cover opacity-15"
+        />
+        <div className="absolute inset-0 bg-[url(/new/background.png)] bg-cover"></div>
+        <MaxWidthWrapper classNames="relative z-10 w-full min-h-full flex flex-col">
+          <div className="relative my-10 w-full p-3 bg-secondary/20 rounded-xl">
+            <div className="absolute -top-5 left-0 w-32 h-32 rounded-full animate-gradient bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-[length:300%_300%] opacity-40 blur-3xl"></div>
+            <img
+              src="/new/noise.png"
+              alt="Noise Image"
+              className="pointer-events-none select-none absolute top-0 left-0 w-full h-full object-cover opacity-30"
+            />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full p-5 bg-secondary/10 rounded-xl">
+              <div className="flex flex-col gap-4">
+                <h1 className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl">
+                  Our success lies in{" "}
+                  <span className="relative">
+                    YOUR
+                    <svg
+                      viewBox="0 0 290 150"
+                      fill="none"
+                      className="absolute -left-2 -right-2 top-3 bottom-0 translate-y-1"
+                    >
+                      <motion.path
+                        initial={{ pathLength: 0 }}
+                        whileInView={{ pathLength: 1 }}
+                        transition={{
+                          duration: 1.25,
+                          ease: "easeInOut",
+                        }}
+                        d="M142.293 1C106.854 16.8908 6.08202 7.17705 1.23654 43.3756C-2.10604 68.3466 29.5633 73.2652 122.688 71.7518C215.814 70.2384 316.298 70.689 275.761 38.0785C230.14 1.37835 97.0503 24.4575 52.9384 1"
+                        stroke="#FACC15"
+                        strokeWidth="3"
+                      />
+                    </svg>
+                  </span>{" "}
+                  victory!.
+                </h1>
+                <span className="text-secondary text-lg">
+                  Establish a profitable ecommerce business with our automated
+                  dropshipping model on Shopify.
+                </span>
+                <div className="w-full h-[1px] bg-secondary" />
+                <div className="flex flex-col gap-3">
+                  <div className="flex items-center gap-2">
+                    <span className="text-white font-semibold">1.</span>
+                    <span className="text-white">
+                      Efficient and hassle-free Shopify dropshipping store
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-white font-semibold">2.</span>
+                    <span className="text-white">
+                      Sell only winning products
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-white font-semibold">3.</span>
+                    <span className="text-white">
+                      Partner with the best and reliable suppliers
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-white font-semibold">4.</span>
+                    <span className="text-white">
+                      Boosted revenues and profit margins!
+                    </span>
+                  </div>
+                </div>
+                <span className="text-secondary text-lg">
+                  Choose Ecom Automations Hub as your Amazon FBA company, sit
+                  back, and relax while we do the heavy lifting for you!
+                </span>
+                <CTAButton
+                  title="Get Started"
+                  onClick={() => setIsOpen(true)}
+                />
+              </div>
+              <img
+                src="/new/services/amazon-fba.jpg"
+                alt="Person Image"
+                className="w-full h-full rounded-xl object-cover max-md:hidden"
+              />
+            </div>
+          </div>
+        </MaxWidthWrapper>
+      </div>
+      <div className="w-full relative py-5">
+        <img
+          src="/new/noise.png"
+          alt="Noise Image"
+          className="pointer-events-none select-none absolute top-0 left-0 w-full h-full z-1 object-cover opacity-15"
+        />
+        <div className="absolute scale-y-[-1] inset-0 bg-[url(/new/background.png)] bg-cover"></div>
+        <MaxWidthWrapper classNames="relative z-10 w-full min-h-full flex flex-col">
+          <div className="relative my-10 w-full p-3 bg-secondary/20 rounded-xl">
+            <div className="absolute -top-5 left-0 w-32 h-32 rounded-full animate-gradient bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-[length:300%_300%] opacity-40 blur-3xl"></div>
+            <img
+              src="/new/noise.png"
+              alt="Noise Image"
+              className="pointer-events-none select-none absolute top-0 left-0 w-full h-full object-cover opacity-30"
+            />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full p-5 bg-secondary/10 rounded-xl">
+              <img
+                src="/new/services/shopify3.jpg"
+                alt="Person Image"
+                className="w-full h-full rounded-xl object-cover max-md:hidden"
+              />
+              <div className="flex flex-col gap-4">
+                <h1 className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl">
+                  Enjoy the Power of a{" "}
+                  <span className="relative">
+                    Recession-proof
+                    <svg
+                      viewBox="0 0 290 150"
+                      fill="none"
+                      className="absolute -left-2 -right-2 -top-3 bottom-0 translate-y-1"
+                    >
+                      <motion.path
+                        initial={{ pathLength: 0 }}
+                        whileInView={{ pathLength: 1 }}
+                        transition={{
+                          duration: 1.25,
+                          ease: "easeInOut",
+                        }}
+                        d="M142.293 1C106.854 16.8908 6.08202 7.17705 1.23654 43.3756C-2.10604 68.3466 29.5633 73.2652 122.688 71.7518C215.814 70.2384 316.298 70.689 275.761 38.0785C230.14 1.37835 97.0503 24.4575 52.9384 1"
+                        stroke="#FACC15"
+                        strokeWidth="3"
+                      />
+                    </svg>
+                  </span>{" "}
+                  and Profitable Shopify Private Label
+                </h1>
+                <span className="text-secondary">
+                  Ecom Automations Hub is one of the most reliable and trusted
+                  Shopify automation partners in town. Our team excels in
+                  setting up and managing recession-proof businesses on this
+                  platform, leveraging their unbounded experience and expertise.
+                  . Our team handling automated dropshipping models on Shopify
+                  has the skills to effectively analyze trends, identify
+                  in-demand products. From setting up to scaling of your Shopify
+                  store, we are the best at what we do!
+                </span>
+                <h1 className="text-white font-extrabold text-xl md:text-2xl">
+                  Ecom Automations Hub, a Shopify Automation Agency, Helps
+                  Streamline and Scale Your Shopify Store
+                </h1>
+                <span className="text-secondary">
+                  Leverage the best of Shopify dropshipping like never before!
+                  <br />
+                  <br />
+                  With a Shopify private label for dropshipping created by us,
+                  you don’t have to worry about any upfront inventory risks. We
+                  purchase inventory only after making sales. We aim to help you
+                  create a valuable digital asset that grows continuously.
+                </span>
+                <CTAButton
+                  title="Get Started"
+                  onClick={() => setIsOpen(true)}
+                />
+              </div>
+            </div>
+          </div>
+        </MaxWidthWrapper>
+      </div>
+      <div className="w-full relative py-5">
+        <img
+          src="/new/noise.png"
+          alt="Noise Image"
+          className="pointer-events-none select-none absolute top-0 left-0 w-full h-full z-1 object-cover opacity-15"
+        />
+        <div className="absolute inset-0 bg-[url(/new/background.png)] bg-cover"></div>
+        <MaxWidthWrapper classNames="relative z-10 w-full min-h-full flex flex-col">
+          <h1 className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl text-center">
+            Benefits of Automated{" "}
+            <span className="relative">
+              Shopify
+              <svg
+                viewBox="0 0 290 150"
+                fill="none"
+                className="absolute -left-2 -right-2 top-3 bottom-0 translate-y-1"
+              >
+                <motion.path
+                  initial={{ pathLength: 0 }}
+                  whileInView={{ pathLength: 1 }}
+                  transition={{
+                    duration: 1.25,
+                    ease: "easeInOut",
+                  }}
+                  d="M142.293 1C106.854 16.8908 6.08202 7.17705 1.23654 43.3756C-2.10604 68.3466 29.5633 73.2652 122.688 71.7518C215.814 70.2384 316.298 70.689 275.761 38.0785C230.14 1.37835 97.0503 24.4575 52.9384 1"
+                  stroke="#FACC15"
+                  strokeWidth="3"
+                />
+              </svg>
+            </span>{" "}
+            Dropshipping with Ecom Automations Hub
           </h1>
-          <div className="w-full h-3 bg-charcoal" />
+          <InfoCols data={benefitsData} />
+        </MaxWidthWrapper>
+      </div>
+      <div className="w-full relative py-5">
+        <img
+          src="/new/noise.png"
+          alt="Noise Image"
+          className="pointer-events-none select-none absolute top-0 left-0 w-full h-full z-1 object-cover opacity-15"
+        />
+        <div className="absolute scale-y-[-1] inset-0 bg-[url(/new/background.png)] bg-cover"></div>
+        <MaxWidthWrapper classNames="relative z-10 w-full min-h-full flex flex-col mt-10">
+          <h1 className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl text-center">
+            Unlock your{" "}
+            <span className="relative">
+              business
+              <svg
+                viewBox="0 0 290 150"
+                fill="none"
+                className="absolute -left-2 -right-2 top-0 bottom-0 translate-y-1"
+              >
+                <motion.path
+                  initial={{ pathLength: 0 }}
+                  whileInView={{ pathLength: 1 }}
+                  transition={{
+                    duration: 1.25,
+                    ease: "easeInOut",
+                  }}
+                  d="M142.293 1C106.854 16.8908 6.08202 7.17705 1.23654 43.3756C-2.10604 68.3466 29.5633 73.2652 122.688 71.7518C215.814 70.2384 316.298 70.689 275.761 38.0785C230.14 1.37835 97.0503 24.4575 52.9384 1"
+                  stroke="#FACC15"
+                  strokeWidth="3"
+                />
+              </svg>
+            </span>{" "}
+            potential with Amazon FBA agency
+          </h1>
+          <div className="mt-5" />
+          <div className="flex flex-col gap-2 mb-5">
+            <span className="text-white font-semibold text-lg">
+              Are you ready to turn your vision into a thriving business?
+            </span>
+            <span className="text-white">
+              Take the first step towards success by sharing essential details
+              about your venture with us. We're here to guide you through the
+              journey.
+            </span>
+            <span className="text-white font-semibold text-lg">
+              Help us get an idea of what business or idea is all about.
+            </span>
+          </div>
+          <CTAButton title="Get Started" onClick={() => setIsOpen(true)} />
+        </MaxWidthWrapper>
+      </div>
+      <div className="w-full relative py-5">
+        <img
+          src="/new/noise.png"
+          alt="Noise Image"
+          className="pointer-events-none select-none absolute top-0 left-0 w-full h-full z-1 object-cover opacity-15"
+        />
+        <div className="absolute inset-0 bg-[url(/new/background.png)] bg-cover"></div>
+        <MaxWidthWrapper classNames="relative z-10 w-full min-h-full flex flex-col">
+          <h1 className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl text-center">
+            Our Shopify{" "}
+            <span className="relative">
+              dropshipping
+              <svg
+                viewBox="0 0 290 150"
+                fill="none"
+                className="absolute -left-2 -right-2 -top-3 bottom-0 translate-y-1"
+              >
+                <motion.path
+                  initial={{ pathLength: 0 }}
+                  whileInView={{ pathLength: 1 }}
+                  transition={{
+                    duration: 1.25,
+                    ease: "easeInOut",
+                  }}
+                  d="M142.293 1C106.854 16.8908 6.08202 7.17705 1.23654 43.3756C-2.10604 68.3466 29.5633 73.2652 122.688 71.7518C215.814 70.2384 316.298 70.689 275.761 38.0785C230.14 1.37835 97.0503 24.4575 52.9384 1"
+                  stroke="#FACC15"
+                  strokeWidth="3"
+                />
+              </svg>
+            </span>{" "}
+            automation services include
+          </h1>
+          <InfoCols data={servicesData} />
+        </MaxWidthWrapper>
+      </div>
+      <div className="w-full relative py-5">
+        <img
+          src="/new/noise.png"
+          alt="Noise Image"
+          className="pointer-events-none select-none absolute top-0 left-0 w-full h-full z-1 object-cover opacity-15"
+        />
+        <div className="absolute scale-y-[-1] inset-0 bg-[url(/new/background.png)] bg-cover"></div>
+        <MaxWidthWrapper classNames="relative z-10 w-full min-h-full flex flex-col mt-10">
+          <h1 className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl text-center">
+            Frequently{" "}
+            <span className="relative">
+              asked
+              <svg
+                viewBox="0 0 290 150"
+                fill="none"
+                className="absolute -left-2 -right-2 top-0 bottom-0 translate-y-1"
+              >
+                <motion.path
+                  initial={{ pathLength: 0 }}
+                  whileInView={{ pathLength: 1 }}
+                  transition={{
+                    duration: 1.25,
+                    ease: "easeInOut",
+                  }}
+                  d="M142.293 1C106.854 16.8908 6.08202 7.17705 1.23654 43.3756C-2.10604 68.3466 29.5633 73.2652 122.688 71.7518C215.814 70.2384 316.298 70.689 275.761 38.0785C230.14 1.37835 97.0503 24.4575 52.9384 1"
+                  stroke="#FACC15"
+                  strokeWidth="3"
+                />
+              </svg>
+            </span>{" "}
+            questions
+          </h1>
+          <div className="mt-5" />
           <Accordion
             type="single"
             collapsible
@@ -515,33 +699,83 @@ export const ShopifyDropshippingAutomation = () => {
           >
             {faqData.map((item, index) => (
               <AccordionItem key={index} value={`item-${index + 1}`}>
-                <AccordionTrigger>{item.title}</AccordionTrigger>
-                <AccordionContent>{item.desc}</AccordionContent>
+                <AccordionTrigger className="text-white font-medium text-lg">
+                  {item.title}
+                </AccordionTrigger>
+                <AccordionContent className="text-secondary text-base">
+                  {item.desc}
+                </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
         </MaxWidthWrapper>
       </div>
-      <div className="relative w-full h-auto md:h-[90vh] py-5 bg-gold mt-12 flex items-center justify-center overflow-hidden">
-        <MaxWidthWrapper>
-          <div className="flex items-center justify-between">
-            <div className="flex flex-col gap-6 max-md:items-center max-md:text-center w-full">
-              <h3 className="text-white text-xl font-extralight">Question?</h3>
-              <div className="flex flex-col gap-2">
-                <span className="text-white text-xl font-semibold">
-                  Ask an strategist
+      <div className="relative min-h-screen w-full flex justify-center py-20 lg:py-10 overflow-hidden">
+        <img
+          src="/new/noise.png"
+          alt="Noise Image"
+          className="pointer-events-none select-none absolute top-0 left-0 w-full h-full z-1 object-cover opacity-15"
+        />
+        <div className="absolute inset-0 bg-[url(/new/background.png)] bg-cover"></div>
+        <MaxWidthWrapper classNames="relative z-10 w-full min-h-full flex flex-col items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-10 w-full h-full">
+            <div className="w-full flex flex-col justify-center max-lg:items-center gap-10">
+              <motion.h1
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, ease: "easeInOut" }}
+                viewport={{ once: true, margin: "-100px" }}
+                className="text-white font-extrabold text-3xl sm:text-4xl md:text-7xl max-lg:text-center"
+              >
+                Ask an{" "}
+                <span className="relative">
+                  strategist
+                  <svg
+                    viewBox="0 0 286 73"
+                    fill="none"
+                    className="absolute -left-2 -right-2 -top-1 bottom-0 translate-y-1"
+                  >
+                    <motion.path
+                      initial={{ pathLength: 0 }}
+                      whileInView={{ pathLength: 1 }}
+                      transition={{
+                        duration: 1.25,
+                        ease: "easeInOut",
+                      }}
+                      d="M142.293 1C106.854 16.8908 6.08202 7.17705 1.23654 43.3756C-2.10604 68.3466 29.5633 73.2652 122.688 71.7518C215.814 70.2384 316.298 70.689 275.761 38.0785C230.14 1.37835 97.0503 24.4575 52.9384 1"
+                      stroke="#FACC15"
+                      strokeWidth="3"
+                    />
+                  </svg>
                 </span>
-                <span className="text-gray-200 text-base">
-                  Get the right guidance with an strategist by your side.
-                </span>
-              </div>
-              <Button className="h-14 w-32">Get Started</Button>
+              </motion.h1>
+              <span className="text-white text-xl">
+                Get the right guidance with an strategist by your side.
+              </span>
+              <motion.div
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, ease: "easeInOut" }}
+                viewport={{ once: true, margin: "-50px" }}
+              >
+                <CTAButton
+                  title="Get Started"
+                  onClick={() => setIsOpen(true)}
+                />
+              </motion.div>
             </div>
-            <img
-              src="/services/tiktok/contact-us.png"
-              alt="Contact us"
-              className="absolute -right-32 max-md:hidden md:w-[600px] object-contain"
-            />
+            <div className="relative w-full hidden sm:flex flex-col justify-center items-center gap-10">
+              <video
+                src="/new/booking/sphere.mp4"
+                autoPlay
+                muted
+                loop
+                className="relative w-full h-full object-cover video-glow-mask z-10"
+              >
+                <source src="/new/booking/sphere.mp4" />
+              </video>
+              <div className="absolute w-[320px] h-[320px] rounded-full animate-gradient bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-[length:300%_300%]  blur-3xl"></div>
+            </div>
           </div>
         </MaxWidthWrapper>
       </div>

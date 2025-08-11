@@ -1,15 +1,18 @@
 import { useEffect, useRef, useState } from "react";
 import { FillBox } from "../fill-box";
 import Lottie from "lottie-react";
-import { CTAButton } from "../cta-button";
 import { FillButton } from "../fill-button";
+import { useNavigate } from "react-router-dom";
 
 interface Props {
   title: string;
   href: unknown;
+  pageSrc: string;
 }
 
-export const CaseStudyCard = ({ title, href }: Props) => {
+export const CaseStudyCard = ({ title, href, pageSrc }: Props) => {
+  const navigate = useNavigate();
+
   const buttonRef = useRef<HTMLButtonElement | null>(null);
   const [xValue, setXValue] = useState(0);
   const [yValue, setYValue] = useState(0);
@@ -46,7 +49,10 @@ export const CaseStudyCard = ({ title, href }: Props) => {
   }, []);
   return (
     <div className="w-full h-full relative">
-      <div className="absolute max-sm:hidden -right-16 -bottom-16 z-50">
+      <div
+        onClick={() => navigate(pageSrc)}
+        className="absolute max-sm:hidden -right-16 -bottom-16 z-50"
+      >
         <button
           ref={buttonRef}
           className="group relative grid h-[220px] w-[220px] place-content-center rounded-full border-2 border-secondary hover:border-black transition-all duration-700 ease-out cursor-pointer"
@@ -117,7 +123,7 @@ export const CaseStudyCard = ({ title, href }: Props) => {
             className="w-full h-[200px] sm:h-[270px] md:h-[320px] object-contain"
           />
           <div className="sm:hidden flex w-full justify-center">
-            <FillButton title="Read More" />
+            <FillButton title="Read More" onClick={() => navigate(pageSrc)} />
           </div>
         </div>
       </FillBox>

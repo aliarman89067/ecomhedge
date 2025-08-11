@@ -42,12 +42,14 @@ export const CaseStudies = () => {
             <CaseStudyCard
               title="$19,760 Profit in 8 Months with FBA Wholesale"
               href={rocketAnimation}
+              pageSrc="/amazon-fba-automation"
             />
           </div>
           <div className="w-full gap-4 grid-cols-1 bg-secondary/20 rounded-xl p-4">
             <CaseStudyCard
               title="$19,760 Profit in 8 Months with FBA Wholesale"
               href={trophyAnimation}
+              pageSrc="/amazon-private-label"
             />
           </div>
         </div>

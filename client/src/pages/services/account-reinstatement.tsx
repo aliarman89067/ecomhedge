@@ -26,8 +26,11 @@ import {
 import { InfoCols } from "@/components/about/info-cols";
 import { MouseParallax } from "react-just-parallax";
 import { ReinstatementCols } from "@/components/service/reinstatement-cols";
+import { useContext } from "react";
+import { FormContext } from "@/context/form-context";
 
 export const AccountReinstatement = () => {
+  const { setIsOpen } = useContext(FormContext);
   const gridData = [
     {
       icon: DollarSignIcon,
@@ -145,7 +148,7 @@ export const AccountReinstatement = () => {
   TabName(" | Account Reinstatement");
   return (
     <section className="relative w-full min-h-screen flex flex-col bg-cover justify-center overflow-hidden">
-      <div className="w-full min-h-screen relative py-5">
+      <div className="w-full min-h-screen relative py-20">
         <img
           src="/new/noise.png"
           alt="Noise Image"
@@ -153,7 +156,7 @@ export const AccountReinstatement = () => {
         />
         <div className="absolute inset-0 bg-[url(/new/background.png)] bg-cover"></div>
         <MaxWidthWrapper classNames="relative z-10 w-full min-h-screen flex items-center">
-          <div className="h-full grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          <div className="h-full grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div className="flex flex-col max-md:items-center max-md:text-center gap-3">
               <h1 className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl">
                 Amazon Account Reinstatement Services that{" "}
@@ -182,7 +185,7 @@ export const AccountReinstatement = () => {
               <p className="bebas font-light text-gray-400 text-lg sm:text-xl xl:text-2xl max-lg:text-center tracking-wider mb-5">
                 Stressed about your suspended seller account?
               </p>
-              <CTAButton title="Get Started" />
+              <CTAButton title="Get Started" onClick={() => setIsOpen(true)} />
             </div>
             <div className="w-[300px] sm:w-[400px] h-auto mx-auto md:ml-auto">
               <FormBox />
@@ -358,7 +361,7 @@ export const AccountReinstatement = () => {
         />
 
         {/* Background Image */}
-        <div className="absolute scale-y-[-1] inset-0 bg-[url(/new/background.png)] bg-cover"></div>
+        <div className="absolute inset-0 bg-[url(/new/background.png)] bg-cover"></div>
 
         {/* Content Wrapper */}
         <MaxWidthWrapper classNames="relative z-10 w-full min-h-screen flex flex-col gap-10 items-center">
@@ -537,7 +540,10 @@ export const AccountReinstatement = () => {
                   Choose our Amazon seller account reinstatement services, sit
                   back, and relax while we do the heavy lifting for you!
                 </span>
-                <CTAButton title="Get Started" />
+                <CTAButton
+                  title="Get Started"
+                  onClick={() => setIsOpen(true)}
+                />
               </div>
               <img
                 src="/new/services/amazon-fba.jpg"
@@ -620,7 +626,10 @@ export const AccountReinstatement = () => {
                   expertise to manage your account issues, reduce your stress,
                   and provide emotional support throughout the process.
                 </span>
-                <CTAButton title="Get Started" />
+                <CTAButton
+                  title="Get Started"
+                  onClick={() => setIsOpen(true)}
+                />
               </div>
             </div>
           </div>
@@ -707,7 +716,7 @@ export const AccountReinstatement = () => {
               Help us get an idea of what business or idea is all about.
             </span>
           </div>
-          <CTAButton title="Get Started" />
+          <CTAButton title="Get Started" onClick={() => setIsOpen(true)} />
         </MaxWidthWrapper>
       </div>
       <div className="w-full relative py-5">
@@ -845,7 +854,10 @@ export const AccountReinstatement = () => {
                 transition={{ duration: 1, ease: "easeInOut" }}
                 viewport={{ once: true, margin: "-50px" }}
               >
-                <CTAButton title="Get Started" />
+                <CTAButton
+                  title="Get Started"
+                  onClick={() => setIsOpen(true)}
+                />
               </motion.div>
             </div>
             <div className="relative w-full hidden sm:flex flex-col justify-center items-center gap-10">

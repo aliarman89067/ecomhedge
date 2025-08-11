@@ -1,9 +1,7 @@
 import { motion } from "framer-motion";
 import { MaxWidthWrapper } from "@/components/max-width-wrapper";
 import { TabName } from "@/lib/tab-name";
-import { cn } from "@/lib/utils";
 import {
-  CheckIcon,
   HandCoinsIcon,
   HeartHandshakeIcon,
   MessageCircleOffIcon,
@@ -15,8 +13,12 @@ import { CTAButton } from "@/components/cta-button";
 import { InfoCols } from "@/components/about/info-cols";
 import { MouseParallax } from "react-just-parallax";
 import { FillBox } from "@/components/fill-box";
+import { useContext } from "react";
+import { FormContext } from "@/context/form-context";
 
 const About = () => {
+  const { setIsOpen } = useContext(FormContext);
+
   const keyFeatureData = [
     {
       label: "Product Listings:",
@@ -107,7 +109,7 @@ const About = () => {
         />
         <div className="absolute inset-0 bg-[url(/new/background.png)] bg-cover"></div>
         <MaxWidthWrapper classNames="relative z-10 w-full min-h-full flex flex-col">
-          <div className="relative w-full min-h-screen lg:h-screen py-16 flex flex-col">
+          <div className="relative w-full min-h-screen lg:h-screen py-20 flex flex-col">
             <h1 className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl text-center">
               Go global with{" "}
               <span className="relative">
@@ -686,7 +688,10 @@ const About = () => {
                 transition={{ duration: 1, ease: "easeInOut" }}
                 viewport={{ once: true, margin: "-50px" }}
               >
-                <CTAButton title="Book a Call Now" />
+                <CTAButton
+                  title="Book a Call Now"
+                  onClick={() => setIsOpen(true)}
+                />
               </motion.div>
             </div>
             <div className="relative w-full hidden sm:flex flex-col justify-center items-center gap-10">

@@ -2,49 +2,54 @@ import { cn } from "@/lib/utils";
 import { MaxWidthWrapper } from "../max-width-wrapper";
 import { motion } from "framer-motion";
 import { FillButton } from "../fill-button";
+import { useContext } from "react";
+import { FormContext } from "@/context/form-context";
+import { useNavigate } from "react-router-dom";
 
 export const ServicesList = () => {
+  const { setIsOpen } = useContext(FormContext);
+  const navigate = useNavigate();
   const servicesData = [
     {
       label: "Amazon FBA Automation",
       desc: "Effortlessly scale your business with automated Amazon FBA solutions.",
       href: "/amazon-fba-automation",
-      imgSrc: "/services-list/amazon-private-label.jpg",
+      imgSrc: "/new/services/amazon-private-label.jpg",
       isFull: false,
     },
     {
       label: "Tiktok Shop Automation",
       desc: "Launch your TikTok Shop Store and earn Monthly passive income.",
       href: "/tiktok-shop-automation",
-      imgSrc: "/services-list/tiktok-shop-automation.jpg",
+      imgSrc: "/new/services/tiktok-shop-automation.jpg",
       isFull: true,
     },
     {
       label: "Amazon Private Label",
       desc: "Effortlessly scale your business with automated Amazon FBA solutions.",
       href: "/amazon-private-label",
-      imgSrc: "/services-list/amazon-label-automation.jpg",
+      imgSrc: "/new/services/amazon-label-automation.jpg",
       isFull: false,
     },
     {
       label: "Walmart Automation",
       desc: "Streamline your business operations, driving efficiency and success with Walmart Automation.",
       href: "/walmart-automation",
-      imgSrc: "/services-list/walmart-automation.jpg",
+      imgSrc: "/new/services/walmart-automation.jpg",
       isFull: true,
     },
     {
       label: "Account Reinstatement",
       desc: "Efficient Solutions to Swiftly Regain Control of Your platform account",
       href: "/account-reinstatement",
-      imgSrc: "/services-list/account-reinstatement.jpg",
+      imgSrc: "/new/services/account-reinstatement.jpg",
       isFull: false,
     },
     {
       label: "Shopify Automation",
       desc: "Simplify your e-commerce success with automated Shopify dropshipping.",
       href: "/shopify-dropshipping-automation",
-      imgSrc: "/services-list/shopify-automation.jpg",
+      imgSrc: "/new/services/shopify-automation.jpg",
       isFull: true,
     },
   ];
@@ -112,29 +117,41 @@ export const ServicesList = () => {
               />
               {item.isFull && (
                 <div className="absolute flex flex-col mt-6 bottom-5 px-2">
-                  <h1 className="text-white font-medium text-2xl sm:text-4xl">
+                  <h1 className="text-white font-medium text-2xl sm:text-2xl">
                     {item.label}
                   </h1>
-                  <span className="bebas text-secondary text-base sm:text-xl tracking-wider">
+                  <span className="text-secondary text-base tracking-wider">
                     {item.desc}
                   </span>
                   <div className="flex sm:items-center justify-between gap-3 mt-2 max-sm:flex-col">
-                    <FillButton title="See More" />
-                    <FillButton title="Get Started" />
+                    <FillButton
+                      title="See More"
+                      onClick={() => navigate(item.href)}
+                    />
+                    <FillButton
+                      title="Get Started"
+                      onClick={() => setIsOpen(true)}
+                    />
                   </div>
                 </div>
               )}
               {!item.isFull && (
                 <div className="flex flex-col mt-auto">
-                  <h1 className="text-white font-medium text-2xl sm:text-3xl">
+                  <h1 className="text-white font-medium text-2xl sm:text-2xl">
                     {item.label}
                   </h1>
-                  <span className="bebas text-secondary text-base sm:text-lg tracking-wider">
+                  <span className="text-secondary text-base tracking-wider">
                     {item.desc}
                   </span>
                   <div className="flex sm:items-center justify-between gap-3 mt-2 max-sm:flex-col">
-                    <FillButton title="See More" />
-                    <FillButton title="Get Started" />
+                    <FillButton
+                      title="See More"
+                      onClick={() => navigate(item.href)}
+                    />
+                    <FillButton
+                      title="Get Started"
+                      onClick={() => setIsOpen(true)}
+                    />
                   </div>
                 </div>
               )}

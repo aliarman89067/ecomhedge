@@ -1,11 +1,15 @@
-import { useContext } from "react";
-import { FormContext } from "@/context/form-context";
-
-export const CTAButton = ({ title }: { title: string }) => {
-  const { setIsOpen } = useContext(FormContext);
-
+export const CTAButton = ({
+  title,
+  onClick,
+}: {
+  title: string;
+  onClick: () => void;
+}) => {
   return (
-    <div className="group relative w-fit transition-transform duration-300 active:scale-95 cursor-pointer">
+    <div
+      onClick={onClick}
+      className="group relative w-fit transition-transform duration-300 active:scale-95 cursor-pointer"
+    >
       <button className="relative z-10 rounded-lg bg-gradient-to-br from-purple-500 to-blue-500 p-0.5 cursor-pointer duration-300 group-hover:scale-110">
         <span className="block rounded-md bg-slate-950 px-10 py-4 font-semibold text-slate-100 duration-300 group-hover:bg-slate-950/50 group-hover:text-slate-50 group-active:bg-slate-950/80">
           {title}

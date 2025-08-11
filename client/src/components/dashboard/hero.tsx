@@ -2,9 +2,11 @@ import { CTAButton } from "../cta-button";
 import { MaxWidthWrapper } from "../max-width-wrapper";
 import { servicesData } from "@/constant";
 import HeroVideosLine from "./hero-videos-line";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { FormContext } from "@/context/form-context";
 
 export const Hero = () => {
+  const { setIsOpen } = useContext(FormContext);
   const [videoSrc, setVideoSrc] = useState("");
   return (
     <section className="relative min-h-screen w-full flex bg-[url(/new/background.png)] bg-cover items-center justify-center pt-20 lg:pt-10">
@@ -35,10 +37,10 @@ export const Hero = () => {
             income is easier, faster, and smarter than ever.
           </p>
           <div className="max-lg:mx-auto">
-            <CTAButton title="Get Started" />
+            <CTAButton title="Get Started" onClick={() => setIsOpen(true)} />
           </div>
         </div>
-        <div className="relative flex flex-col max-lg:max-w-2xl  w-full">
+        <div className="relative flex flex-col max-lg:max-w-2xl w-full">
           <div className="absolute w-full h-full scale-[150%] opacity-60 mix-blend-overlay pointer-events-none mask-gradient-left">
             <video
               src="/new/hero/earth.mp4"
@@ -57,7 +59,6 @@ export const Hero = () => {
                 key={index}
                 index={index}
                 label={item.label}
-                desc={item.desc}
                 href={item.href}
                 videoSrc={item.videoSrc}
                 setVideoSrc={setVideoSrc}

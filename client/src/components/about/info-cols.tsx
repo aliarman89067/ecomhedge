@@ -1,12 +1,15 @@
 import { motion } from "framer-motion";
 import { CTAButton } from "../cta-button";
 import type { LucideIcon } from "lucide-react";
+import { useContext } from "react";
+import { FormContext } from "@/context/form-context";
 
 interface Props {
   data: { label: string; desc: string; icon?: LucideIcon }[];
 }
 
 export const InfoCols = ({ data }: Props) => {
+  const { setIsOpen } = useContext(FormContext);
   return (
     <div className="relative w-full h-full flex flex-col items-center justify-between overflow-hidden mt-10 bg-secondary/20 p-3 rounded-3xl">
       <video
@@ -53,7 +56,7 @@ export const InfoCols = ({ data }: Props) => {
             </motion.div>
           ))}
         </div>
-        <CTAButton title="Get Started" />
+        <CTAButton title="Get Started" onClick={() => setIsOpen(true)} />
       </div>
     </div>
   );

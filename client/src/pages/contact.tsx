@@ -6,10 +6,13 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { FormContext } from "@/context/form-context";
 import { motion } from "framer-motion";
 import { MailIcon, MapIcon, PhoneIcon } from "lucide-react";
+import { useContext } from "react";
 
 const Contact = () => {
+  const { setIsOpen } = useContext(FormContext);
   const faqData = [
     {
       title: "What is Ecom Automations Hub, and what does it do?",
@@ -64,7 +67,7 @@ const Contact = () => {
         />
         <div className="absolute inset-0 bg-[url(/new/background.png)] bg-cover"></div>
         <MaxWidthWrapper classNames="relative z-10 w-full min-h-full flex flex-col">
-          <div className="relative w-full min-h-screen lg:h-screen py-16 flex flex-col">
+          <div className="relative w-full min-h-screen lg:h-screen py-20 flex flex-col">
             <h1 className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl text-center">
               <span className="relative">
                 Contact
@@ -114,7 +117,10 @@ const Contact = () => {
                       777 S Central Expy #4h Richardson, TX 75080, USA
                     </span>
                   </div>
-                  <CTAButton title="Get Started" />
+                  <CTAButton
+                    title="Get Started"
+                    onClick={() => setIsOpen(true)}
+                  />
                 </div>
               </div>
               <div className="grid grid-cols-1 gap-5">

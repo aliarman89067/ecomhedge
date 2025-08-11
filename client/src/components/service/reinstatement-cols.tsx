@@ -1,6 +1,8 @@
 import { cn } from "@/lib/utils";
 import { CTAButton } from "../cta-button";
 import { motion } from "framer-motion";
+import { useContext } from "react";
+import { FormContext } from "@/context/form-context";
 
 interface Props {
   headingP1: string;
@@ -19,6 +21,7 @@ export const ReinstatementCols = ({
   imageHref,
   isFlip,
 }: Props) => {
+  const { setIsOpen } = useContext(FormContext);
   return (
     <div className="h-full grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
       <div
@@ -54,7 +57,7 @@ export const ReinstatementCols = ({
         <p className="bebas font-light text-gray-400 text-lg sm:text-xl xl:text-2xl max-md:text-center tracking-wider mb-5">
           {desc}
         </p>
-        <CTAButton title="Get Started" />
+        <CTAButton title="Get Started" onClick={() => setIsOpen(true)} />
       </div>
       <img
         src={imageHref}

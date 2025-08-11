@@ -1,6 +1,13 @@
-export const FillButton = ({ title }: { title: string }) => {
+export const FillButton = ({
+  title,
+  onClick,
+}: {
+  title: string;
+  onClick: () => void;
+}) => {
   return (
     <button
+      onClick={onClick}
       className="
     relative z-0 flex items-center gap-2 overflow-hidden rounded-lg border-[1px]
     border-secondary px-7 py-3 cursor-pointer font-semibold uppercase text-secondary

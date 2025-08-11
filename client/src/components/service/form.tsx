@@ -13,10 +13,18 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import axios from "axios";
 import { toast } from "sonner";
 import { Textarea } from "../ui/textarea";
-import { FillButton } from "../fill-button";
-import { CTAButton } from "../cta-button";
+import { cn } from "@/lib/utils";
+import { XIcon } from "lucide-react";
+import { useContext } from "react";
+import { FormContext } from "@/context/form-context";
 
-export const FormBox = () => {
+interface Props {
+  isOverlay?: boolean;
+}
+
+export const FormBox = ({ isOverlay = false }: Props) => {
+  const { setIsOpen } = useContext(FormContext);
+
   const formSchema = z.object({
     name: z.string().min(1, { message: "Please enter your name" }),
     email: z.email().min(1, { message: "Please enter your email" }),
@@ -60,13 +68,24 @@ export const FormBox = () => {
         alt="Noise Image"
         className="pointer-events-none select-none absolute top-0 left-0 w-full h-full object-cover opacity-30"
       />
-      <div className="relative overflow-hidden w-full h-full bg-secondary/10 rounded-xl">
+      <div
+        className={cn(
+          "relative overflow-hidden w-full h-full bg-secondary/10 rounded-xl",
+          isOverlay && "pt-6"
+        )}
+      >
+        {isOverlay && (
+          <XIcon
+            onClick={() => setIsOpen(false)}
+            className="absolute cursor-pointer top-2 right-2 text-white size-6 z-50"
+          />
+        )}
         <video
           src="/new/hero/earth.mp4"
           autoPlay
           muted
           loop
-          className="absolute w-full h-full mask-gradient-left opacity-40 object-cover rounded-r-3xl z-10"
+          className="absolute w-full h-full top-0 mask-gradient-left opacity-30 object-cover rounded-r-3xl z-10"
         >
           <source src="/new/hero/earth.mp4" />
         </video>
@@ -139,14 +158,17 @@ export const FormBox = () => {
                 </FormItem>
               )}
             />
-            <div className="group mt-4 relative w-full transition-transform duration-300 active:scale-95 cursor-pointer">
-              <button className="relative z-10 rounded-lg bg-gradient-to-br from-purple-500 to-blue-500 p-0.5 cursor-pointer duration-300 group-hover:scale-105 w-full">
+            <button
+              type="submit"
+              className="group mt-4 relative w-full transition-transform duration-300 active:scale-95 cursor-pointer"
+            >
+              <div className="relative z-10 rounded-lg bg-gradient-to-br from-purple-500 to-blue-500 p-0.5 cursor-pointer duration-300 group-hover:scale-105 w-full">
                 <span className="block rounded-md bg-slate-950 px-10 py-3 font-semibold text-slate-100 duration-300 group-hover:bg-slate-950/50 group-hover:text-slate-50 group-active:bg-slate-950/80">
                   Send
                 </span>
-              </button>
+              </div>
               <span className="pointer-events-none absolute -inset-4 z-0 transform-gpu rounded-2xl bg-gradient-to-br from-purple-500 to-blue-500 opacity-30 blur-xl transition-all duration-300 group-hover:opacity-60 group-active:opacity-50"></span>
-            </div>
+            </button>
           </form>
         </Form>
       </div>

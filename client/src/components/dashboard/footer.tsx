@@ -86,12 +86,17 @@ export const Footer = () => {
       <MaxWidthWrapper classNames="flex w-full flex-col gap-5 justify-between">
         <div className="flex flex-wrap gap-20 w-full py-14">
           <div className="flex flex-col gap-3">
-            <img src="/logo.png" alt="Logo" className="w-28 object-contain" />
+            <Link to="/">
+              <img src="/logo.png" alt="Logo" className="w-28 object-contain" />
+            </Link>
             <p className="text-white text-lg bebas tracking-wider">
               Start your business today.
             </p>
             <a href="tel:+1(469) 935-7701">
-              <Button variant="secondary" className="w-full py-5 text-white">
+              <Button
+                variant="secondary"
+                className="w-full py-5 text-white bg-background"
+              >
                 <PhoneIcon />
                 +1(469) 935-7701
               </Button>
@@ -104,8 +109,18 @@ export const Footer = () => {
               info@ecomautomationshub.com
             </a>
             <div className="flex gap-4 items-center">
-              <FacebookIcon className="text-white size-6 hover:text-secondary cursor-pointer transition-all duration-200 ease-in-out" />
-              <InstagramIcon className="text-white size-6 hover:text-secondary cursor-pointer transition-all duration-200 ease-in-out" />
+              <Link
+                target="_blank"
+                to="https://www.facebook.com/ecomautomationshub"
+              >
+                <FacebookIcon className="text-white size-6 hover:text-secondary cursor-pointer transition-all duration-200 ease-in-out" />
+              </Link>
+              <Link
+                target="_blank"
+                to="https://www.instagram.com/ecomautomationshub/"
+              >
+                <InstagramIcon className="text-white size-6 hover:text-secondary cursor-pointer transition-all duration-200 ease-in-out" />
+              </Link>
               <TiSocialPinterest className="text-white size-6 hover:text-secondary cursor-pointer transition-all duration-200 ease-in-out" />
               <BsTwitterX className="text-white size-6 hover:text-secondary cursor-pointer transition-all duration-200 ease-in-out" />
             </div>

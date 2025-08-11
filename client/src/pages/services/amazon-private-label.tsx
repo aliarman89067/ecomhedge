@@ -31,8 +31,12 @@ import { FormBox } from "@/components/service/form";
 import { Chart } from "@/components/service/chart";
 import { InfoCols } from "@/components/about/info-cols";
 import { MouseParallax } from "react-just-parallax";
+import { useContext } from "react";
+import { FormContext } from "@/context/form-context";
 
 export const AmazonPrivateLabel = () => {
+  const { setIsOpen } = useContext(FormContext);
+
   const gridData = [
     {
       label: "A Standout Brand Identity",
@@ -181,7 +185,7 @@ export const AmazonPrivateLabel = () => {
   TabName(" | Amazon Private Label");
   return (
     <section className="relative w-full min-h-screen flex flex-col bg-cover justify-center overflow-hidden">
-      <div className="w-full min-h-screen relative py-5">
+      <div className="w-full min-h-screen relative py-20">
         <img
           src="/new/noise.png"
           alt="Noise Image"
@@ -189,7 +193,7 @@ export const AmazonPrivateLabel = () => {
         />
         <div className="absolute inset-0 bg-[url(/new/background.png)] bg-cover"></div>
         <MaxWidthWrapper classNames="relative z-10 w-full min-h-screen flex items-center">
-          <div className="h-full grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          <div className="h-full grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div className="flex flex-col max-md:items-center max-md:text-center gap-3">
               <h1 className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl">
                 Amazon FBA Label Service That{" "}
@@ -219,7 +223,7 @@ export const AmazonPrivateLabel = () => {
                 Think starting your own business will drill a hole in your
                 pocket? Not on our watch!
               </p>
-              <CTAButton title="Get Started" />
+              <CTAButton title="Get Started" onClick={() => setIsOpen(true)} />
             </div>
             <div className="w-[300px] sm:w-[400px] h-auto mx-auto md:ml-auto">
               <FormBox />
@@ -446,7 +450,10 @@ export const AmazonPrivateLabel = () => {
                   Choose Ecom Automations Hub as your Amazon FBA company, sit
                   back, and relax while we do the heavy lifting for you!
                 </span>
-                <CTAButton title="Get Started" />
+                <CTAButton
+                  title="Get Started"
+                  onClick={() => setIsOpen(true)}
+                />
               </div>
               <img
                 src="/new/services/amazon-fba.jpg"
@@ -535,7 +542,10 @@ export const AmazonPrivateLabel = () => {
                   insights and innovative solutions, we navigate challenges,
                   capitalize on opportunities, and deliver sustainable results.
                 </span>
-                <CTAButton title="Get Started" />
+                <CTAButton
+                  title="Get Started"
+                  onClick={() => setIsOpen(true)}
+                />
               </div>
             </div>
           </div>
@@ -622,7 +632,7 @@ export const AmazonPrivateLabel = () => {
               Help us get an idea of what business or idea is all about.
             </span>
           </div>
-          <CTAButton title="Get Started" />
+          <CTAButton title="Get Started" onClick={() => setIsOpen(true)} />
         </MaxWidthWrapper>
       </div>
       <div className="w-full relative py-5">
@@ -760,7 +770,10 @@ export const AmazonPrivateLabel = () => {
                 transition={{ duration: 1, ease: "easeInOut" }}
                 viewport={{ once: true, margin: "-50px" }}
               >
-                <CTAButton title="Get Started" />
+                <CTAButton
+                  title="Get Started"
+                  onClick={() => setIsOpen(true)}
+                />
               </motion.div>
             </div>
             <div className="relative w-full hidden sm:flex flex-col justify-center items-center gap-10">

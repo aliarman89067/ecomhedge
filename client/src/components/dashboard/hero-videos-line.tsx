@@ -1,9 +1,9 @@
 import type { Dispatch, SetStateAction } from "react";
+import { Link } from "react-router-dom";
 
 interface Props {
   index: number;
   label: string;
-  desc: string;
   href: string;
   videoSrc: string;
   setVideoSrc: Dispatch<SetStateAction<string>>;
@@ -12,13 +12,13 @@ interface Props {
 const HeroVideosLine = ({
   index,
   label,
-  desc,
   href,
   videoSrc,
   setVideoSrc,
 }: Props) => {
   return (
-    <div
+    <Link
+      to={href}
       key={index}
       onMouseEnter={() => setVideoSrc(videoSrc)}
       onMouseLeave={() => setVideoSrc("")}
@@ -45,7 +45,7 @@ const HeroVideosLine = ({
       >
         <source src={videoSrc} />
       </video>
-    </div>
+    </Link>
   );
 };
 

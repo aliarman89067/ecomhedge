@@ -31,8 +31,11 @@ import {
 import { FormBox } from "@/components/service/form";
 import { InfoCols } from "@/components/about/info-cols";
 import { MouseParallax } from "react-just-parallax";
+import { useContext } from "react";
+import { FormContext } from "@/context/form-context";
 
 export const TiktokShopAutomation = () => {
+  const { setIsOpen } = useContext(FormContext);
   const gridData = [
     {
       icon: ChartNetworkIcon,
@@ -176,7 +179,7 @@ export const TiktokShopAutomation = () => {
   TabName(" | Tiktok Shop Automation");
   return (
     <section className="relative w-full min-h-screen flex flex-col bg-cover justify-center overflow-hidden">
-      <div className="w-full min-h-screen relative py-5">
+      <div className="w-full min-h-screen relative py-20">
         <img
           src="/new/noise.png"
           alt="Noise Image"
@@ -184,7 +187,7 @@ export const TiktokShopAutomation = () => {
         />
         <div className="absolute inset-0 bg-[url(/new/background.png)] bg-cover"></div>
         <MaxWidthWrapper classNames="relative z-10 w-full min-h-screen flex items-center">
-          <div className="h-full grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          <div className="h-full grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div className="flex flex-col max-md:items-center max-md:text-center gap-3">
               <h1 className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl">
                 Hop on the{" "}
@@ -214,7 +217,7 @@ export const TiktokShopAutomation = () => {
                 TikTok shop opens a doorway to unimaginable profits only if it's
                 done the right way. Thinking how to do that?
               </p>
-              <CTAButton title="Get Started" />
+              <CTAButton title="Get Started" onClick={() => setIsOpen(true)} />
             </div>
             <div className="w-[300px] sm:w-[400px] h-auto mx-auto md:ml-auto">
               <FormBox />
@@ -440,7 +443,10 @@ export const TiktokShopAutomation = () => {
                   Choose our TikTok shop automation service, sit back, and relax
                   while we do the heavy lifting for you!
                 </span>
-                <CTAButton title="Get Started" />
+                <CTAButton
+                  title="Get Started"
+                  onClick={() => setIsOpen(true)}
+                />
               </div>
               <img
                 src="/new/services/amazon-fba.jpg"
@@ -528,7 +534,10 @@ export const TiktokShopAutomation = () => {
                   goals effortlessly with our TikTok private label and
                   automation service.
                 </span>
-                <CTAButton title="Get Started" />
+                <CTAButton
+                  title="Get Started"
+                  onClick={() => setIsOpen(true)}
+                />
               </div>
             </div>
           </div>
@@ -615,7 +624,7 @@ export const TiktokShopAutomation = () => {
               Help us get an idea of what business or idea is all about.
             </span>
           </div>
-          <CTAButton title="Get Started" />
+          <CTAButton title="Get Started" onClick={() => setIsOpen(true)} />
         </MaxWidthWrapper>
       </div>
       <div className="w-full relative py-5">
@@ -753,7 +762,10 @@ export const TiktokShopAutomation = () => {
                 transition={{ duration: 1, ease: "easeInOut" }}
                 viewport={{ once: true, margin: "-50px" }}
               >
-                <CTAButton title="Get Started" />
+                <CTAButton
+                  title="Get Started"
+                  onClick={() => setIsOpen(true)}
+                />
               </motion.div>
             </div>
             <div className="relative w-full hidden sm:flex flex-col justify-center items-center gap-10">

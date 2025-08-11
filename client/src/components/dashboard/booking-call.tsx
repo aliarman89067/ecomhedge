@@ -1,8 +1,11 @@
+import { useContext } from "react";
 import { CTAButton } from "../cta-button";
 import { MaxWidthWrapper } from "../max-width-wrapper";
 import { motion } from "framer-motion";
+import { FormContext } from "@/context/form-context";
 
 export const BookingCall = () => {
+  const { setIsOpen } = useContext(FormContext);
   return (
     <section className="relative min-h-screen w-full flex justify-center py-20 lg:py-10 overflow-hidden">
       <img
@@ -49,7 +52,10 @@ export const BookingCall = () => {
               transition={{ duration: 1, ease: "easeInOut" }}
               viewport={{ once: true, margin: "-50px" }}
             >
-              <CTAButton title="Book a Call Now" />
+              <CTAButton
+                title="Book a Call Now"
+                onClick={() => setIsOpen(true)}
+              />
             </motion.div>
           </div>
           <div className="relative w-full hidden sm:flex flex-col justify-center items-center gap-10">

@@ -8,6 +8,7 @@ import { RiAccountBox2Line } from "react-icons/ri";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { CTAButton } from "../cta-button";
+import { useNavigate } from "react-router-dom";
 
 const iconsData = [
   {
@@ -63,6 +64,7 @@ const contentData = [
   },
 ];
 export const HeroBento = () => {
+  const navigate = useNavigate();
   const [rotation, setRotation] = useState(65);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -158,7 +160,10 @@ export const HeroBento = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-20 w-full h-full overflow-hidden">
           <div className="relative flex items-center md:pl-20 w-full max-md:mt-16 max-md:pb-16">
             {contentData.map((item, index) => (
-              <div className="absolute flex flex-col max-md:items-center max-md:text-center gap-5 w-full max-sm:h-full">
+              <div
+                key={index}
+                className="absolute flex flex-col max-md:items-center max-md:text-center gap-5 w-full max-sm:h-full"
+              >
                 <h1
                   className={cn(
                     "relative text-white font-bold text-3xl sm:text-4xl z-50 transition-all duration-[900ms] ease-in-out",
@@ -187,7 +192,10 @@ export const HeroBento = () => {
                       : "-translate-x-[650px]"
                   )}
                 >
-                  <CTAButton title="Read More" />
+                  <CTAButton
+                    title="Read More"
+                    onClick={() => navigate(item.href)}
+                  />
                 </div>
               </div>
             ))}
